@@ -1,0 +1,102 @@
+---
+layout: post
+title: "Announcing as-printf."
+permalink: "/trane/2009/feb/21/printf-as3/"
+tags: [actionscript as3 opensource]
+categories: [posts]
+id: 26
+date: "2009-02-21 -0300"
+---
+Actionscript, as it's name implies, is a high level scripting language. Regardless of what scripting means, it's definitely high level. It has a large core api that shields most programmers from low level manipulation. It's is actually a pretty powerful language, with optional static typing, closures, functions as first class objects and other facilities.
+
+It does, however, has a few key missing features. One of it's noteworthy absences is the low level interface for string manipulation, specially a lack of a printf like facility. [printf] (http://en.wikipedia.org/wiki/Printf) stands for  print format, a function that makes mixing strings and variables more convenient. It's surprising really, that actionscript does not have a printf function in it's core library. Even C, which is seen as a low level,  unproductive language has it.  printf has been around for a long time, and has been known by printf for over 30 years. As far as I can remember, Actionscript and Javascript are the only modern , high level, programming languages that lack such facility. 
+
+[Printf-as](http://github.com/arthur-debert/printf-as3/) tries to bridge this gap. If you are familiar with printf, the rest of this post will simply bore you. You might just head to the [project's github homepage] (http://http://github.com/arthur-debert/printf-as3/), check out the [list of supported formatters](http://stimuli.com.br:8080/media/projects/printf-as3/docs/printf/as/package-detail.html) or make a fresh [svn checkout](http://github.com/arthur-debert/printf-as3/). The project has a working test suite (I love synchronous re-entrant code) that servers as a good documentation of what to expect. The code license is a [MIT License](http://www.opensource.org/licenses/mit-license.php).
+
+Just import br.com.stimuli.string.printf and you are all set.
+
+If you are not sold on what the point is, I'll try to illustrate bellow how it makes things easier.
+
+### Advantages:  conciseness, readability
+
+At first, it seems the primary advantage is that it's terse and readable. All those quotes and addition signs really get in the way. Suppose you have a class called User, that has a friendly toString output, such as:
+    
+<code>
+public function toString() : String{
+    return "[Class User] name: " + name + ", age:" + age ;
+}
+</code>
+Printf makes it more readable:
+<code>
+public function toString() : String{
+    return printf("[Class User] name:%s  age: %s",  name, age );
+}
+</code>
+You simply mark "wholes" on the string, places where it should be substituted by a variable. That way, the string itself is not interrupted by extraneous quotes and plus signs. Less typing, more readability.
+The percent sign marks a whole on the string, where a substitution will occur. Following the percent sign, you specify how to substitute the string. The universal case is to mark it as a string, with an "s" (%s), but other formatters are helpful as we'll see bellow. The template string is the followed by the variables to be used in the substitution.
+
+
+### Advantages:  helpers, precision, padding
+Besides direct substitution, printf can help you format those strings with little fuss. One such helper is the precision formatter. Let's say you have a frame rate counter, that can hold decimal values such as 23.652636. Maybe you wish to truncate the number to a certain digits, for a more friendly output. Just use the dot (".") precision formatter:
+<code>
+frate.txt = printf("%.1f fps", frameRate); 
+// sets the textfield's value to "23.6 fps". The digit 1 after the dot means to 
+// truncate to 1 decimal place, and the f tells printf to threat it like a float.
+</code>
+
+
+Or you want to display number in hexadecimal, for example:
+<code>
+msg = printf("The box color is %h", boxColor); // outputs: The box color is #FF0066
+</code>
+### Advantages:  Logic outside of the string.
+Printf can use named variables. Let's say there's an User object, with "name", "middleName" and "lastName"  properties. 
+<code>
+msg = "Posted by " + user.name + " " + user.lastName + ".";
+</code>
+But then if later on you decide to show the last name first, you need to rewrite this code:
+<code>
+msg = "Posted by " + user.lastName + ", " + user.name + ".";
+</code>
+If you are using printf, you could say:
+<code>
+msg = printf( "Posted by  %(name)s %(lastName)s",  user);
+</code>
+And printf will match those names between parenthesis with properties on the variable "user". Then a change to the string is easier to visualize:
+<code>
+msg = printf( "Posted by  %(lastName)s, %(name)s",  user);
+</code>
+That's handy, but printf really shines when you realize that having format strings allow you to have let code alone on presentational changes. Let's say that you have a website with different languages, and of all of it's strings are defined an external xml file . An excerpt of that xml:
+<code>
+...
+<string id="greeting">Hello %(firstName)s %(lastName)s</string>
+...
+</code>
+And the code is:
+<code>
+msg = printf( "Posted by  %(lastName)s, %(name)s",  user);
+</code>
+You can change the message string only by editing the xml file, no need to change code nor recompile.
+Better yet, if you need to support English, where it's usual to have first and last names, but also Spanish, where the middle name is more important than the last name, on the Spanish xml file, you'd have:
+<code>
+...
+<string id="greeting">Hello %(firstName)s %(middleName)s</string>
+...
+</code>
+Same code, but different presentations format supported. You are effectively separating presentation (the string you need to produce/show) and logic. Internationalization will often require words in different orders from locale to locale.
+
+### Warning: a loose interpretation of printf
+The as-printf implementation is loosely based on python's print and strftime. I did implement most of it's behaviour, but translated freely where it felt that actionscript should behave differently. For example, printf should never raise an error, and if a substitution fails it will be substituted by and empty string.
+
+### Warning: performance
+While I did not make a consious effort to make as-printf slow, I didn't do any optimizations at all. If you are producing a lot of strings in a place where performance is critical, you'd be better of doing the substitution by hand.
+
+### Warning regex implementation
+Instead of a full blown parser, I it's a quick hack: a regular expression. That means that making meaningless formats may produce in unexpected results. Mixing formatters that don't go together is a bad idea, be warned.
+
+### Wrapping it up:
+printf-as is a small, very narrowed focused project. It's a quick hack, but just like [bulkloader](http://github.com/arthur-debert/BulkLoader), it removed a small nag that bothered me when developing in Actionscript.
+
+Thanks to project member [Gabriel Laet](http://www.gabriellaet.com) who fixed bugs, improved the test coverage and convinced me that printf-as should never raise an error.
+
+Happy stringing.

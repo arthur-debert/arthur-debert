@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Acura MDX"
+permalink: "/works/acura-mdx"
+tags: []
+categories: [works]
+id: 5
+date: "2006-10-24 -0300"
+---
+The Accura MDX website is a hotsite to promote Honda's new high end car. 
+I coded the internal pages, each one having an specific look (more than 30 of them). A few of them have playful interaction to show off the car's extensive feature set.
+
+The website was awarded an FWA site of the day for November the 19th.

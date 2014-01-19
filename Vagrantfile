@@ -29,7 +29,7 @@ Vagrant::Config.run do |config|
 end
 Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 4000, host: 4000
-  config.vm.synced_folder ".", "/var/www/site"
+  config.vm.synced_folder ".", "/var/www/site/"
   # synced folders will always be set to vagrant:vagrant , and it can't be changed
   # from inside the vm, this is hackish, but well....
   config.vm.provider :virtualbox do |vb|

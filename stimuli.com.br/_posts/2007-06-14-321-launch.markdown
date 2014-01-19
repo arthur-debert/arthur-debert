@@ -1,0 +1,18 @@
+---
+layout: post
+title: "3,2,1 - Launch!"
+permalink: "/trane/2007/jun/14/321-launch/"
+tags: [personal]
+categories: [posts]
+id: 13
+date: "2007-06-14 -0300"
+---
+I've been holding back having a blog for a long time. I just felt that  I didn't have much to add. As time passed by, I felt it was very hard to find some information on the web, specially regarding flash development, which has been my bread and butter for a while. Informative Actionscript posts are few and far and between. Also after becoming a regular at other people's blog for quite a while, I though it would be fun to be able to look back a few years and see what I was thinking , struggling or enjoying. 
+
+After deciding to start a blog, I did what any self respected hacker would do: create your own blogging engine (hint: irony). It was a chance to hack a little with [django](http://djangoproject.com), which is always a pleasure. I've used some django apps, notably [James Bennet's coltrane](http://code.google.com/p/coltrane-blog/) and  [django-tagging ](http://code.google.com/p/django-tagging/). I kind of hated del.icio.us interface and wanted to have something simpler. 
+
+After hacking the backend and doing a half-assed job with the layout, it was time to find hosting. After a [long journey](http://futuro.stimuli.com.br/trane/2007/jun/13/hosting-life-good-again/) through various hosts, I landed at [SliceHost](http:www.slicehost.com) which has been a great learning experience. Having to run a server turned out to be less intimidating than it looked like and a lot more fun as well. Now not having root access to a server feels very restricting.
+
+I grabbed some notes taken in the last few months and posted them as a morale-bosting push. I hope to write a few useful bits on actionscript, user interfaces, web-development and python.
+
+3...2...1 ready, go!
