@@ -1,10 +1,24 @@
 ---
 layout: post
-title: "Preloading Video in AS2"
-tags: [actionscript as2 video flv]
-categories: [trane]
-legacy_id: 9
-date: "2006-12-10 -0300"
+title: "Arthur Debert (Ribeiro)"
+categories: [static]
 ---
 
-I'm here
+Hey there.
+
+*I'm Arthur Debert, a computer programmer in his mid thirties (it goes so fast!) from São Paulo, Brazil.*
+
+TLDR
+====
+
+I co-founded  [loggi](https://www.loggi.com/), an urban logistics startup in my home town, São Paulo. We began working on it since June 2013, and it's  been mad. And great. Of course, none of the stuff here has anything to do with it, no endorsement iada iada dah.
+
+Before that, I spent a couple of years working for the fine folks from  [PCF](http://www.pculture.org) on  [Amara](http://www.amara.org/) , a tool to subtitle and translate video on the web. Pretty cool stuff.
+
+And a long time ago I worked as a front end guy, doing crazy-award-winning for the very self centered advertising world. 
+More at <a href='br.linkedin.com/in/arthurdebert/'>my linked-in profile</a>.
+
+If you want to reach me, <a href='mailto:arthur@stimuli.com.br'>email</a> is always best.
+If we are acquainted, you know, in real life, maybe <a href='https://facebook.com/arthurdebert'>my Facebook </a> is what you're looking for (oh, the irony). 
+I'm also on <a href='https://twitter.com/arthur_debert'>twitter</a> .
+
