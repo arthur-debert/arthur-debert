@@ -3,7 +3,7 @@ inc:
   title:        "Arthur Debert"
   subtitle:     "Welcome to my internets"
   cover_image:  blog-cover.jpg
-  logo:         logo.png
+  logo:         logo.jpg
   
   # Company information
   company:      Loggi
@@ -103,7 +103,9 @@ kramdown:
 
 redcloth:
   hard_breaks: true
-
+post:
+    author:
+        image: gravatar.jpeg
 #
 # jekyll-assets: see more at https://github.com/ixti/jekyll-assets
 #
