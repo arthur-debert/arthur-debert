@@ -21,68 +21,66 @@ If you are not sold on what the point is, I'll try to illustrate bellow how it m
 
 At first, it seems the primary advantage is that it's terse and readable. All those quotes and addition signs really get in the way. Suppose you have a class called User, that has a friendly toString output, such as:
     
-<code>
-public function toString() : String{
-    return "[Class User] name: " + name + ", age:" + age ;
-}
-</code>
+
+    public function toString() : String{
+        return "[Class User] name: " + name + ", age:" + age ;
+    }
+
 Printf makes it more readable:
-<code>
-public function toString() : String{
-    return printf("[Class User] name:%s  age: %s",  name, age );
-}
-</code>
+
+    public function toString() : String{
+        return printf("[Class User] name:%s  age: %s",  name, age );
+    }
+
 You simply mark "wholes" on the string, places where it should be substituted by a variable. That way, the string itself is not interrupted by extraneous quotes and plus signs. Less typing, more readability.
 The percent sign marks a whole on the string, where a substitution will occur. Following the percent sign, you specify how to substitute the string. The universal case is to mark it as a string, with an "s" (%s), but other formatters are helpful as we'll see bellow. The template string is the followed by the variables to be used in the substitution.
 
 
 ### Advantages:  helpers, precision, padding
 Besides direct substitution, printf can help you format those strings with little fuss. One such helper is the precision formatter. Let's say you have a frame rate counter, that can hold decimal values such as 23.652636. Maybe you wish to truncate the number to a certain digits, for a more friendly output. Just use the dot (".") precision formatter:
-<code>
-frate.txt = printf("%.1f fps", frameRate); 
-// sets the textfield's value to "23.6 fps". The digit 1 after the dot means to 
-// truncate to 1 decimal place, and the f tells printf to threat it like a float.
-</code>
+
+    frate.txt = printf("%.1f fps", frameRate); 
+    // sets the textfield's value to "23.6 fps". The digit 1 after the dot means to 
+    // truncate to 1 decimal place, and the f tells printf to threat it like a float.
+
 
 
 Or you want to display number in hexadecimal, for example:
-<code>
-msg = printf("The box color is %h", boxColor); // outputs: The box color is #FF0066
-</code>
+
+    msg = printf("The box color is %h", boxColor); // outputs: The box color is #FF0066
+
 ### Advantages:  Logic outside of the string.
 Printf can use named variables. Let's say there's an User object, with "name", "middleName" and "lastName"  properties. 
-<code>
-msg = "Posted by " + user.name + " " + user.lastName + ".";
-</code>
+
+    msg = "Posted by " + user.name + " " + user.lastName + ".";
+
 But then if later on you decide to show the last name first, you need to rewrite this code:
-<code>
-msg = "Posted by " + user.lastName + ", " + user.name + ".";
-</code>
+
+    msg = "Posted by " + user.lastName + ", " + user.name + ".";
+
 If you are using printf, you could say:
-<code>
-msg = printf( "Posted by  %(name)s %(lastName)s",  user);
-</code>
+
+    msg = printf( "Posted by  %(name)s %(lastName)s",  user);
+
 And printf will match those names between parenthesis with properties on the variable "user". Then a change to the string is easier to visualize:
-<code>
-msg = printf( "Posted by  %(lastName)s, %(name)s",  user);
-</code>
+
+    msg = printf( "Posted by  %(lastName)s, %(name)s",  user);
+
 That's handy, but printf really shines when you realize that having format strings allow you to have let code alone on presentational changes. Let's say that you have a website with different languages, and of all of it's strings are defined an external xml file . An excerpt of that xml:
-<code>
-...
-<string id="greeting">Hello %(firstName)s %(lastName)s</string>
-...
-</code>
+
+    ...
+    <string id="greeting">Hello %(firstName)s %(lastName)s</string>
+    ...
 And the code is:
-<code>
-msg = printf( "Posted by  %(lastName)s, %(name)s",  user);
-</code>
+    msg = printf( "Posted by  %(lastName)s, %(name)s",  user);
+
 You can change the message string only by editing the xml file, no need to change code nor recompile.
 Better yet, if you need to support English, where it's usual to have first and last names, but also Spanish, where the middle name is more important than the last name, on the Spanish xml file, you'd have:
-<code>
-...
-<string id="greeting">Hello %(firstName)s %(middleName)s</string>
-...
-</code>
+
+    ...
+    <string id="greeting">Hello %(firstName)s %(middleName)s</string>
+    ...
+
 Same code, but different presentations format supported. You are effectively separating presentation (the string you need to produce/show) and logic. Internationalization will often require words in different orders from locale to locale.
 
 ### Warning: a loose interpretation of printf

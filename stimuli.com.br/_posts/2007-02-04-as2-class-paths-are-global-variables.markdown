@@ -9,13 +9,12 @@ date: "2007-02-04 -0300"
 ---
 Globals are evil, anyone will tell you that.
 
-In AS2 there are no real classpaths, but a chain of objects bound to the _global space. In fact, before Flash MX came out this was the canonical way to make sure your "semi-global" objects were safe kept: creating nested objects that would look like a class path, and put your data there. For example:
-<code  class="actionscript">
-// checks to make sure we don't overwrite anybody else's objects
-if (!_global.com) _global.com = {};
-if(!_global.com.stimuli)_global.com.stimuli = {};
-_global.com.stimuli.myFavoriteColor = 0xFF0000;
-</code>
+In AS2 there are no real classpaths, but a chain of objects bound to the `_global` space. In fact, before Flash MX came out this was the canonical way to make sure your "semi-global" objects were safe kept: creating nested objects that would look like a class path, and put your data there. For example:
+
+    // checks to make sure we don't overwrite anybody else's objects
+    if (!_global.com) _global.com = {};
+    if(!_global.com.stimuli)_global.com.stimuli = {};
+    _global.com.stimuli.myFavoriteColor = 0xFF0000;
 
 This code hides a variable "myFavoriteColor" inside a global object com.stimuli, that looks like a classpath. This works well. So well that, in fact, it's how classpaths are usually created in Javascript. If you are careful to make sure you don't delete anybody else's "com" or "org" objects you should be fine. Since in AS2 and Javascript there are no real private variables(except for values hidden inside closures) that's pretty much how far  classpaths go. 
 

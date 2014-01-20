@@ -10,24 +10,24 @@ date: "2007-08-22 -0300"
 Reading Bruce [Eckel's post about Flex Components](http://www.artima.com/weblogs/viewpost.jsp?thread=212818) I felt the ending suggestion was pretty interesting: porting python's string library to AS3. Python's string library is very useful: it is full of convenience methods such as <strong>startswith</strong>, <strong>endswith</strong> and so on. I can understand why Adobe feels like this doesn't belong in the player: keeping the player footprint small is paramount, and adding a lot of convenience methods is arguable at best. So let's code our own.
 
 The first step it to create a new class, one that will inherit from String. Oops! The string class is marked <strong>final</strong> which means that it can't be extended. So now, you'd think, just trade inheritance for composition, creating a class that looks like this:
-<code  class="actionscript">
-public class SString{
-	private var _string : String;
-    private var _length : int;
-    public function SString(withString : *){
-        _string = withString.toString();
-        _length = _string.length;
-    }
+
+    public class SString{
+    	private var _string : String;
+        private var _length : int;
+        public function SString(withString : *){
+            _string = withString.toString();
+            _length = _string.length;
+        }
     
-    public function get length() : int{
-        return _length;
+        public function get length() : int{
+            return _length;
+        }
+
+    	public function toString() : String{
+            return _string;
+        }
     }
 
-	public function toString() : String{
-        return _string;
-    }
-}
-</code>
 And then add the extra convenience methods. But there's a problem with using composition in this scenario. If you do, every method that takes a vanilla String will not accept the SString class. This means every time you need a string such as in <strong> new URLRequest(myString);</strong> you will need to convert back to a vanilla string. Now using our "enhanced" string class you must perform these extra steps:
 * Import the SSTring clas.
 * Use a formal constructor instead of quotes.
@@ -35,16 +35,15 @@ And then add the extra convenience methods. But there's a problem with using com
 
 The first two issues are understandable, it's just harder to take those cases into account. But it starts to be too heavy weight, it feels clunky. This is just bad design. AS3 is a weakly typed language: types are converted behind the scenes in some cases. If you have something such as :
 
-<code  class="actionscript">
-var s : * = 1 + " some text";
-// s = "1 some text"
-</code>
+
+    var s : * = 1 + " some text";
+    // s = "1 some text"
+
 The interpreter will convert the Number 1 to a String automagically. So the type of variables depend on the context their being used. But on other cases the compiler will not allow type substitutions. 
 
 The other solution is to code a class that acts manly as a namespace for function. A class that is a collection of static methods such as:
-<code  class="actionscript">
-StringHelper.startsWith(myString, "static");
-</code>
+
+     StringHelper.startsWith(myString, "static");
 
 This is too verbose. Also, for note that a class such as this is mostly a workaround for the fact that no function do not exist by themselves, which is not very OOP at all. OOP is more than mimicking Java. OOP is about creating designs: hierarchy, collections, that are easy to use and make code more versatile. In this case, which is ironic, AS2 would offer us better alternatives. Prototype inheritance is not so bad after all.
 

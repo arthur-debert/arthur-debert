@@ -18,76 +18,78 @@ The core issue here, is flexibility. Actionscript has a few features that take y
 
 ## Default parameters:
 Let's say you have a method that plays sounds on the library, by some id which is string. Then, you always have to specify the id.
-<code>
-public function playSound(soundID : String){
- 	//...
-};
-</code>
+
+    public function playSound(soundID : String){
+     	//...
+    };
 
 All is well, but you want to be able to control the volume each sound is playing. Maybe all sounds are not properly equalized, or the user has a volume knob he can set at run time. Most of the time, a volume of 1 is appropriate, but a few sounds are way to loud, and you need to tone it down a bit. But still, usually the volume of 1 will do it, and also you don't want to break backwards compatibility with all the working code you've written. Default parameters solve both issues:
-<code>
-public function playSound(soundID : String, volume : Number = 1){
- 	//...
-};
-</code>
+
+    public function playSound(soundID : String, volume : Number = 1){
+     	//...
+    };
+
 All working code will keep working. Since you usually want the volume to be 1, this won't make you type more on most calls, but for that few sounds that were recorded to loud, you can just say:
-<code>
-playSound("rollover", 0,5);
-</code>
+
+    playSound("rollover", 0,5);
+
 In the end you get flexibility, both in terms of code you've already written and code you will write. There is no overhead of breaking things, creating a new function or having to educate users. Flexibility is one of the touchstones of well written software.
 
 ## Variable number of parameters:
 In AS3 you can signal that you are expecting an unknown number of parameters with a "...". Say you've got a function that adds to numbers:
-<code>
-function addNumbers(a : Number, b:Number) : Number{
-   return a + b
-}
-</code>.
+
+    function addNumbers(a : Number, b:Number) : Number{
+       return a + b
+    }
+
 Now you need a function that can add 3 numbers. What do you do, create another function that can add 3 numbers?
-<code>
-function addThreeNumbers(a : Number, b : Number, c: Number) : Number{
-	return a + b + c;
-}</code>
+
+    function addThreeNumbers(a : Number, b : Number, c: Number) : Number{
+    	return a + b + c;
+    }
+
 That's ugly, and not very flexible, what if next week you run into the need of adding 5 numbers? Will you create a method call addFiveNumbers ?
 The solution for this, is to create a function that works with any amount of parameters:
-<code>
-function addNumbers(numbers...) : Void{
-	var result : Number = 0;
-	for(var i : int = 0; i < numbers.length; i++){
-		result += numbers[i]
-	}
-	return result;
-}</code>
+
+    function addNumbers(numbers...) : Void{
+    	var result : Number = 0;
+    	for(var i : int = 0; i < numbers.length; i++){
+    		result += numbers[i]
+    	}
+    	return result;
+    }
+    
 Now you can deal with any number of parameters. Your function is very flexible. Old code will still work unmodified, new cases can be dealt with. Flexibility is good.
 
 But having functions with an unknown number of parameters work well when all possible arguments are of the same type and will usually be processed in a loop, such as the example above.
 
 But suppose you'd try that on the playSound above, but now defining if the sound will loop, something like:
-<code>
-function playSound(args...) : void{
-   var soundId : String = args[0];
-   var volume : Number = args[1] || 1;
-   var loops : Boolean = args[2] || false;
-}
+
+    function playSound(args...) : void{
+       var soundId : String = args[0];
+       var volume : Number = args[1] || 1;
+       var loops : Boolean = args[2] || false;
+    }
+
 This is still flexible, but it is not very maintainable. Lot's of extra typing, and worse, now the arguments are tied to the order of the args parameter. Unless the order of items has any meaning, or doesn't mean anything at all (such as when adding numbers), the functionality will depend on an opaque, hidden and unrelated information. So if you want a sound to loop with the default value, you have to say:
-<code>
-playSound("rollover", null, true);
-</code>
+
+    playSound("rollover", null, true);
+
 But if you then add other features (such as panning, or callbacks) you might simply end up with some case where you need to specify the 6th parameter but not the ones in the middle, now it is just horrible:
-<code>
-playSound("rollover", null, false, null, null, onDone )
-</code>
+
+    playSound("rollover", null, false, null, null, onDone )
+
 It's too easy to err and forget. Sometimes you would pass null, others false... it's a lot of typing. All in one a very bad solution.
 
 The core problem here, is that parameter passing, both with named parameters and also collapsing parameters into an args... array will make the logic depend on the order, and doesn't let you mark things as optional. You only want to define the first and 7th option, not anything else. You shouldn't have to remember long list of parameters and their correct order. 
 
 ## Standard Java solution: create an object for holding an specific set of properties.
 This is how you'd do it in Java, create a SoundPlayProperties object that does nothing. Then you can say:
-<code>
-var soundProperties : SoundPlayProperties = new SoundPlayProperties("rollover");
-soundProperties.loops = true;
-playSound(soundProperties);
-</code>
+
+    var soundProperties : SoundPlayProperties = new SoundPlayProperties("rollover");
+    soundProperties.loops = true;
+    playSound(soundProperties);
+
 I'll get my self covered saying this is just a matter of taste. Some people like that better. But this is the standard excuse for not sticking to an opinion. I don't like the above solution. It is not elegant, it is verbose, it imposes a higher learning curve. Main issues with it:
 
 * Complexity: the minimum number of tokens for this is 3, one for function call, another for the id, and other for the looping. The above code has 11 That's way, way too many.
@@ -100,7 +102,7 @@ Its a long rambling just to say it rubs me the wrong way, no I don't like it.
 
 ## Hashes:
 Passing those options as hash keys, like this:
-<code>playSound("rollover", {loops:true});</code>
+    playSound("rollover", {loops:true});
 Provide a few advantages:
 
 * Order doesn't matter any more
@@ -119,18 +121,18 @@ In the end, it's just a hack, a work around, but right now, it feels to be the m
 
 ## The ideal solution
 Is to have a language with the right feature, like python has, which is to have optional named parameters, that won't depend on evocation order, so in this case, you can say:
-<code>
-function playSound(soundID : String /* obligatory */, volume: Number=1, rightPanning: Number=1, leftPanning: Number=1, loops : Boolean=true, onCompleteCallBack : Function = null) : void{
 
-}</code>
+    function playSound(soundID : String /* obligatory */, volume: Number=1, rightPanning: Number=1, leftPanning: Number=1, loops : Boolean=true, onCompleteCallBack : Function = null) : void{
+
+    }
 
 This will give you a lot of flexibility, creates no overhead, is very readable, and doesn't force the user to learn another class. You can specify as many options as you need, in any order you need, and keep it readable. You could say:
-<code>
-playSound("rollover", loops=true);
-// or
-playSound("rollover", onCompleteCallBack=doSomething);
-// or many otions:
-playSound("rollover", loops=true, onCompleteCallBack=doSomething, volume=0.5);
-</code>
+
+    playSound("rollover", loops=true);
+    // or
+    playSound("rollover", onCompleteCallBack=doSomething);
+    // or many otions:
+    playSound("rollover", loops=true, onCompleteCallBack=doSomething, volume=0.5);
+
 
 This post was a bit longer than I expected, but I was tired of trying to squeeze all this info inside a one liner in a forum thread.

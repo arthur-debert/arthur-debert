@@ -39,28 +39,28 @@ Design goals:
    - Items can be assigned an identifier key to be used on retrieval.
     
 At a glance:
-<code>
-var loader : BulkLoader = new BulkLoader("main");
-loader.add("bg.jpg");
-loader.add("config.xml");
-loader.add("soundtrack.mp3");
-loader.add("intro.flv");
-loader.addEventListener(BulkLoader.PROGRESS, onProgress);
-loader.addEventListener(BulkLoader.COMPLETE, onComplete);
-loader.start();
 
-function onProgress(evt : BulkProgressEvent) : void{
-    trace(evt.percentLoaded);
-}
+    var loader : BulkLoader = new BulkLoader("main");
+    loader.add("bg.jpg");
+    loader.add("config.xml");
+    loader.add("soundtrack.mp3");
+    loader.add("intro.flv");
+    loader.addEventListener(BulkLoader.PROGRESS, onProgress);
+    loader.addEventListener(BulkLoader.COMPLETE, onComplete);
+    loader.start();
 
-function onComplete(evt : Event) : void{
-    var bgBitmap = loader.getBitmap("bg.jpg");
-    addChild(bgBitmap);
-    var video : Video = new Video();
-    video.attachNetStream(loader.getNetStream("intro.flv"));
-    parseConfig(loader.getXML("config.xml"));
-}
-</code>
+    function onProgress(evt : BulkProgressEvent) : void{
+        trace(evt.percentLoaded);
+    }
+
+    function onComplete(evt : Event) : void{
+        var bgBitmap = loader.getBitmap("bg.jpg");
+        addChild(bgBitmap);
+        var video : Video = new Video();
+        video.attachNetStream(loader.getNetStream("intro.flv"));
+        parseConfig(loader.getXML("config.xml"));
+    }
+
 The above code in 8 lines:
 
 - adds 4 items with different typed to be loaded: xml, mp3, flv, jpg.

@@ -16,27 +16,27 @@ With the great [architectural changes](http://www.stimuli.com.br/trane/2007/may/
 
 
 So we hacked a sane VideoStream class for AS2 and I wanted to port it to AS3. The idea was to have a class that could do something like:
-<code  class="actionscript">
-var vs : VideoStream = new VideoStream(url, buffertime);
-// video loops once the end of the stream is reached
-vs.loops = true ; 
-// listen to complete loading events
-vs.addEventListener(Event.COMPLETE, onVideoLoaded); 
-// listen to loading progres events
-vs.addEventListener(Event.PROGRESS, onLoadingProgress);
-vs.addEventListener("playComplete", onPlayFinished);
+
+    var vs : VideoStream = new VideoStream(url, buffertime);
+    // video loops once the end of the stream is reached
+    vs.loops = true ; 
+    // listen to complete loading events
+    vs.addEventListener(Event.COMPLETE, onVideoLoaded); 
+    // listen to loading progres events
+    vs.addEventListener(Event.PROGRESS, onLoadingProgress);
+    vs.addEventListener("playComplete", onPlayFinished);
   
-// and then later:
-// the video duration:
-trace(vs.duration)
-// and so on
-</code>
-In order to start a NetStream, you must instantiate it with a NetConnection object. it's ugly. You have to say:
-<code  class="actionscript">
-nc = new NetConnection();
-nc.connect(null);
-stream = new NetStream(nc);
-</code>
+    // and then later:
+    // the video duration:
+    trace(vs.duration)
+    // and so on
+    </code>
+    In order to start a NetStream, you must instantiate it with a NetConnection object. it's ugly. You have to say:
+    <code  class="actionscript">
+    nc = new NetConnection();
+    nc.connect(null);
+    stream = new NetStream(nc);
+
 
 Why on earth you can't say simply stream = new NetStream(); and, with no parameters for the NetConnection,  it would do it for you?
 Since the NetConnection object doesn't do anything, I coded this class differently. Instead of keeping the NetConnection as a class property, I simply created a local variable and used that to instantiate the NetStream. But then something funny would happen. For a while the NetStream.bytesLoaded and NetStream.bytesTotal would behave as expected, at first it would be zero, until the the response would return the content length and then it would show the right bytes total and bytes loaded for a few executions, and THEN it would read 0 for both. That's right, after a few milliseconds the bytesTotal would go from 28428 to 0. That combined with a miss configured apache omitting the content length, and it took us hours to chase this bug. Worse it wasn't very predictable: sometimes loading information would read correctly all the way trough. 

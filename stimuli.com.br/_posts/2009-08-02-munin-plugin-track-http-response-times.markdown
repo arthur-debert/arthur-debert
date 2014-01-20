@@ -27,10 +27,10 @@ Munin plugins are ran through the shell: they can be anything a perl script, c, 
 
 I am putting this up on [github](http://github.com/arthur-debert/munin-httpresponse-plugin/tree/master), as future updates will be easier to track. Installing is pretty easy, just copy the httpresonsetime file to where plugins are located (/etc/munin/plugins on ubuntu), chmod it appropriately and add the urls you need to monitor on the config file:
 
-<code>
-[httpresponsetime]
-    env.urls http://www.example.com,http://www.othersite.com/somewhere
-</code>
+
+    [httpresponsetime]
+        env.urls http://www.example.com,http://www.othersite.com/somewhere
+
 
 Restart the munin-node daemon, and you're all set.
 

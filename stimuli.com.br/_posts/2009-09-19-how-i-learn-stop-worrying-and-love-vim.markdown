@@ -37,176 +37,176 @@ I've [ written ](http://www.stimuli.com.br/trane/2009/sep/21/hello-vim-or-quitti
 
 And now the obligatory vimrc file. Enjoy:
 
-<code class="vim">
-" Arthur Debert
-" http://www.stimuli.com.br
 
-""""""""""""""""""""""""""""""""""""""
-"            Appearance              "
-""""""""""""""""""""""""""""""""""""""
-colorscheme ir_black        " color scheme
-set ruler                   " line numbers, rulers, and everything else
-set number
-set cursorline
-set vb                      " Visual bell
-set lazyredraw              " Don't update while in macro
-set ttyfast                 " Improves redrawing
-set titlestring=%f title    " Display filename in terminal window
-set rulerformat=%l:%c ruler " Display current column/line
-set showcmd                 " Show commands at bottom right
-set splitbelow              " Split windows BELOW current window!
-set winminheight=0          " Window minimum height
-set scrolloff=8             " always have at least 8 lines before the window's bottom
-"match ErrorMsg /\%>80v.\+/  " formats text longer than 80 columns
-set foldcolumn=3              " 2 lines of column for fold showing, always
-set foldmethod=syntax
-set foldlevelstart=99
+    " Arthur Debert
+    " http://www.stimuli.com.br
 
-""""""""""""""""""""""""""""""""""""""
-"  Search & Replace
-""""""""""""""""""""""""""""""""""""""
-set hlsearch   " highlight searches
-set ignorecase " make searches case-insensitive, unless they contain upper-case letters:
-set smartcase
-set incsearch  " show the `best match so far' as search strings are typed:
-set gdefault   " assume the /g flag on :s substitutions to replace all matches in a line:
-set enc=utf-8  " UTF-8 Default encoding
+    """"""""""""""""""""""""""""""""""""""
+    "            Appearance              "
+    """"""""""""""""""""""""""""""""""""""
+    colorscheme ir_black        " color scheme
+    set ruler                   " line numbers, rulers, and everything else
+    set number
+    set cursorline
+    set vb                      " Visual bell
+    set lazyredraw              " Don't update while in macro
+    set ttyfast                 " Improves redrawing
+    set titlestring=%f title    " Display filename in terminal window
+    set rulerformat=%l:%c ruler " Display current column/line
+    set showcmd                 " Show commands at bottom right
+    set splitbelow              " Split windows BELOW current window!
+    set winminheight=0          " Window minimum height
+    set scrolloff=8             " always have at least 8 lines before the window's bottom
+    "match ErrorMsg /\%>80v.\+/  " formats text longer than 80 columns
+    set foldcolumn=3              " 2 lines of column for fold showing, always
+    set foldmethod=syntax
+    set foldlevelstart=99
 
-
-""""""""""""""""""""""""""""""""""""""
-"           General Settings         "
-""""""""""""""""""""""""""""""""""""""
-syntax on                                                            " syntax highlighting
-filetype plugin on                                                   " enables filetype
-set listchars=nbsp:¬¨¬®,eol:¬¨‚àÇ,tab:>-,extends:¬¨¬™,precedes:¬¨¬¥,trail:‚Äö√Ñ¬¢ " whitespace chars
-set autoindent smartindent                                           " auto/smart indent
-set expandtab                                                        " expand tabs to spaces
-set smarttab                                                         " tab and backspace are smart " 
-set ttyfast
-
-"""""""""""""""""""""""""""""""""""""""
-"           Menu completions          "
-"""""""""""""""""""""""""""""""""""""""
-set wildmode=full wildmenu                            " Command-line tab completion
-set infercase                                         " AutoComplete in Vim
-set completeopt=longest,menu,menuone
-set wildignore+=*.o,*.obj,*.pyc,*.DS_STORE,*.db,*.swc
+    """"""""""""""""""""""""""""""""""""""
+    "  Search & Replace
+    """"""""""""""""""""""""""""""""""""""
+    set hlsearch   " highlight searches
+    set ignorecase " make searches case-insensitive, unless they contain upper-case letters:
+    set smartcase
+    set incsearch  " show the `best match so far' as search strings are typed:
+    set gdefault   " assume the /g flag on :s substitutions to replace all matches in a line:
+    set enc=utf-8  " UTF-8 Default encoding
 
 
-"""""""""""""""""""""""""""""""""""""""
-"           GUI Stuff                 "
-"""""""""""""""""""""""""""""""""""""""
-set mousemodel=extend " Enable mouse support
-set selectmode=mouse
-set mousefocus
-set mouse=a
+    """"""""""""""""""""""""""""""""""""""
+    "           General Settings         "
+    """"""""""""""""""""""""""""""""""""""
+    syntax on                                                            " syntax highlighting
+    filetype plugin on                                                   " enables filetype
+    set listchars=nbsp:¬¨¬®,eol:¬¨‚àÇ,tab:>-,extends:¬¨¬™,precedes:¬¨¬¥,trail:‚Äö√Ñ¬¢ " whitespace chars
+    set autoindent smartindent                                           " auto/smart indent
+    set expandtab                                                        " expand tabs to spaces
+    set smarttab                                                         " tab and backspace are smart " 
+    set ttyfast
+
+    """""""""""""""""""""""""""""""""""""""
+    "           Menu completions          "
+    """""""""""""""""""""""""""""""""""""""
+    set wildmode=full wildmenu                            " Command-line tab completion
+    set infercase                                         " AutoComplete in Vim
+    set completeopt=longest,menu,menuone
+    set wildignore+=*.o,*.obj,*.pyc,*.DS_STORE,*.db,*.swc
 
 
-"""""""""""""""""""""""""""""""""""""""
-"    Keystrokes -- Moving Around      "
-"""""""""""""""""""""""""""""""""""""""
-"Space is so much easier than :
-noremap <space> :
-" have the h and l cursor keys wrap between lines (like <Space> and <BkSpc> do
-" by default), and ~ covert case over line breaks; also have the cursor keys
-" wrap in insert mode:
-set whichwrap=h,l,~,[,]
-" backspace over anything
-set backspace=indent,eol,start
-" Use smarte paste for preserving identation when copying and pasting
-nmap <silent> ,p :SmartPaste<cr>
-" Show a list of recently opend files:
-nmap ,r :FuzzyFinderMruFile<cr>
-" Show a list of files to be regex matched, under the current dir (a la textmate)
-nmap ,f :FuzzyFinderTextMate<cr>
-let Tlist_WinWidth = 50
-" Task list bindings:
-map <silent> ,T :TaskList<CR>
-"Tag list
-map <silent> ,t :Tlist<CR>
-" joining lines
-noremap ,j :join<cr>
-" Bindings for tab switching:
-" change tabs with shift tab
-nnoremap <S-Tab> <C-W>w;
-"" Scrolling
-no J 20j
-no K 20k
-" List whitespace
-nn <silent> ,<space> :se nolist!<cr>
-" Buffer Window Focus
-nn ,k       <C-W>k<C-W>_
-nn ,=       <C-W>=
-" Yank to all app's
-no ,y !pbcopy<cr><esc>u 
-" use smart paste "
-nmap <silent> ,p :SmartPaste<cr>
-" ,nn will toggle NERDTree on and off
-nmap ,nn :NERDTreeToggle<cr>
-
-"""""""""""""""""""""""""""""""""""""""
-"           Plugins                   "
-"""""""""""""""""""""""""""""""""""""""
-" MiniBuffer support:
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-
-" tag list :
-let Tlist_Sort_Type = "name"
-"""""""""""""""""""""""""""""""""""""""
-"           Spelling                  "
-"""""""""""""""""""""""""""""""""""""""
-if v:version >= 700
-  setlocal spell spelllang=en
-  nmap ,ll :set spell!<CR>
-  nmap ,le :set spelllang=en<CR>
-  nmap ,lp :set spelllang=pt<CR>
-endif
-"   Correct some spelling mistakes    "
-ia teh      the
-ia htis     this
-ia tihs     this
-ia funciton function
-ia fucntion function
-ia funtion  function
-ia retunr   return
-ia reutrn   return
-ia sefl     self
-ia eslf     self
+    """""""""""""""""""""""""""""""""""""""
+    "           GUI Stuff                 "
+    """""""""""""""""""""""""""""""""""""""
+    set mousemodel=extend " Enable mouse support
+    set selectmode=mouse
+    set mousefocus
+    set mouse=a
 
 
-"""""""""""""""""""""""""""""""""""""""
-"           GUI Stuff                 "
-"""""""""""""""""""""""""""""""""""""""
-autocmd BufRead *.json set filetype=javascript " clojure filetype:
-autocmd BufRead *.as set filetype=actionscript " actionscript syntax:
-autocmd BufRead *.clj set filetype=clojure     " clojure filetype:
-autocmd BufRead *.mxml set filetype=mxml       " mxml files:
-let mapleader=","
+    """""""""""""""""""""""""""""""""""""""
+    "    Keystrokes -- Moving Around      "
+    """""""""""""""""""""""""""""""""""""""
+    "Space is so much easier than :
+    noremap <space> :
+    " have the h and l cursor keys wrap between lines (like <Space> and <BkSpc> do
+    " by default), and ~ covert case over line breaks; also have the cursor keys
+    " wrap in insert mode:
+    set whichwrap=h,l,~,[,]
+    " backspace over anything
+    set backspace=indent,eol,start
+    " Use smarte paste for preserving identation when copying and pasting
+    nmap <silent> ,p :SmartPaste<cr>
+    " Show a list of recently opend files:
+    nmap ,r :FuzzyFinderMruFile<cr>
+    " Show a list of files to be regex matched, under the current dir (a la textmate)
+    nmap ,f :FuzzyFinderTextMate<cr>
+    let Tlist_WinWidth = 50
+    " Task list bindings:
+    map <silent> ,T :TaskList<CR>
+    "Tag list
+    map <silent> ,t :Tlist<CR>
+    " joining lines
+    noremap ,j :join<cr>
+    " Bindings for tab switching:
+    " change tabs with shift tab
+    nnoremap <S-Tab> <C-W>w;
+    "" Scrolling
+    no J 20j
+    no K 20k
+    " List whitespace
+    nn <silent> ,<space> :se nolist!<cr>
+    " Buffer Window Focus
+    nn ,k       <C-W>k<C-W>_
+    nn ,=       <C-W>=
+    " Yank to all app's
+    no ,y !pbcopy<cr><esc>u 
+    " use smart paste "
+    nmap <silent> ,p :SmartPaste<cr>
+    " ,nn will toggle NERDTree on and off
+    nmap ,nn :NERDTreeToggle<cr>
 
-"""""""""""""""""""""""""""""""""""""""
-"           backup options            "
-"""""""""""""""""""""""""""""""""""""""
-set backupdir=~/tmp,/tmp " backups (~)
-set directory=~/tmp,/tmp " swap files
-set backup               " enable backups
+    """""""""""""""""""""""""""""""""""""""
+    "           Plugins                   "
+    """""""""""""""""""""""""""""""""""""""
+    " MiniBuffer support:
+    let g:miniBufExplMapWindowNavVim = 1
+    let g:miniBufExplMapWindowNavArrows = 1
+    let g:miniBufExplMapCTabSwitchBufs = 1
+    let g:miniBufExplModSelTarget = 1
+
+    " tag list :
+    let Tlist_Sort_Type = "name"
+    """""""""""""""""""""""""""""""""""""""
+    "           Spelling                  "
+    """""""""""""""""""""""""""""""""""""""
+    if v:version >= 700
+      setlocal spell spelllang=en
+      nmap ,ll :set spell!<CR>
+      nmap ,le :set spelllang=en<CR>
+      nmap ,lp :set spelllang=pt<CR>
+    endif
+    "   Correct some spelling mistakes    "
+    ia teh      the
+    ia htis     this
+    ia tihs     this
+    ia funciton function
+    ia fucntion function
+    ia funtion  function
+    ia retunr   return
+    ia reutrn   return
+    ia sefl     self
+    ia eslf     self
 
 
-"""""""""""""""""""""""""""""""""""""""
-"           Clipboard Management      "
-"""""""""""""""""""""""""""""""""""""""
-"" Improve Vim copy for OSX terminal
-if has('gui_running')
-    set mousefocus          " Mouse can control splits
-endif
-"Make sure paste mode is on before pasting
-function! SmartPaste()
-    set paste
-    normal! p`[=`]
-    set nopaste
-endfunction
-command! -bar            SmartPaste   :call SmartPaste()
+    """""""""""""""""""""""""""""""""""""""
+    "           GUI Stuff                 "
+    """""""""""""""""""""""""""""""""""""""
+    autocmd BufRead *.json set filetype=javascript " clojure filetype:
+    autocmd BufRead *.as set filetype=actionscript " actionscript syntax:
+    autocmd BufRead *.clj set filetype=clojure     " clojure filetype:
+    autocmd BufRead *.mxml set filetype=mxml       " mxml files:
+    let mapleader=","
 
-</code>
+    """""""""""""""""""""""""""""""""""""""
+    "           backup options            "
+    """""""""""""""""""""""""""""""""""""""
+    set backupdir=~/tmp,/tmp " backups (~)
+    set directory=~/tmp,/tmp " swap files
+    set backup               " enable backups
+
+
+    """""""""""""""""""""""""""""""""""""""
+    "           Clipboard Management      "
+    """""""""""""""""""""""""""""""""""""""
+    "" Improve Vim copy for OSX terminal
+    if has('gui_running')
+        set mousefocus          " Mouse can control splits
+    endif
+    "Make sure paste mode is on before pasting
+    function! SmartPaste()
+        set paste
+        normal! p`[=`]
+        set nopaste
+    endfunction
+    command! -bar            SmartPaste   :call SmartPaste()
+
+
