@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email validation in Actionscript 3 &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="Email validation in Actionscript 3 ">
+    <link rel="canonical" href="http://www.stimuli.com.br/trane/2007/sep/13/email-validation-actionscript-3/">
+     
+           
+    <meta property="og:title" content="Email validation in Actionscript 3 "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/trane/2007/sep/13/email-validation-actionscript-3/"/>
+    
+
+    
+    <meta property="og:description" content="Email validation in Actionscript 3"/>
+    <meta name="description" content="I've been playing with flex lately and I though the best way to get the hang of it was to use it ..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2007-13-September" title="September 13, 2007">September 13, 2007</time>
+            </div>
+            <h1 class="title">Email validation in Actionscript 3</h1>
+            
+        </header>
+
+        <section>
+            <p>I’ve been playing with flex lately and I though the best way to get the hang of it was to use it in small pieces. One of the most obvious places for using the flex framework seemed form validation. Since it is <strong>enterprise</strong> ready, validation must be top notch. And then I stumbled upon the monstrous 500+ lines of code mx.validators.EmailValidator class. Sure, it’s doing a lot more than checking if a String is a valid email address. It will tell you if there is too litle at signs, too many at signs, and many other possible combination of invalid email addresses.</p>
+
+<p>Wow! This is such a case of over engineering! If someone is typing a email addresses on a form, they probably know what it looks like. I’ve never seen such detailed error messages, and honestly, that’s a good thing. Using the EmailValidator from flex will weight 6kb of sources. If it’s that complex it sure will do a great job at validating emails, you’d think. But shockingly, the email validation is a great hack: no regex just a bunch of string searches such as:</p>
+
+<pre><code>var ampPos:int = emailStr.indexOf(&quot;@&quot;);
+if (ampPos == -1)</code></pre>
+
+<p>And so forth. Ouch! Regexes can be daunting and intimidating, but sometimes avoiding a regex will cause a lot more trouble that it will save you. This is an invalid email address, according to the flex validator: “arthur+latenight@somedomain.com”. Not only plus signs are legal at the address part, but they’re very useful. If your mail server is configured correctly (and unfortunately many aren’t) and you have an email account such as “arthur@somedomain.com”, then you can use many variations of “arthur+a.web.store@somedomain.com” and still get those delivered to you. This is great for checking if a company has passed your personal information to others, or generating automated rules for filtering or forwarding. Gmail allows that, and I use it all the time.</p>
+
+<p>Getting email validation right is tough. Zeh couldn’t get his email to be <a href="http://labs.zeh.com.br/blog/?p=70">accepted in so many places he had to change</a> it. The <a href="http://tools.ietf.org/html/rfc2822#section-3.4.1">spec</a> allows many variations such as: arthur’@’debert@somedomain.com and other bizarre cases. You don’t have to allow them all, but you should definitely allow for the most common ones. Flex, being a framework for client side programming, should really do a better job at validating emails.</p>
+
+<p>In the end you have a heavy, tightly coupled framework that deals with really edge cases (such as warning a user that his email has too many at signs!) but not taking enough care to validate emails correctly.</p>
+
+<p>I’ve hacked an EmailValidator class that is much more light weight and hopefully gets most emails right. You can <a href="http://media.stimuli.com.br:8080/media/misc/downloads/email-validation.zip">download it here</a>. Sample usage below:</p>
+
+<pre><code>/* http://www.stimuli.com.br/, Arthur Debert
+*/
+package br.com.stimuli.mona.validators{
+    /*// usage
+    * import br.com.stimuli.mona.validators.EmailValidator;
+    * 
+    * // will return a boolean
+    * EmailValidator.isValidEmail(&quot;someone@someplace.com&quot;);
+    * 
+    * // if you'd rather validate an catch an error you can use:
+    * EmailValidator.validate(&quot;someone@someplace.com&quot;);
+    * 
+    * // You can also specify which class you;d rather throw an error in case the email isn't valid:
+    * EmailValidator.validate(&quot;bad@email@someplace.com&quot;, MyErrorClass);
+    * 
+    * // You can also specify the message to be passed to the error class
+    * EmailValidator.validate(&quot;bad@email@someplace.com&quot;, Error, &quot;Bad email!&quot;);
+    * 
+    * // If you have an input where people can type a few email addresses you can validate a whole list
+    * // This will separate and trim each word of text:
+    * EmailValidator.isValidEmailList(&quot;someone@someplace.com, afriend@otherplace.com&quot;);
+    * 
+    * // If you specify an arbitrary separator to test. This will return true:
+    * EmailValidator.isValidEmailList(&quot;someone@someplace.com; afriend@otherplace.com &quot;, &quot;;&quot;);
+    * // But using the default (&quot;,&quot;) separator, this will return false:
+    * EmailValidator.isValidEmailList(&quot;someone@someplace.com; afriend@otherplace.com &quot;,);
+    */
+    public class EmailValidator{
+
+        public function EmailValidator() {
+            throw new Error(&quot;The EmailValidator class is not intended to be instantiated.&quot;);
+        }
+    
+        // permissive, will allow quite a few non matching email addresses
+        public static const EMAIL_REGEX : RegExp = /^[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+
+        /** Checks if the given string is a valid email address.
+        *  @param email The email address as a String
+        *  @return True if the given string is a valid email address, false otherwise.
+        */
+        public static function isValidEmail(email : String) : Boolean{
+            return Boolean(email.match(EMAIL_REGEX));
+        }
+    
+        /* Splits a string with the separator character, strips white characters and checks if all of them are valid
+        */
+        public static function isValidEmailList(emailList : String, separator : String = &quot;,&quot;) : Boolean{
+            var addresses : Array = emailList.split(separator);
+            for each (var email : String in addresses){
+                if (!isValidEmail(email.replace(/\s/, &quot;&quot;)))return false;
+            }
+            return true;
+        }
+    
+        public static function validate(email : String, errorClass : Class = null, errorMessage : String = &quot;Invalid e-mail address.&quot;) : void{
+            if (isValidEmail(email) )return;
+            errorClass = errorClass || Error;
+            throw new errorClass(errorMessage)
+        }
+    }
+}</code></pre>
+
+<p>If you catch valid emails that this regex is complaining about, please let me know. you can also get the full scoop on the nitty gritty of email validation <a href="http://www.regular-expressions.info/email.html">here</a>.</p>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Email validation in Actionscript 3" data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

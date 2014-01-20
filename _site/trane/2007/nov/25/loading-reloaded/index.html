@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Reloaded &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="Loading Reloaded ">
+    <link rel="canonical" href="http://www.stimuli.com.br/trane/2007/nov/25/loading-reloaded/">
+     
+           
+    <meta property="og:title" content="Loading Reloaded "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/trane/2007/nov/25/loading-reloaded/"/>
+    
+
+    
+    <meta property="og:description" content="Loading Reloaded"/>
+    <meta name="description" content="Controlling loading is tedious, error prone, and each projects has such specific requirements tha..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2007-25-November" title="November 25, 2007">November 25, 2007</time>
+            </div>
+            <h1 class="title">Loading Reloaded</h1>
+            
+        </header>
+
+        <section>
+            <p>Controlling loading is tedious, error prone, and each projects has such specific requirements that you end up rewriting loading code. A lot. In my last project I spent 4 hours debugging download code and promised my self I would solve this annoyance once and for all. So in the best &quot;let me be lazy&quot; fashion, I decided to write my final loading code.</p>
+
+<p>Everybody has been there, and there are many classes around to manage loading, but I've never found one that was complete, flexible and easy enough to use. AS3 has created some kind of loading hell: so many classes to import and understand, a plethora of listeners, the need for error handling and the new API objects (Bitmap, DisplayObject) have added more corner cases to remember. Worse still, videos are still left in some twisted logic maze.</p>
+
+<p><a href="http://github.com/arthur-debert/BulkLoader/">BulkLoader</a> is my shot at trying to unify the most common cases for loading management into a reusable library for AS3.</p>
+
+<p>It is licensed under an open source MIT license. Features:</p>
+
+<ul>
+<li>Unified interface for different loading types.</li>
+
+<li>Unified progress notification.</li>
+
+<li>Events for individual items and as a group.</li>
+
+<li>Priority.</li>
+
+<li>Stop,resuming and removing individually as well as in bulk.</li>
+
+<li>Configurable number of maximum connections.</li>
+
+<li>Cache managing.</li>
+
+<li>Statistics about loading (latency, speed, average speed).</li>
+
+<li>Multiple kinds on progress indication: ratio (items loaded / items to load), bytes, and weighted percentage.</li>
+
+<li>Multiple number of retries.</li>
+
+<li>Configurable logging.</li>
+
+<li>Video: meta data storage, streaming as soon as connection is open, sane progress handling.</li>
+
+<li>Helpers for different kinds of contents</li>
+
+<li>Easy memory management (releasing objects)</li>
+
+<li>Connection pooling.</li>
+</ul>
+
+<p>Design goals:</p>
+
+<ul>
+<li>Minimal imports.</li>
+
+<li>Few method to learn.</li>
+
+<li>Dynamic nature: items can be added by specifying a url as a String or a URLRequest .</li>
+
+<li>Items can be assigned an identifier key to be used on retrieval.</li>
+</ul>
+
+<p>At a glance:</p>
+
+<pre><code>var loader : BulkLoader = new BulkLoader(&quot;main&quot;);
+loader.add(&quot;bg.jpg&quot;);
+loader.add(&quot;config.xml&quot;);
+loader.add(&quot;soundtrack.mp3&quot;);
+loader.add(&quot;intro.flv&quot;);
+loader.addEventListener(BulkLoader.PROGRESS, onProgress);
+loader.addEventListener(BulkLoader.COMPLETE, onComplete);
+loader.start();
+
+function onProgress(evt : BulkProgressEvent) : void{
+    trace(evt.percentLoaded);
+}
+
+function onComplete(evt : Event) : void{
+    var bgBitmap = loader.getBitmap(&quot;bg.jpg&quot;);
+    addChild(bgBitmap);
+    var video : Video = new Video();
+    video.attachNetStream(loader.getNetStream(&quot;intro.flv&quot;));
+    parseConfig(loader.getXML(&quot;config.xml&quot;));
+}</code></pre>
+
+<p>The above code in 8 lines:</p>
+
+<ul>
+<li>adds 4 items with different typed to be loaded: xml, mp3, flv, jpg.</li>
+
+<li>created listeners for progress notification and when all items are done.</li>
+</ul>
+
+<p>I needed a class that:</p>
+
+<ul>
+<li>Would wrap up errors elegantly: retries and no errors on browser tabs closed.</li>
+
+<li>Progress that works with many simultaneous items and many simultaneous items of very different sizes</li>
+
+<li>Would let me use (and let me know) as each item was ready, and would allow items that can be streamed (video, sound) to be consumed as soon as possible.</li>
+
+<li>Would treat video as any kind of asset.</li>
+</ul>
+
+<p>I am pretty happy with the results. I feel BulkLoader strikes a good balance between ease of use, flexibility and power. At <a href="http://www.gringo.nu/">work</a> we've used it in a few projects, and users like it.</p>
+
+<p>The thought of managing multiple loadings by hand again makes me shiver. It's the same feeling I got when I started to use a tweening library.</p>
+
+<p>The project is hosted at github. Right now, I believe it's very close the final API. Mostly bug fixes and other enhancements.</p>
+
+<h2 id="links">Links:</h2>
+
+<ul>
+<li>project home at <a href="http://github.com/arthur-debert/BulkLoader/">github</a></li>
+
+<li><a href="http://github.com/arthur-debert/BulkLoader/issues">the issue tracker</a>: if you find a bug, please let me know and I'll get it fixed asap.</li>
+
+<li>An <a href="http://media.stimuli.com.br/projects/bulk-loader/docs/">online doc</a>.</li>
+
+<li>The WIKI <a href="http://github.com/arthur-debert/BulkLoader/wiki/">developer guide</a>.</li>
+
+<li>The <a href="http://groups.google.com/group/bulkloader-users">discussion list</a>.</li>
+</ul>
+
+<h2 id="thanks_to">Thanks to:</h2>
+
+<ul>
+<li>Igor Almeida: my coworker who has been a thorough beta tester. A couple of months ago he wrote a loading manager class that, while has little resemblance to BulkLoader, provided many insights and a good road map of what works (and what doesn't). Igor reported bugs and gave a lot of feedback on features and ideais.</li>
+
+<li><a href="http://www.zeh.com.br/">Zeh</a>: in long emails Zeh has given valuable ideas and discussed a few key issues. Having Zeh give you design ideas is (to steal a phrase from <a href="http://www.paulgraham.com/">Paul Graham</a>) like having Mick Jagger playing on your son's Bar Mitzvah.’</li>
+</ul>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Loading Reloaded" data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BulkLoader :: Refactor me &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="BulkLoader :: Refactor me ">
+    <link rel="canonical" href="http://www.stimuli.com.br/trane/2008/mar/01/bulkloader-refactor-me/">
+     
+           
+    <meta property="og:title" content="BulkLoader :: Refactor me "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/trane/2008/mar/01/bulkloader-refactor-me/"/>
+    
+
+    
+    <meta property="og:description" content="BulkLoader :: Refactor me"/>
+    <meta name="description" content="After BulkLoader was made public in November 2007, it really took of. From about 3 downloads a we..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2008-01-March" title="March 01, 2008">March 01, 2008</time>
+            </div>
+            <h1 class="title">BulkLoader :: Refactor me</h1>
+            
+        </header>
+
+        <section>
+            <p>After BulkLoader was made public in November 2007, it really took of. From about 3 downloads a week, to around 30 daily, since November, totaling over 3 thousand downloads in about three months.</p>
+
+<p>For me this came out as a big surprise. I’d expect coworkers at <a href="http://www.gringo.nu/">Gringo</a> to use it, and maybe a few others, but I’ve never thought it would be that many.</p>
+
+<p>Usage numbers are much harder to guess though, since most hackers would rather checkout from svn, and of course, the majority of people will download it, take a 20 seconds look and leave it at that.</p>
+
+<p>Still, from the mailing list, email exchange and blog posts, I can see that there’s a few programmers using it. This is a great reward.</p>
+
+<p>Turns out, releasing BulkLoader was much, much more work than I’d figure. Documenting, replying to comments, wiki and general maintenance are many times more time consuming than coding actually. It’s been a great exercise in learning how to communicate, write docs, and making sure that BulkLoader will help users getting work done.</p>
+
+<p>When users started to write about it, I realized that there were far more use cases than I had planned for, and it showed. Many thoughtful feature requests came, bug reports. Also more than one person struggle with the same issue made it clear that the docs were either lacking, or that feature behave in a hard to grok manner.</p>
+
+<p>As I started to push more and more updates, and many times, hacking features that were not in my regular usage pattern, sometimes I’d push broken updates, or sometimes break something that used to work.</p>
+
+<h2 id="the_types_mess">The types mess</h2>
+
+<p>Somewhere in January, I realized that there were problems with the way BulkLoader was programmed. One was that, for various reasons, it was necessary to specify the type of an item being added (images, videos, text files, etc), because that would map to internal details regarding how to load them (NetStreams, Sound objects, Loader object and so forth). But I made a deep mess, confusing file extension, mime types and the classes used in BulkLoader to load them. The end result was a big mess of the “types” system, where it was very complex to change, or and understand that part of the code. This also impacted users heavily since types were used from the outside as well.</p>
+
+<h2 id="the_anti_oo_conditionals_spread_all_over_the_place">The anti OO, conditionals spread all over the place</h2>
+
+<p>The other issue, is that I always intend to not expose the LoadingItem instances, to keep them internal. It turns out, that it wasn’t possible to do that, not without restricting some very fair needs. So with time, people would use more and more of LoadingItem objects directly. But LoadingItem was crafted hack after hack, the antithesis of Object Orientation, full of conditionals for each loading type. <a href="http://groups.google.com/group/bulkloader-users/browse_frm/thread/d9a5872c790b3ad3#">This thread</a> laid the plan.</p>
+
+<h2 id="change_but_dont_break">Change but don’t break</h2>
+
+<p>I wanted to get a major refactor done: properly create a class structure for LoadingItems and also clean up the whole types-are-extensions-and-classes mess. But there were so many people using it, and I didn’t want to break things too much. I needed to go into that large refactor, with some assurance that most stuff would simply work: a needed a test suite. I started a new svn branch, the li-refactor branch, and have been hacking on it when time allows for the last month.</p>
+
+<h2 id="testing_is_hard_lets_go_shopping">Testing is hard: let’s go shopping!</h2>
+
+<p>I’ve used some Unit Testing in the past, but very little. Either toy examples for studding, or reading it like documentation. BulkLoader is hard to test. Most features are asynchronous, and very little of the code is reentrant. Also, because it is a singleton of sorts (not really, but all instances are kept in memory) it made it testing hell.</p>
+
+<p>I chose to go with <a href="http://www.asunit.org/">ASUnit</a>, mostly because it looked less tied up to flex libraries and Flex Builder. BulkLoader is now proud to have over 170 test. I am pretty sure that there are more to come, but it is a great start. I’ve decided to keep test out of the main zip download, since most people will never need to touch those, but they are in the svn rep. I’ve kept a copy of ASUnit as well, since I had to patch it a bit to make testing for BulkLoader easier, mostly making sure that tests would run in a serial fashion, and not in parallel (because if it keeping all instances in memory, it made a mess).</p>
+
+<p>Tests got many, many bugs that were lurking around. It’s really impressive how useful they are. There is so much to gain in understanding, how things work, and what in the design promotes bad coupling. This is first real test suite I wrote, and I am sure I’ve made a lot of mistakes in it. But never the less, it has taught me a lot, on testing, BulkLoader design in general, and more importantly, gave me the confidence for a large, much needed refactor.</p>
+
+<h2 id="breaking_backwards_compatibility">Breaking backwards compatibility</h2>
+
+<p>As much as I wished I didn’t have too, some backwards compatibility was broken. Fixing the issues above implied in changing a few details, and since BulkLoader is such a young project, I am glad I have done so.</p>
+
+<h2 id="avoiding_bloat">Avoiding bloat</h2>
+
+<p>One of the hardest issues with a public project is saying no to feature requests. Most are very sensible, and it is a natural impulse to just go ahead and implement them. But BulkLoader has become very large, borderline bloated for a project of it’s scope. So unless something incredibly useful comes out, I am freezing new features and calling this merge a release candidate. I’ll do a couple more of bug fixes releases and then called it a 1.0 day.</p>
+
+<h2 id="and_many_thanks">And many thanks</h2>
+
+<p>To all users who provided bug reports, feature requests and just general feedback. Those contributions are invaluable, and it is very rewarding seeing users begin more productive, doing less grunt work.</p>
+
+<p>For a full list of changes: <a href="http://groups.google.com/group/bulkloader-users/browse_frm/thread/9320421e58b7bd17">mailing list thread</a> for the whole shebang.</p>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="BulkLoader :: Refactor me" data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

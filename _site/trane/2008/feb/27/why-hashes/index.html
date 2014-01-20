@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Hashes? &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="Why Hashes? ">
+    <link rel="canonical" href="http://www.stimuli.com.br/trane/2008/feb/27/why-hashes/">
+     
+           
+    <meta property="og:title" content="Why Hashes? "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/trane/2008/feb/27/why-hashes/"/>
+    
+
+    
+    <meta property="og:description" content="Why Hashes?"/>
+    <meta name="description" content="Every now and then I have to defend the use of hashes in parameters. Usually it is a side issue t..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2008-27-February" title="February 27, 2008">February 27, 2008</time>
+            </div>
+            <h1 class="title">Why Hashes?</h1>
+            
+        </header>
+
+        <section>
+            <p>Every now and then I have to defend the use of hashes in parameters. Usually it is a side issue to something else, and I try to explain my position in 6 words or less, and it ends up sounding like insult or non sense. So today I am writing this so I can provide a link between parenthesis and carry on with the subject in hand.</p>
+
+<p>Using hashes to collect parameters to functions gives the impression that I think they are great, but in fact, I don’t: it’s a poor solution to a very specific problem. It’s a work around a language deficiency, mostly because Actionscript’s lack of a proper abstraction for this particular situation.</p>
+
+<h2 id="what_problem_does_it_solve">What problem does it solve?</h2>
+
+<p>Sometimes you have a method or a function that is very parametrized, you want to control it’s behavior with a many parameters, and many have a default, sensible value, your don’t need to specify them most of the time. Also, you might want to add features to your method in the near future, you want it to remain flexible.</p>
+
+<p>The core issue here, is flexibility. Actionscript has a few features that take you 80% of the way, but sometimes it leaves you 20% off.</p>
+
+<h2 id="default_parameters">Default parameters:</h2>
+
+<p>Let’s say you have a method that plays sounds on the library, by some id which is string. Then, you always have to specify the id.</p>
+
+<pre><code>public function playSound(soundID : String){
+ 	//...
+};</code></pre>
+
+<p>All is well, but you want to be able to control the volume each sound is playing. Maybe all sounds are not properly equalized, or the user has a volume knob he can set at run time. Most of the time, a volume of 1 is appropriate, but a few sounds are way to loud, and you need to tone it down a bit. But still, usually the volume of 1 will do it, and also you don’t want to break backwards compatibility with all the working code you’ve written. Default parameters solve both issues:</p>
+
+<pre><code>public function playSound(soundID : String, volume : Number = 1){
+ 	//...
+};</code></pre>
+
+<p>All working code will keep working. Since you usually want the volume to be 1, this won’t make you type more on most calls, but for that few sounds that were recorded to loud, you can just say:</p>
+
+<pre><code>playSound(&quot;rollover&quot;, 0,5);</code></pre>
+
+<p>In the end you get flexibility, both in terms of code you’ve already written and code you will write. There is no overhead of breaking things, creating a new function or having to educate users. Flexibility is one of the touchstones of well written software.</p>
+
+<h2 id="variable_number_of_parameters">Variable number of parameters:</h2>
+
+<p>In AS3 you can signal that you are expecting an unknown number of parameters with a ”…”. Say you’ve got a function that adds to numbers:</p>
+
+<pre><code>function addNumbers(a : Number, b:Number) : Number{
+   return a + b
+}</code></pre>
+
+<p>Now you need a function that can add 3 numbers. What do you do, create another function that can add 3 numbers?</p>
+
+<pre><code>function addThreeNumbers(a : Number, b : Number, c: Number) : Number{
+	return a + b + c;
+}</code></pre>
+
+<p>That’s ugly, and not very flexible, what if next week you run into the need of adding 5 numbers? Will you create a method call addFiveNumbers ? The solution for this, is to create a function that works with any amount of parameters:</p>
+
+<pre><code>function addNumbers(numbers...) : Void{
+	var result : Number = 0;
+	for(var i : int = 0; i &lt; numbers.length; i++){
+		result += numbers[i]
+	}
+	return result;
+}</code></pre>
+
+<p>Now you can deal with any number of parameters. Your function is very flexible. Old code will still work unmodified, new cases can be dealt with. Flexibility is good.</p>
+
+<p>But having functions with an unknown number of parameters work well when all possible arguments are of the same type and will usually be processed in a loop, such as the example above.</p>
+
+<p>But suppose you’d try that on the playSound above, but now defining if the sound will loop, something like:</p>
+
+<pre><code>function playSound(args...) : void{
+   var soundId : String = args[0];
+   var volume : Number = args[1] || 1;
+   var loops : Boolean = args[2] || false;
+}</code></pre>
+
+<p>This is still flexible, but it is not very maintainable. Lot’s of extra typing, and worse, now the arguments are tied to the order of the args parameter. Unless the order of items has any meaning, or doesn’t mean anything at all (such as when adding numbers), the functionality will depend on an opaque, hidden and unrelated information. So if you want a sound to loop with the default value, you have to say:</p>
+
+<pre><code>playSound(&quot;rollover&quot;, null, true);</code></pre>
+
+<p>But if you then add other features (such as panning, or callbacks) you might simply end up with some case where you need to specify the 6th parameter but not the ones in the middle, now it is just horrible:</p>
+
+<pre><code>playSound(&quot;rollover&quot;, null, false, null, null, onDone )</code></pre>
+
+<p>It’s too easy to err and forget. Sometimes you would pass null, others false… it’s a lot of typing. All in one a very bad solution.</p>
+
+<p>The core problem here, is that parameter passing, both with named parameters and also collapsing parameters into an args… array will make the logic depend on the order, and doesn’t let you mark things as optional. You only want to define the first and 7th option, not anything else. You shouldn’t have to remember long list of parameters and their correct order.</p>
+
+<h2 id="standard_java_solution_create_an_object_for_holding_an_specific_set_of_properties">Standard Java solution: create an object for holding an specific set of properties.</h2>
+
+<p>This is how you’d do it in Java, create a SoundPlayProperties object that does nothing. Then you can say:</p>
+
+<pre><code>var soundProperties : SoundPlayProperties = new SoundPlayProperties(&quot;rollover&quot;);
+soundProperties.loops = true;
+playSound(soundProperties);</code></pre>
+
+<p>I’ll get my self covered saying this is just a matter of taste. Some people like that better. But this is the standard excuse for not sticking to an opinion. I don’t like the above solution. It is not elegant, it is verbose, it imposes a higher learning curve. Main issues with it:</p>
+
+<ul>
+<li>Complexity: the minimum number of tokens for this is 3, one for function call, another for the id, and other for the looping. The above code has 11 That’s way, way too many.</li>
+
+<li>Overhead: now, you added another class, just to define options to a method. Users will no longer be able to find out how the method works by just reading the method signature, or the documentation to that method. Users will (I least I do) check out the modules for a library I am using. If a very simple library takes 30 classes, it really scares me.</li>
+
+<li>Performance overhead: now, besides the method call you are creating an object.</li>
+
+<li>Moral high ground: without trying to go overboard on over stretching the implications of a simple choice, or turning into a flamewar of Java doesn’t know what object orientation is. But an object is useful mostly for defining state and behavior, not just as a property list that doesn’t do anything.</li>
+
+<li>Users expect to change the SoundPlayProperties objects later on, and have that change reflect on the playSound method.</li>
+</ul>
+
+<p>Its a long rambling just to say it rubs me the wrong way, no I don’t like it.</p>
+
+<h2 id="hashes">Hashes:</h2>
+
+<p>Passing those options as hash keys, like this: playSound(“rollover”, {loops:true}); Provide a few advantages:</p>
+
+<ul>
+<li>Order doesn’t matter any more</li>
+
+<li>Very readable, you can see exactly what that call means, with very few superfluous tokens (just the “{}”).</li>
+
+<li>You can choose to specify as many, or as few options as you like.</li>
+
+<li>If in he future you decide to add another option, you are not breaking anyones code or habit.</li>
+
+<li>Makes it very clear that those options will be used in the playSound method, and not later.</li>
+</ul>
+
+<p>A few disadvantages remain though:</p>
+
+<ul>
+<li>An extra object creation ( performance overhead).</li>
+
+<li>No static typing, if you make a type it won’t let you know, and while you can document the options on one place (the method doc).</li>
+
+<li>Tt’s not very discoverable.</li>
+</ul>
+
+<p>In the end, it’s just a hack, a work around, but right now, it feels to be the make fewer compromises. Most of the time, you either wish to create objects really, or have a small number of parameters, but sometimes you don’t.</p>
+
+<h2 id="the_ideal_solution">The ideal solution</h2>
+
+<p>Is to have a language with the right feature, like python has, which is to have optional named parameters, that won’t depend on evocation order, so in this case, you can say:</p>
+
+<pre><code>function playSound(soundID : String /* obligatory */, volume: Number=1, rightPanning: Number=1, leftPanning: Number=1, loops : Boolean=true, onCompleteCallBack : Function = null) : void{
+
+}</code></pre>
+
+<p>This will give you a lot of flexibility, creates no overhead, is very readable, and doesn’t force the user to learn another class. You can specify as many options as you need, in any order you need, and keep it readable. You could say:</p>
+
+<pre><code>playSound(&quot;rollover&quot;, loops=true);
+// or
+playSound(&quot;rollover&quot;, onCompleteCallBack=doSomething);
+// or many otions:
+playSound(&quot;rollover&quot;, loops=true, onCompleteCallBack=doSomething, volume=0.5);</code></pre>
+
+<p>This post was a bit longer than I expected, but I was tired of trying to squeeze all this info inside a one liner in a forum thread.</p>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Why Hashes?" data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweener Tips &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="Tweener Tips ">
+    <link rel="canonical" href="http://www.stimuli.com.br/trane/2007/nov/07/tweener-tips/">
+     
+           
+    <meta property="og:title" content="Tweener Tips "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/trane/2007/nov/07/tweener-tips/"/>
+    
+
+    
+    <meta property="og:description" content="Tweener Tips"/>
+    <meta name="description" content="I've been using [Tweener](http://code.google.com/p/tweener/) for almost an year now, and I though..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2007-07-November" title="November 07, 2007">November 07, 2007</time>
+            </div>
+            <h1 class="title">Tweener Tips</h1>
+            
+        </header>
+
+        <section>
+            <p>I’ve been using <a href="http://code.google.com/p/tweener/">Tweener</a> for almost an year now, and I thought I’d share a few quick and useful tips.</p>
+
+<h2 id="delayed_function_call_or_a_poor_mans_timer">Delayed Function call, or a Poor man’s timer</h2>
+
+<p>AS3 has the Timer class which is handy, but sometimes you just need a quick “call this function in x seconds”. No need to instantiate an object, keep its reference, add event listeners, a function and clear up the timer. This is so simple (and great):</p>
+
+<pre><code>Tweener.addTween(this, {time:0.3, onComplete: myFunction});</code></pre>
+
+<p>Or, using an anonymous function:</p>
+
+<pre><code>Tweener.addTween(this, {time:0.3, onComplete: function():void{
+	// do something here!
+	trace(&quot;hello&quot;);
+});</code></pre>
+
+<p>Note that you don’t have to tween any property at all for this to work. Just specify any object as the target, the time in seconds you wish to wait until the function is called and which function to call.</p>
+
+<h2 id="using_base_as_a_template_for_tweens">Using “base” as a template for Tweens</h2>
+
+<p>Some animations / visual effects are used many times over in the same project. Using the base property you can create a “template” of a tween and specialize it later (like adding an onComplete callback for some runs of the effect). Suppose you have a recurring tween that scale items and does a fade. You can say:</p>
+
+<pre><code>// creates a &quot;template&quot; to be used more than once:
+var scaleFadeIn : Object = {
+	alpha:1,
+	_scale:1,
+	time:0.5,
+	transition: &quot;linear&quot;
+}
+// later in you code you can say:
+Tweener.addTween(myMovieClip, {base:scaleFadeIn});
+// or you can &quot;enhance it&quot;, for example with an onComplete callback:
+Tweener.addTween(myMovieClip, {base:scaleFadeIn, onComplete: callHome});</code></pre>
+
+<p>The great thing about this is easier maintenance. If you later on decide that you want to try another transition or time, you only change the template, the “base” for those Tweens.</p>
+
+<p>Note that base is very flexible, as they can be nested:</p>
+
+<pre><code>var scaleAndColorFadeIn : Object = {
+	base: scaleFadeIn,
+	_color: 0xFF0000
+}</code></pre>
+
+<p>In this case, you “add” all settings from the scaleFadeIn and the scaleAndColorFadeIn. More on the <a href="http://hosted.zeh.com.br/tweener/docs/en-us/">base property documentation page</a>.</p>
+
+<h2 id="using_settimescale_to_speed_up_testing">Using setTimeScale to speed up testing</h2>
+
+<p>This is a real life saver. Tweener uses a sort of internal clock, a value by which all time operations are measured, called timeScale. Sometimes you are coding some section of the website, but to get there you have to see the loading animations, menu transitions and so on. Because you are seeing this over and over again, those precious seconds until you get to the part that really interests you is very boring, so you can “fast forward” them. At the beginning of your website you can just say:</p>
+
+<pre><code>// this will run everything 3 times as fast
+Tweener.timeScale(3);</code></pre>
+
+<p>Once you’ve reached the section / part of the website that you are actually working on, you can just set the speed back to normal:</p>
+
+<pre><code>// this will set the speed back to normal
+Tweener.setTimeScale( 1);</code></pre>
+
+<p>Another use for this is when you want to see your animations in “slow motion”. Setting time scale will allow the rhythm to be the same, you’re just slowing down the tempo, maybe you are interested in looking how a blur really looks or if some items are overlapping.</p>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Tweener Tips" data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

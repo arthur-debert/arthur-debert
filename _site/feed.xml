@@ -1,0 +1,1830 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>http://www.stimuli.com.br</link>
+    <atom:link href="http://www.stimuli.com.br/feed.xml" rel="self" type="application/rss+xml" />
+    <description></description>
+    <language>en-us</language>
+    <pubDate>Mon, 20 Jan 2014 05:52:19 +0000</pubDate>
+    <lastBuildDate>Mon, 20 Jan 2014 05:52:19 +0000</lastBuildDate>
+
+    
+    
+    <item>
+      <title>Flash Camp 2011</title>
+      <link>http://www.stimuli.com.br/talks/flash-camp-2011/</link>
+      <pubDate>Sun, 20 Nov 2011 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/talks/flash-camp</guid>
+      <description>&lt;p&gt;For &lt;a href=&quot;http://asdevs.com.br/flashcampsp/&quot;&gt;Flash Camp 2011 event&lt;/a&gt; I talked about long term thinking about a developer’s career.&lt;/p&gt;
+
+&lt;p&gt;Slides are here: &lt;code&gt;&amp;lt;script async class=&amp;quot;speakerdeck-embed&amp;quot; data-id=&amp;quot;4eca4ed420e5210054009959&amp;quot; data-ratio=&amp;quot;1.2994923857868&amp;quot; src=&amp;quot;//speakerdeck.com/assets/embed.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>30 Anos esta noite</title>
+      <link>http://www.stimuli.com.br/talks/python-brazil-2011/</link>
+      <pubDate>Tue, 20 Sep 2011 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/talks/python-brazil</guid>
+      <description>&lt;p&gt;Gave a talk on &lt;a href=&quot;http://2011.pythonbrasil.org.br/2011/programacao/grade-do-evento/django/integracao-continua-testes-e-qualidade&quot;&gt;Python Brazil’s 2011 event&lt;/a&gt; about quality, testing and continuous integration.&lt;/p&gt;
+
+&lt;p&gt;Slides are here: &lt;code&gt;&amp;lt;script async class=&amp;quot;speakerdeck-embed&amp;quot; data-id=&amp;quot;4e88a1118f993b0050004fb0&amp;quot; data-ratio=&amp;quot;1.2994923857868&amp;quot; src=&amp;quot;//speakerdeck.com/assets/embed.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And the &lt;a href=&quot;http://www.youtube.com/watch?v=4f-1oNghE6w&quot;&gt;talk on youtube&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>The Web does not need flash.</title>
+      <link>http://www.stimuli.com.br/trane/2010/feb/01/the-web-doe-not-need-flash/</link>
+      <pubDate>Mon, 01 Feb 2010 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2010/feb/01/the-web-doe-not-need-flash</guid>
+      <description>&lt;p&gt;With the iPad launch, the lack of the Flash runtime has received a lot of slashback. This gave me the opportunity to gather a few thoughts on Flash, and where it is going. I’ve seen a lot of hate from people who don’t know much about Flash, and also a very defensive and blind reaction from inside the Flash world. I wanted to give a different perspective. A few disclaimers:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I am not a known name in the Flash community, but I am not a Flash hater either. Actionscript is the language I’ve programmed the most. I’ve made my living primarily out of it for 5 years or so. In fact I keep two open source Actionscript projects( &lt;a href=&quot;http://code.google.com/p/bulk-loader/&quot;&gt;BulkLoader&lt;/a&gt; and &lt;a href=&quot;http://code.google.com/p/printf-as3/&quot;&gt;printf as3&lt;/a&gt;) and have contributed to &lt;a href=&quot;http://code.google.com/p/tweener/&quot;&gt;others&lt;/a&gt;.&lt;/li&gt;
+
+&lt;li&gt;Technologies come and go, but their effects linger on for quite a while. COBOL is dead for any intended purposes, and has been dead for 20 years. But still, there is a lot of people making a living from it. Same thing with Microsoft. Microsoft is still huge and will remain so for quite some time. But neither of these are relevant for the future tech landscape. They are not dictating new directions. They’re influence and usage will only decrease, not increase.&lt;/li&gt;
+
+&lt;li&gt;I’ll call Macrodobe initiatives for lack of better judgment. I don’t know in detail (nor intend to) which were started at Macromedia, Adobe or both.&lt;/li&gt;
+
+&lt;li&gt;I am not picking on the FWA itself. It’s a great site, and has been invaluable to the community. I’ve worked on a few projects featured on the website, and I’m always proud to be there.&lt;/li&gt;
+
+&lt;li&gt;I have no illusions regarding Apple’s stance for blocking the flash player. It’s a dog eat dog world. Adobe is not a saint either. &lt;a href=&quot;http://al3x.net/2010/01/28/ipad.html&quot;&gt;Alex Payne&lt;/a&gt; post hit the mark. I am not a fan of walled gardens either.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With that said, I think Flash is marked for a sharp decline in importance, and has been so for quite a few years. It’s inevitable. The current situation with the iPad and HTML5’s video capabilities are only the harbingers of it’s decline.&lt;/p&gt;
+
+&lt;h2 id=&quot;the_rise_of_flash&quot;&gt;The rise of Flash:&lt;/h2&gt;
+
+&lt;p&gt;HTML was invented to solve a very different problem than what it has been put to in the last few years. That mismatch meant that there was a large demand for capabilities it didn’t possess. Flash made it’s rise out of these major gaps on the web technologies of the day, namely:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(1) Static content: visual animation. When Flash appeared, the best you could do for animation was a GIF.&lt;/li&gt;
+
+&lt;li&gt;(2) Interactivity: HTML was though of a document format. Until 2004 or so, with the raise of Ajax, web pages had zero interaction (except for forms). Flash offered an answer to that.&lt;/li&gt;
+
+&lt;li&gt;(3) Design: again, HTML was never though as a presentation format. Until CSS came along, it was very messy to control HTML visually with some sophistication. Even now, with all the browser compliance differences, it’s not easy to control pixel perfect the visual layout. Regarding fonts, HTML has no great solution yet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Later on, Macrodobe was very clever to move Flash to new pastures:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(4) Audio&lt;/li&gt;
+
+&lt;li&gt;(5) Video&lt;/li&gt;
+
+&lt;li&gt;(6) Advanced bitmap manipulation&lt;/li&gt;
+
+&lt;li&gt;(7) Video recording&lt;/li&gt;
+
+&lt;li&gt;(8) Sockets, for real time messaging.&lt;/li&gt;
+
+&lt;li&gt;(9) Local storage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Until 2004 or so, Flash was the only good alternative to all of those. In that context, yes, the only way to make ‘rich’ applications (an ill defined term, but still), on the web was to use Flash. And then came video. Video helped spread Flash like wildfire. The prior options such as Quicktime, WMP were a mess: too many codecs and the download took forever.&lt;/p&gt;
+
+&lt;p&gt;If you look to the traditional web dev community, all of those issues have been, one by one, tackled. Static content, Interactivity and Design are pretty much solved with the advances in standards, the improvement in Javascript runtimes and the massive options of open source libs. Not literally. Flash can still exhibit greater visual freedom than HTML + CSS, but it’s good enough for most use case. See ‘worse is better’. For 95% of the web properties, standards are efficient solution to those. Have you ever seen someone says they don’t user Facebook because the typography is boring?&lt;/p&gt;
+
+&lt;p&gt;For issues 4 through 8, HTML is catching up. These will take a while to be widespread and reliable, but it’s inevitable. They are coming, all but #7. Video recording is a niche market. It won’t dictate the direction the web is going by any means.&lt;/p&gt;
+
+&lt;p&gt;The big picture is that Flash was the only viable alternative to work around many of HTML’s short comings as a document format. But webapps have become mass produced and mass consumed. The standards committees move slowly, but it has make steady progress. Each year one of Flash’s unique capabilities get a reasonable alternative.&lt;/p&gt;
+
+&lt;h2 id=&quot;understanding_the_hate&quot;&gt;Understanding the hate.&lt;/h2&gt;
+
+&lt;p&gt;Flash is a strange beast, because of it’s unique origin. It was it an animation tool, then a design tool, then an interactive environment than a platform. While been mostly proprietary most of the time. The net result is that the Flash community is somewhat disjointed from the general web dev community. There is some overlap on the larger web , but there is a great divide. It’s hard for people to understand where all the Flash hate comes from. The main forces between Flash hate are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Religiousness. Yes, there is a small but very vocal group of OSS zealots. They’ve always criticised Flash on the basis of it been a proprietary technology alone. While this group is very loud on the blogosphere, it’s not a driving force for most companies. Businesses tend to be pragmatic.&lt;/li&gt;
+
+&lt;li&gt;Pragmatism. Lack of support for various platforms. Adobe has improved recently, but the fact is that many platforms (64 bits, freebsds) are or were totally neglected for a long time. Again, these were not a large number of users, but they are very loud. With the diversity of devices coming up (mobile, pads, car panels, talking toaster, whatever), this will only get worse. It will be hard for Adobe to keep stable and usable versions of Flash on the wide range of platforms yet to come. Many companies are not keen on depending on Adobe alone.&lt;/li&gt;
+
+&lt;li&gt;Advertising. If you exclude video, an enormous amount of Flash work revolves around advertising. Be it the ads themselves, or campaign micro sites. Just take a look at &lt;strong&gt;the&lt;/strong&gt; Flash showcase, The FWA, and take note of how many are marketing campaign. Folks are not very hot about ads on the web, specially the rich media, processor consuming ones. Those are precisely the ones in which Flash prevails. They’ve simply conflated hate for the delivery medium with the message. Oh well.&lt;/li&gt;
+
+&lt;li&gt;Disregard for UI and web conventions. As a case in point, I’ll take the FWA website as an example, as it’s one of the most important websites in the Flash world. It’s basically a data grid, with a simple filtering, and a small detail pane for content (agencies, sites). To this day, there is no way to send a direct link to a campaign or anything else but interviews. It’s nuts.&lt;br /&gt;In the name of exercising more control over the visual design, the FWA makes it awfully hard to use it other sites on the web. Upon a closer inspection where is the rich application? It’s basically text, lists and thumbnails. I don’t mean to pick on the FWA by itself, it’s just that it’s really makes it easy make the point. It’s a well made, high profile, commercial site within the community. It’s the poster child for what was discussed above. Six years ago, Flash was the only viable way to deliver such an experience. But now, that could be achieved easily with regular web technologies.&lt;br /&gt;Yes, you can do deeplink in Flash. But the amount of work would be enormous (hint hint: if it’s that easy to do, why isn’t it done by now?). HTML’s structure is a pretty good fit for it.&lt;br /&gt;And don’t get me started on the crazy non standards UI controls, scrollbars, the lack of any sane tabbing on input elements. And that the browser cannot offer you an auto complete option for your email address. The keyboard focus is funky. Almost all of these an be done in Flash, but it’s a lot of work. By the time you’re done getting everything to work as people expect you’ve spent much more time than HTML would have taken. Just look at most Flash websites. They tend to get it wrong, precisely because it takes a lot of work to get it right. I cringe on the though of how many hours of my life I’ve spent coding scroll bars with quirky behaviors. The flip side of it, is that blindly following all pre-established UI conventions is not the way forward. While the experimentation is surely welcome, most UI improvements I’ve seen in the past years have come from games, other web apps (auto-complete boxes) and Apple. I for one am yet to see a use for 3D video or interfaces outside of gaming and simulations.&lt;/li&gt;
+
+&lt;li&gt;Self centered. This one is pretty shocking to me. Of all the websites and apps I use regularly, Flash is only used for video / audio. Campaigns are a tiny niche. Just to give you an idea a, again, the FWA, which is among the most visited Flash sites, ranks number #17,216 on Alexa. Newgrounds with its massive user base: 719th.&lt;br /&gt;Most Actionscript programmers I know show very little understanding that their niche is almost as small as Lisp, Scheme and much smaller than COBOL. To add insult to injury, most designers on the Flash space have little or no knowledge of HTML or the web. For years the flash world appeared to find plain old HTML to be ugly and boring.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That said, much of the hate geared towards Flash is either misguided (it’s the ads, not the plugin!) or uninformed, or no longer valid. But still, those cultural artifacts take a while to disappear.&lt;/p&gt;
+
+&lt;h2 id=&quot;the_web_will_be_everywhere_and_in_anything_soon&quot;&gt;The web will be everywhere and in anything. Soon.&lt;/h2&gt;
+
+&lt;p&gt;Macrodobe has had great success getting the Flash player to be installed in every computer. Their figures show over 96% penetration. Except now we’ll witness the web coming into so many devices, in many form factors : phones, pads, car dashboards and a whole lot more. We are just at the beginning of this path. Most of those devices will be very constrained in their capabilities, namely, CPU.&lt;/p&gt;
+
+&lt;p&gt;Unless Flash is utterly needed , many of those will not support it. Adobe has been working hard to get Flash running on all these platforms, but it will only get harder. If you’re making a device, you can simple use Webkit. It is opensource, has a very readable code base, is actively developed and you can tailor it to your device as you see fit. The entry price for supporting the web on your device is pretty manageable now. On the other hand, getting Flash to work requires the good will of Adobe, and might be hard to fit within your hardware limitations. Resources are limited: manufacturers will always privilege regular HTML first.&lt;/p&gt;
+
+&lt;p&gt;On the cutting edge front, the pressure to add more hardware support makes it tough on the player engineering. How can you compete with a game for the iPhone written in OpenGL? Not only the amount of platforms will increase, but allowing for greater access to the hardware makes it impossible to support them all. At this point, Unity 3D is pretty far ahead of the graphic processing you can deliver real time through a browser. Flash is second rate on CG. I remember rendering things at 30 fps in Director with a 384MB of RAM pentium 4 that I can not do at 15 fps with todays machines. This was 7 years ago.&lt;/p&gt;
+
+&lt;h2 id=&quot;strategic_mistakes&quot;&gt;Strategic mistakes.&lt;/h2&gt;
+
+&lt;p&gt;It seems that all those forces were inevitable, but in hindsight, some of Macrodobe’s strategies seem harmful&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Licensing the plugin for mobile platforms. This probably withheld adoption greatly. There was a good article on the subject floating on tweeter some time ago. Too lazy to find the URL for it now. Right now it seems crazy that manufacturers would pay Adobe to have their technology running, but this is the strategy Macromedia pursued for a while.&lt;/li&gt;
+
+&lt;li&gt;Batshit crazy naming. Flex? Flash? Flash MX? BlazeDS? AS3? Flex sdk? MXMLC? I still talk to people who make a living out of Flash that can’t tell a difference between all of them. Every now and then there I get bug report for BulkLoader saying it doesn’t work with flex. Also a very poor job communicating what the platform is like exactly, what pieces are open or open sourced and so on.&lt;/li&gt;
+
+&lt;li&gt;The open source strategy was late, and was poorly executed. Till this day: how many people, outside of Adobe has contributed patches to the compiler, or asdoc (which is a mess, by the way). Why do I have to register at Adobe’s Jira to search for bugs? Why most bugs have very little information, or link to issues or fixes in their internal system? It’s a maze out there.&lt;/li&gt;
+
+&lt;li&gt;Using On2 codecs which hindered common tools incapable of generating content. The enormous delay on releasing specs in a sane manner. Remember the crazy agreement people had to agree to before reading SWF’s specs?).&lt;/li&gt;
+
+&lt;li&gt;The awful tools. The Media Encoder that comes with Flash Professional. The code ‘editor’ on the IDE. The compiler written in Java that takes forever to start up. The control panel for administering FMS. FlexBuilder is buggy as hell. Would you like to compare the Flex Profiler (+500 dollars) to &lt;a href=&quot;http://googleblog.blogspot.com/2009/12/faster-apps-for-faster-web-introducing.html&quot;&gt;Google’s speed tracer&lt;/a&gt;? Or the &lt;a href=&quot;http://www.apple.com/macosx/developers/#instruments&quot;&gt;Apple’s intruments&lt;/a&gt;?&lt;/li&gt;
+
+&lt;li&gt;Pricing. Call me crazy, but the market for expensive development environments died years ago. Remember Borland? The only large player in that space is Microsoft, which is by the way a weaker player on the web. People do not want to pay $500,00 for development tools, nevermind inferior ones.&lt;/li&gt;
+
+&lt;li&gt;What’s the deal with Director? Why won’t they kill it? Why split the development community? I am not convinced that there was nothing on the rendering pipeline that Flash couldn’t take from Director. Director had such a great performance for it’s day.&lt;/li&gt;
+
+&lt;li&gt;Bugs, bugs bugs. Before player 9, I only stumbled once with a crashing bug on the player. Only once. I don’t know what it is: the increasing hardware support, or the more aggressive vm, but all players since have become much more prone to ugly crashes. This has really hurt Flash’s reputation. Didn’t it make sense for Adobe to pay a team and get Flash running extremely well on Chrome (specially on osX), this has been, for a while their last problem to release Chrome on the Mac. All the 20 or so last projects I’ve been involved, we always found a bug specific to a platform under a certain player revision. Our test grid became hell.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bottom line is that I am sympathetic to Adobe’s position. It’s damn hard for large companies to play the open source game. But Macrodobe hasn’t handle it well at all. This contributed to putting Flash into a corner.&lt;/p&gt;
+
+&lt;h2 id=&quot;niches&quot;&gt;Niches.&lt;/h2&gt;
+
+&lt;p&gt;After all the iPad ordeal, Lee Brimelow has published a &lt;a href=&quot;http://theflashblog.com/?p=1703&quot;&gt;witty post&lt;/a&gt;, showing what the web looks like without Flash. It was a smart move, but there are somethings to be said about it. Much of those do rely on video. Once HTML has that working , those will be fixed. Some are real niche websites (FWA, Aviary). Google finance could be done in Javascript (it won’t take long, rest assured). Of those examples, the only one’s where blue legos will be an issue are the games / gamish ones. Right now, gaming is the one space where HTML doesn’t have a solution. This is &lt;strong&gt;the one&lt;/strong&gt; niche where it will be very hard to displace Flash. That said, it’s possible that some of that market will be directed to more established gaming technologies, like OpenGl, adapted for each platform. Looking at Apple’s App Store catalog, there is a thriving market of games there. Gaming companies don’t seem to mind using traditional gaming tech: C, C++ and OpenGl. The other thing to keep in mind, is that if those devices that lack Flash prosper, those sites will adapt their content.&lt;/p&gt;
+
+&lt;p&gt;Note, however, that there’s nothing wrong in being a niche tech. Objective-C was a very small niche until 2 years ago (and it’s still is). A lot of people hacked good software with it, and made a good living doing so. Maybe it’s just natural that flash will fill a niche, since mainstream will be provided for by HTML. The truth is, most of the things Flash excels at are beyond day to day need of most people.&lt;/p&gt;
+
+&lt;h2 id=&quot;wrapping_it_up&quot;&gt;Wrapping it up&lt;/h2&gt;
+
+&lt;p&gt;Most features that set Flash apart have viable alternatives right now, or will soon enough. The final pieces are being worked on, and will, in time, be solved.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, new devices and markets will make it harder for Adobe to keep the player with a large installed base. Once flash looses it’s installed based, less content will be developed, which will in turn lower the adoption further. Just look at how hard it was for Silverlight to get mass adoption, even with Microsoft’s muscles behind it.&lt;/p&gt;
+
+&lt;p&gt;If you think about it, most proprietaries browser technologies are either dead or dying. Remember applets? RealVideo? Shockwave? Authorware? iPix? The ‘plain’ web has eaten their lunch.&lt;/p&gt;
+
+&lt;p&gt;Make no mistake, Flash’s days are numbered.&lt;/p&gt;
+
+&lt;h3 id=&quot;what_the_future_holds_for_me_at_least&quot;&gt;What the future holds (for me at least)?&lt;/h3&gt;
+
+&lt;p&gt;The thing to keep in mind is that this movement will be slow and gradual. Will there be sites using Flash next year? Absolutely. Will you be able to work on Actionscript for years to come? Sure. But in 5 years or so it will decrease sharply. Probably earlier than that, but I don’t care about predicting the right date. It doesn’t matter. What I am saying is that soon the market for Flash developers will decrease, and it will do so consistently. There will be many legacy applications that will require Actionscript programmer for years to come. Also there will probably be niches where Flash will remain king. People still use Director for some things. But again and again, Flash will decline. If you haven’t, go read it now &lt;a href=&quot;http://www.jwz.org/doc/worse-is-better.html&quot;&gt;Worse is Better&lt;/a&gt;. It’s required reading for any programmer, but it fits Flash’s predicament like a glove. HTML is worse, Flash is better.&lt;/p&gt;
+
+&lt;p&gt;As developers it’s a smart move to be prepared. I am not married to one platform. I want to work within the web, making tools for people to communicate, interact, discover and get things done. If it’s HTML + CSS + Javascript, so be it. If it’s Objective-C, python or Java, it’s O.K. as well. I’d say that expect to be doing FLash work for 3 or 4 years from now.&lt;/p&gt;
+
+&lt;p&gt;Predicting the future is always a waste of time. Maybe Adobe will find new killer features to put into the runtime, buying the platform more time. Maybe Moore’s Law will be back on track, and all those tiny devices will get insanely beefy processors next year, and Flash will be viable once again. I’ll be watching closely. I am not an Adobe shareholder. I &lt;strong&gt;do&lt;/strong&gt; have, however, vested interest in the years spent on Actionscript, but programmers should always work on more than one platform. Look into the history of our profession. Programmers have had to adapt to new technologies in the past 50 years. This isn’t about to change.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>OpenInVim droplet for osx</title>
+      <link>http://www.stimuli.com.br/trane/2009/sep/22/openinvim-droplet-osx/</link>
+      <pubDate>Tue, 22 Sep 2009 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2009/sep/22/openinvim-droplet-osx</guid>
+      <description>&lt;p&gt;Inspired by &lt;a href=&quot;http://www.entropy.ch/&quot;&gt;Marc Liyanage&lt;/a&gt;’s &lt;a href=&quot;http://www.entropy.ch/software/applescript/&quot;&gt;OpenTerminalHere&lt;/a&gt; is a simple droplet that will open the selected file(s) in VIM, or open the current directory on the finder window.&lt;/p&gt;
+
+&lt;p&gt;Instructions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://media.stimuli.com.br/projects/open-in-vim.zip&quot;&gt;Download&lt;/a&gt; the droplet.&lt;/li&gt;
+
+&lt;li&gt;Unzip and put it some place where it makes sense (i.e. /Applications/Scripts).&lt;/li&gt;
+
+&lt;li&gt;Drag the droplet to you finder toolbar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And you should be all set. Drag and drop file(s) into it, or select a file and click the droplet.&lt;/p&gt;
+
+&lt;p&gt;Thanks for Marc since I’ve pretty much copied all of his work (applescript is a bit yucky to my taste).&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Hello VIM, or quitting TextMate cold turkey</title>
+      <link>http://www.stimuli.com.br/trane/2009/sep/21/hello-vim-or-quitting-textmate-cold-turkey/</link>
+      <pubDate>Mon, 21 Sep 2009 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2009/sep/21/hello-vim-or-quitting-textmate-cold-turkey</guid>
+      <description>&lt;p&gt;In my &lt;a href=&quot;http://www.stimuli.com.br/trane/2009/sep/19/how-i-learn-stop-worrying-and-love-vim/&quot;&gt;last post&lt;/a&gt; I’ve mentioned my way through VIM. Quiting TextMate cold turkey wasn’t easy. But fear not: there are a bunch of plugins that will make it a breeze. Bellow a list of the best ones to fill the gap:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=2754&quot;&gt;DelimitMate&lt;/a&gt; When in insert mode, will auto balance paired delimiters (parenthesis, brackets, quotes, angle brackets). This is a default in TextMate, when you type a balanced delimiter it inserts the closing one and puts the cursor in the middle. This is a pretty new plugin, I don’t think it has received the attention it deserves.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=1658&quot;&gt;NerdTree&lt;/a&gt; A file explorer thing, similar to the project drawer in TextMate.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=1218&quot;&gt;NerdCommenter&lt;/a&gt;: A plugin that makes commenting source code dead easy. Supports many languages, and has smart settings (toggle, visual mode, etc).&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://github.com/jamis/fuzzyfinder_textmate&quot;&gt;Fuzzy Finder TextMate&lt;/a&gt;. This was the feature that I missed the most: a quick way to navigate through files (aka command T) also through tags in a source file (aka command shift T). Just brilliant, and also adds some nifty features such searching from the most recently used files. This plugin required ruby support.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=2540&quot;&gt;SnipMate&lt;/a&gt;: snippets support, much like TextMate’s.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=1234&quot;&gt;YankRing&lt;/a&gt; implements a kill ring for the yank buffer. Pretty much like TextMate’s copy and paste history, but more configurable and powerful: VIM style.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With those plugins in place, there aren’t any major features missing. Having those plugins for VIM is a testimony of how TextMate has really brought good ideas into the editor scene. It also corroborates VIM’s extensibility. Even under primitive constrains (no GUI, terminal only), VIM is able to mimic those features.&lt;/p&gt;
+
+&lt;p&gt;Also, other plugins that I’ve found essential:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=1697&quot;&gt;Surround&lt;/a&gt;: smartly inserts, changes and removes balanced delimiters including XML tags.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=273&quot;&gt;Taglist&lt;/a&gt;: parses and helps you to navigate through structured source code.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=294&quot;&gt;Align&lt;/a&gt;: makes source code alignment a breeze (hard to explain, give it a shot).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All in all, with the right plugins, VIM can match most of TextMate’s features. Are there any other plugins I should know about?&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>How I learn to stop worrying and love VIM</title>
+      <link>http://www.stimuli.com.br/trane/2009/sep/19/how-i-learn-stop-worrying-and-love-vim/</link>
+      <pubDate>Sat, 19 Sep 2009 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2009/sep/19/how-i-learn-stop-worrying-and-love-vim</guid>
+      <description>&lt;p&gt;In the beginning there was Eclipse, and all was good. It was feature packed and free. It was slow, but that seemed inevitable: so many features should cost something. Then I found out TextMate, and I was immediately hooked. It was fast, responsive and powerful. It could edit just any file type with great syntax highlighting and useful commands. Until one day I had a hacking session with a &lt;a href=&quot;http://b1n.org/&quot;&gt;friend&lt;/a&gt;. He fired up VIM and boy, it seemed like magic. I was intrigued, but saw no reason to change editors, since TextMate was incredibly smooth. But then I started to edit more and more files on different boxes, mostly unixes through ssh. Since TextMate wasn’t available on other systems I had to learn enough vim to get by (basically getting into insert mode, then saving and quiting), which is pretty dumb: using VIM as it was pico. The clumsiness with VIM started to bother me more and more, those edits were slow and painful. I needed to learn VIM so I could edit in any box with ease.&lt;/p&gt;
+
+&lt;p&gt;So my VIM journey begins. Now, after using strictly VIM for over a month, I can’t picture my self using another editor. I still have much to learn, since VIM is very customizable, but I am very used to it.&lt;/p&gt;
+
+&lt;p&gt;The thing is, it does have a learning curve, and that’s stems from:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;VIM is unlike other editors. Being a modal editor, VIM is a different beast. You can’t just type. You need to understand visual, command and insert mode. More than understand it, you must embrace it. VIM makes no sense if you use it in insert mode all the time. Used in such manner, you might as well use nano or notepad. This means that very little of what you’ve previously learned will be of any use. Most editors behave pretty much the same: you type text and you run commands with keyboard shortcuts. Changing editor is merely a question of learning new commands / shortcuts. With VIM you’ll need to learn an entire new model. It takes time until you muscle memory stops getting lost.&lt;/li&gt;
+
+&lt;li&gt;VIM is too powerful, too configurable. This is both a technical reason and a cultural one. VIM is very customizable and has a long legacy. VIM is geared to power users, hard core users. Its features aren’t easily discovered. Worse, the terminology, the help system is pretty intimidating for newbies. The long legacy implies that VIM will be installed pretty naked on your machine. VIM expects you to customize it heavily. If you edit on someone else’s TextMate, chances are it will be almost identical to yours. Maybe they’ve added a couple of bundles, maybe they’ve changed some shortcut, but you’d be at home. Not with VIM. VIM users customize their settings so heavily, that it can be disorienting. So learning vim means also learning to customize it entirely. VIM is not a turnkey system, you have to spend some time with it making it behave as you desire.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Roughly speaking, the learning process I’ve followed was:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The I-just-want-an-editor-stage. Learn to get out of it, save file, enter insert mode and edit it. This is the dumb nano stage. VIM sucks like this.&lt;/li&gt;
+
+&lt;li&gt;The well-this-is-actually-nifty-stage. Go through the tutorial. &lt;a href=&quot;http://jmcpherson.org/editing.html&quot;&gt;Jonathan McPherson’s tips&lt;/a&gt; is a great quick starter as well. At this point you can move efficiently. This is the first steep step to mastery. This is where your muscle memory starts to abandon the modeless paradigm. When this is mastered, you find that you can edit files very quickly. Now you are hooked to VIM, and its design starts to make sense. Except now, you start to miss IDE like features. Maybe the color scheme isn’t right for you. Maybe you need a syntax highlighting that is not readily available. Some shortcuts seem inefficient and hard to remember. You’re ready for customization hell.&lt;/li&gt;
+
+&lt;li&gt;The customization-hell-stage. You start trying to bend VIM to your will. You understand how the customization works (vimrc, plugins, ftplugins, syntax). You start browsing &lt;a href=&quot;http://www.vim.org&quot;&gt;vim’s official website&lt;/a&gt; and fiddle with plugins. You will scavenge vimrc files, trying to find neat customizations by chance. You want to make vim what you think it should be.&lt;/li&gt;
+
+&lt;li&gt;The I-better-learn-how-this-thing-works stage. After some trial and error, you’ll find out that it won’t work. Since the combinations of settings and plugins is enormous you are bound to have conflicting mappings, settings and so on. Also, since the community is geared towards heavy users, you’ll have difficulty understanding the documentation. You need to dive in, understand how the help works, the jargon, the logic things (tend) to follow. After groking the basics it gets so much easier. Now you can generate help, navigate it and best of all, make sense of it. Comfortable enough with the help system you’ll find out that VIM has excellent documentation. Not only the core software, but also plugins. It’s just that it takes a while to wrap your head around it. Things to understand: guimode, term mode, auto load, filetypes and the help system.&lt;/li&gt;
+
+&lt;li&gt;The evangelizing stage. Now, after much messing with plugins, vimrcs and other goodies you understand that VIM is very flexible. Most things that annoyed you are easy to change. You’ll have the most important IDE features you miss. You can navigate and edit many files at once easily. You want to let others now about it. It feels that after a long detour you’ve reached a summit, and it’s beautiful from the top. Then you’ll start to blog about it, let your coworkers know what’s so cool about VIM. Some people under this spell will go on useless rampages against Emacs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since VIM is so powerful and you can script it, there is always a lot to learn. I still feel like a newbie, but I can find my way through things, and fix most issues. VIML is not a very nice language to script in, but you can script it with Python, Perl or Ruby (as long as you compile it with such capabilities).&lt;/p&gt;
+
+&lt;p&gt;While I was happy with TextMate, I’ll be sticking to VIM now mainly because it’s:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Available in many platforms&lt;/li&gt;
+
+&lt;li&gt;Ease to customize heavily&lt;/li&gt;
+
+&lt;li&gt;Much better editing. Command mode rules.&lt;/li&gt;
+
+&lt;li&gt;Faster and leaner.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’ve &lt;a href=&quot;http://www.stimuli.com.br/trane/2009/sep/21/hello-vim-or-quitting-textmate-cold-turkey/&quot;&gt;written&lt;/a&gt; about the plugins that made the transition from TextMate possible.&lt;/p&gt;
+
+&lt;p&gt;And now the obligatory vimrc file. Enjoy:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot; Arthur Debert
+&amp;quot; http://www.stimuli.com.br
+
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;            Appearance              &amp;quot;
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+colorscheme ir_black        &amp;quot; color scheme
+set ruler                   &amp;quot; line numbers, rulers, and everything else
+set number
+set cursorline
+set vb                      &amp;quot; Visual bell
+set lazyredraw              &amp;quot; Don't update while in macro
+set ttyfast                 &amp;quot; Improves redrawing
+set titlestring=%f title    &amp;quot; Display filename in terminal window
+set rulerformat=%l:%c ruler &amp;quot; Display current column/line
+set showcmd                 &amp;quot; Show commands at bottom right
+set splitbelow              &amp;quot; Split windows BELOW current window!
+set winminheight=0          &amp;quot; Window minimum height
+set scrolloff=8             &amp;quot; always have at least 8 lines before the window's bottom
+&amp;quot;match ErrorMsg /\%&amp;gt;80v.\+/  &amp;quot; formats text longer than 80 columns
+set foldcolumn=3              &amp;quot; 2 lines of column for fold showing, always
+set foldmethod=syntax
+set foldlevelstart=99
+
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;  Search &amp;amp; Replace
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+set hlsearch   &amp;quot; highlight searches
+set ignorecase &amp;quot; make searches case-insensitive, unless they contain upper-case letters:
+set smartcase
+set incsearch  &amp;quot; show the `best match so far' as search strings are typed:
+set gdefault   &amp;quot; assume the /g flag on :s substitutions to replace all matches in a line:
+set enc=utf-8  &amp;quot; UTF-8 Default encoding
+
+
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;           General Settings         &amp;quot;
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+syntax on                                                            &amp;quot; syntax highlighting
+filetype plugin on                                                   &amp;quot; enables filetype
+set listchars=nbsp:¬¨¬®,eol:¬¨‚àÇ,tab:&amp;gt;-,extends:¬¨¬™,precedes:¬¨¬¥,trail:‚Äö√Ñ¬¢ &amp;quot; whitespace chars
+set autoindent smartindent                                           &amp;quot; auto/smart indent
+set expandtab                                                        &amp;quot; expand tabs to spaces
+set smarttab                                                         &amp;quot; tab and backspace are smart &amp;quot; 
+set ttyfast
+
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;           Menu completions          &amp;quot;
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+set wildmode=full wildmenu                            &amp;quot; Command-line tab completion
+set infercase                                         &amp;quot; AutoComplete in Vim
+set completeopt=longest,menu,menuone
+set wildignore+=*.o,*.obj,*.pyc,*.DS_STORE,*.db,*.swc
+
+
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;           GUI Stuff                 &amp;quot;
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+set mousemodel=extend &amp;quot; Enable mouse support
+set selectmode=mouse
+set mousefocus
+set mouse=a
+
+
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;    Keystrokes -- Moving Around      &amp;quot;
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;Space is so much easier than :
+noremap &amp;lt;space&amp;gt; :
+&amp;quot; have the h and l cursor keys wrap between lines (like &amp;lt;Space&amp;gt; and &amp;lt;BkSpc&amp;gt; do
+&amp;quot; by default), and ~ covert case over line breaks; also have the cursor keys
+&amp;quot; wrap in insert mode:
+set whichwrap=h,l,~,[,]
+&amp;quot; backspace over anything
+set backspace=indent,eol,start
+&amp;quot; Use smarte paste for preserving identation when copying and pasting
+nmap &amp;lt;silent&amp;gt; ,p :SmartPaste&amp;lt;cr&amp;gt;
+&amp;quot; Show a list of recently opend files:
+nmap ,r :FuzzyFinderMruFile&amp;lt;cr&amp;gt;
+&amp;quot; Show a list of files to be regex matched, under the current dir (a la textmate)
+nmap ,f :FuzzyFinderTextMate&amp;lt;cr&amp;gt;
+let Tlist_WinWidth = 50
+&amp;quot; Task list bindings:
+map &amp;lt;silent&amp;gt; ,T :TaskList&amp;lt;CR&amp;gt;
+&amp;quot;Tag list
+map &amp;lt;silent&amp;gt; ,t :Tlist&amp;lt;CR&amp;gt;
+&amp;quot; joining lines
+noremap ,j :join&amp;lt;cr&amp;gt;
+&amp;quot; Bindings for tab switching:
+&amp;quot; change tabs with shift tab
+nnoremap &amp;lt;S-Tab&amp;gt; &amp;lt;C-W&amp;gt;w;
+&amp;quot;&amp;quot; Scrolling
+no J 20j
+no K 20k
+&amp;quot; List whitespace
+nn &amp;lt;silent&amp;gt; ,&amp;lt;space&amp;gt; :se nolist!&amp;lt;cr&amp;gt;
+&amp;quot; Buffer Window Focus
+nn ,k       &amp;lt;C-W&amp;gt;k&amp;lt;C-W&amp;gt;_
+nn ,=       &amp;lt;C-W&amp;gt;=
+&amp;quot; Yank to all app's
+no ,y !pbcopy&amp;lt;cr&amp;gt;&amp;lt;esc&amp;gt;u 
+&amp;quot; use smart paste &amp;quot;
+nmap &amp;lt;silent&amp;gt; ,p :SmartPaste&amp;lt;cr&amp;gt;
+&amp;quot; ,nn will toggle NERDTree on and off
+nmap ,nn :NERDTreeToggle&amp;lt;cr&amp;gt;
+
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;           Plugins                   &amp;quot;
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot; MiniBuffer support:
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+&amp;quot; tag list :
+let Tlist_Sort_Type = &amp;quot;name&amp;quot;
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;           Spelling                  &amp;quot;
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+if v:version &amp;gt;= 700
+  setlocal spell spelllang=en
+  nmap ,ll :set spell!&amp;lt;CR&amp;gt;
+  nmap ,le :set spelllang=en&amp;lt;CR&amp;gt;
+  nmap ,lp :set spelllang=pt&amp;lt;CR&amp;gt;
+endif
+&amp;quot;   Correct some spelling mistakes    &amp;quot;
+ia teh      the
+ia htis     this
+ia tihs     this
+ia funciton function
+ia fucntion function
+ia funtion  function
+ia retunr   return
+ia reutrn   return
+ia sefl     self
+ia eslf     self
+
+
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;           GUI Stuff                 &amp;quot;
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+autocmd BufRead *.json set filetype=javascript &amp;quot; clojure filetype:
+autocmd BufRead *.as set filetype=actionscript &amp;quot; actionscript syntax:
+autocmd BufRead *.clj set filetype=clojure     &amp;quot; clojure filetype:
+autocmd BufRead *.mxml set filetype=mxml       &amp;quot; mxml files:
+let mapleader=&amp;quot;,&amp;quot;
+
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;           backup options            &amp;quot;
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+set backupdir=~/tmp,/tmp &amp;quot; backups (~)
+set directory=~/tmp,/tmp &amp;quot; swap files
+set backup               &amp;quot; enable backups
+
+
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;           Clipboard Management      &amp;quot;
+&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;
+&amp;quot;&amp;quot; Improve Vim copy for OSX terminal
+if has('gui_running')
+    set mousefocus          &amp;quot; Mouse can control splits
+endif
+&amp;quot;Make sure paste mode is on before pasting
+function! SmartPaste()
+    set paste
+    normal! p`[=`]
+    set nopaste
+endfunction
+command! -bar            SmartPaste   :call SmartPaste()&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>A Visual Inspector for BulkLoader</title>
+      <link>http://www.stimuli.com.br/trane/2009/aug/09/bulkloader-inspector/</link>
+      <pubDate>Sun, 09 Aug 2009 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2009/aug/09/bulkloader-inspector</guid>
+      <description>&lt;p&gt;A couple of weeks ago I exchanged a few emails with &lt;a href=&quot;http://www.acleveraddress.com/&quot;&gt;Chris O’Byrne&lt;/a&gt;. He was writing a loading lib for actionscritp and was taking some ideas and code from BulkLoader. The result is &lt;a href=&quot;http://code.google.com/p/as3-multiloader/&quot;&gt;MultiLoader&lt;/a&gt;. I haven’t look much into it, but one thing struck me. He created a visual inspector, a GUI that let’s helps to understand what is being loaded. I thought this would be a nice addition to BulkLoader, mainly to help others debug and understand what BulkLoader is doing. As they say, good artists copy, great artists steal ;).&lt;/p&gt;
+
+&lt;p&gt;It ocurred to me that anything but the simplest interface would require a GUI toolkit. It made sense to do it in Flex.&lt;/p&gt;
+
+&lt;p&gt;It turns out that the inspector is very useful, and helped to visualize a few issues with BulkLoader my self. Here is what it looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog-posts/bulkloader-inspector-01.jpg&quot; alt=&quot;The inspector running&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Since it uses Flex, you need to use it differently, depending on what your project is. If you are coding a Flex application, then just instanciate the BulkLoaderInspectorPanel, and you should be all set. If you are working on a regular (non-flex) project, you should load a compiled swf. But since flex apps have a very specific lifecycle, there are some steps you need to take. The easiest path is to just create a Bootstrapper (trunk/inspector/Bootstrapper.as). Just setup the path to the swf, and it should just work.&lt;/p&gt;
+
+&lt;p&gt;There a few visual adjustments to be made, but it’s &lt;strong&gt;very&lt;/strong&gt; useful as is. If you’re into flex and would like to improve on it, patches are very welcome.&lt;/p&gt;
+
+&lt;p&gt;Note however, that since it compiles the entire flex framework, hence it has a big file size, it should only be used while debugging.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>A Munin plugin to track http response times.</title>
+      <link>http://www.stimuli.com.br/trane/2009/aug/02/munin-plugin-track-http-response-times/</link>
+      <pubDate>Sun, 02 Aug 2009 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2009/aug/02/munin-plugin-track-http-response-times</guid>
+      <description>&lt;p&gt;After two years of abandonment, I’ve finally managed to give some love to the server running this site. After all the trouble, I wanted to have a good monitoring setup, so I can evaluate the changes and how they’re performing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://munin.projects.linpro.no/&quot;&gt;Munin&lt;/a&gt; has been running for while, but I had never tweaked it. Now, after running nginx and memcahed, I wanted to monitor those as well.&lt;/p&gt;
+
+&lt;p&gt;Turns out that Munin’s plugin system is easy to extend. But it takes a while to understand how it all comes together: the various jobs, rdd integration, updates, permissions. Specially the autocongif and wildcards plugins, while a neat idea do make things more magical and harder to track.&lt;/p&gt;
+
+&lt;p&gt;I wanted to monitor is the total performance of the application. Not how apache, nginx or mysql are doing. Nor only disk or the bandwidth but the final response times, to measure how the entire stack is doing.&lt;/p&gt;
+
+&lt;p&gt;External tools, such as &lt;a href=&quot;http://pingdom.com/&quot;&gt;Pingdom&lt;/a&gt; and &lt;a href=&quot;http://mon.itor.us/&quot;&gt;Monitor.us&lt;/a&gt; can handle it, but then you’re also dealing with the internet connection, network conditions interfere with the measurements.&lt;/p&gt;
+
+&lt;p&gt;So I’ve hacked a quick plugin for Munin, that will measure response times for the urls you wish to monitor. This is a how it looks: &lt;img src=&quot;http://media.stimuli.com.br/blog-posts/http-response.png&quot; alt=&quot;The Http Response munin plugin graph&quot; /&gt;.&lt;/p&gt;
+
+&lt;p&gt;In this particular case, I am monitoring the home url and the same one with a query string. That way, I can keep tabs on how the site is performing with memcached on and off.&lt;/p&gt;
+
+&lt;p&gt;Munin plugins are ran through the shell: they can be anything a perl script, c, python, anything else really. This plugin is written in python. It does require &lt;a href=&quot;http://code.oogle.com/p/httplib2/&quot;&gt;httplib2&lt;/a&gt; though. I’ve tested this in python 2.5 and 2.4 (thanks for the patch &lt;a href=&quot;http://github.com/hermzz&quot;&gt;Hermann Kase&lt;/a&gt; ) on linux, but it should really run on other setups without issues.&lt;/p&gt;
+
+&lt;p&gt;I am putting this up on &lt;a href=&quot;http://github.com/arthur-debert/munin-httpresponse-plugin/tree/master&quot;&gt;github&lt;/a&gt;, as future updates will be easier to track. Installing is pretty easy, just copy the httpresonsetime file to where plugins are located (/etc/munin/plugins on ubuntu), chmod it appropriately and add the urls you need to monitor on the config file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[httpresponsetime]
+    env.urls http://www.example.com,http://www.othersite.com/somewhere&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Restart the munin-node daemon, and you’re all set.&lt;/p&gt;
+
+&lt;p&gt;Of course, just as I finished writing this, I found a similar plugin at the &lt;a href=&quot;http://muninexchange.projects.linpro.no/?search=&amp;cid=10&amp;os%5B4%5D=on&amp;os%5B7%5D=on&amp;os%5B3%5D=on&amp;os%5B2%5D=on&amp;os%5B5%5D=on&amp;os%5B8%5D=on&amp;os%5B1%5D=on&amp;os%5B6%5D=on&amp;pid=158&quot;&gt;munin exchange&lt;/a&gt;.It takes a different approach though, as it allows for one url only to be monitored, and that url is set on the plugin file itself. The solution above seems cleaner.&lt;/p&gt;
+
+&lt;p&gt;If anyone else finds this useful, I’ll put it up on munin exchange.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Announcing as-printf.</title>
+      <link>http://www.stimuli.com.br/trane/2009/feb/21/printf-as3/</link>
+      <pubDate>Sat, 21 Feb 2009 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2009/feb/21/printf-as3</guid>
+      <description>&lt;p&gt;Actionscript, as it’s name implies, is a high level scripting language. Regardless of what scripting means, it’s definitely high level. It has a large core api that shields most programmers from low level manipulation. It’s is actually a pretty powerful language, with optional static typing, closures, functions as first class objects and other facilities.&lt;/p&gt;
+
+&lt;p&gt;It does, however, has a few key missing features. One of it’s noteworthy absences is the low level interface for string manipulation, specially a lack of a printf like facility. &lt;a href=&quot;http://en.wikipedia.org/wiki/Printf&quot;&gt;printf&lt;/a&gt; stands for print format, a function that makes mixing strings and variables more convenient. It’s surprising really, that actionscript does not have a printf function in it’s core library. Even C, which is seen as a low level, unproductive language has it. printf has been around for a long time, and has been known by printf for over 30 years. As far as I can remember, Actionscript and Javascript are the only modern , high level, programming languages that lack such facility.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://github.com/arthur-debert/printf-as3/&quot;&gt;Printf-as&lt;/a&gt; tries to bridge this gap. If you are familiar with printf, the rest of this post will simply bore you. You might just head to the &lt;a href=&quot;http://http://github.com/arthur-debert/printf-as3/&quot;&gt;project’s github homepage&lt;/a&gt;, check out the &lt;a href=&quot;http://stimuli.com.br:8080/media/projects/printf-as3/docs/printf/as/package-detail.html&quot;&gt;list of supported formatters&lt;/a&gt; or make a fresh &lt;a href=&quot;http://github.com/arthur-debert/printf-as3/&quot;&gt;svn checkout&lt;/a&gt;. The project has a working test suite (I love synchronous re-entrant code) that servers as a good documentation of what to expect. The code license is a &lt;a href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;MIT License&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Just import br.com.stimuli.string.printf and you are all set.&lt;/p&gt;
+
+&lt;p&gt;If you are not sold on what the point is, I’ll try to illustrate bellow how it makes things easier.&lt;/p&gt;
+
+&lt;h3 id=&quot;advantages_conciseness_readability&quot;&gt;Advantages: conciseness, readability&lt;/h3&gt;
+
+&lt;p&gt;At first, it seems the primary advantage is that it’s terse and readable. All those quotes and addition signs really get in the way. Suppose you have a class called User, that has a friendly toString output, such as:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function toString() : String{
+    return &amp;quot;[Class User] name: &amp;quot; + name + &amp;quot;, age:&amp;quot; + age ;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Printf makes it more readable:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function toString() : String{
+    return printf(&amp;quot;[Class User] name:%s  age: %s&amp;quot;,  name, age );
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You simply mark “wholes” on the string, places where it should be substituted by a variable. That way, the string itself is not interrupted by extraneous quotes and plus signs. Less typing, more readability. The percent sign marks a whole on the string, where a substitution will occur. Following the percent sign, you specify how to substitute the string. The universal case is to mark it as a string, with an “s” (%s), but other formatters are helpful as we’ll see bellow. The template string is the followed by the variables to be used in the substitution.&lt;/p&gt;
+
+&lt;h3 id=&quot;advantages_helpers_precision_padding&quot;&gt;Advantages: helpers, precision, padding&lt;/h3&gt;
+
+&lt;p&gt;Besides direct substitution, printf can help you format those strings with little fuss. One such helper is the precision formatter. Let’s say you have a frame rate counter, that can hold decimal values such as 23.652636. Maybe you wish to truncate the number to a certain digits, for a more friendly output. Just use the dot (“.”) precision formatter:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;frate.txt = printf(&amp;quot;%.1f fps&amp;quot;, frameRate); 
+// sets the textfield's value to &amp;quot;23.6 fps&amp;quot;. The digit 1 after the dot means to 
+// truncate to 1 decimal place, and the f tells printf to threat it like a float.&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or you want to display number in hexadecimal, for example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;msg = printf(&amp;quot;The box color is %h&amp;quot;, boxColor); // outputs: The box color is #FF0066&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;advantages_logic_outside_of_the_string&quot;&gt;Advantages: Logic outside of the string.&lt;/h3&gt;
+
+&lt;p&gt;Printf can use named variables. Let’s say there’s an User object, with “name”, “middleName” and “lastName” properties.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;msg = &amp;quot;Posted by &amp;quot; + user.name + &amp;quot; &amp;quot; + user.lastName + &amp;quot;.&amp;quot;;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But then if later on you decide to show the last name first, you need to rewrite this code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;msg = &amp;quot;Posted by &amp;quot; + user.lastName + &amp;quot;, &amp;quot; + user.name + &amp;quot;.&amp;quot;;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you are using printf, you could say:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;msg = printf( &amp;quot;Posted by  %(name)s %(lastName)s&amp;quot;,  user);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And printf will match those names between parenthesis with properties on the variable “user”. Then a change to the string is easier to visualize:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;msg = printf( &amp;quot;Posted by  %(lastName)s, %(name)s&amp;quot;,  user);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That’s handy, but printf really shines when you realize that having format strings allow you to have let code alone on presentational changes. Let’s say that you have a website with different languages, and of all of it’s strings are defined an external xml file . An excerpt of that xml:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+&amp;lt;string id=&amp;quot;greeting&amp;quot;&amp;gt;Hello %(firstName)s %(lastName)s&amp;lt;/string&amp;gt;
+...&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And the code is: msg = printf( “Posted by %(lastName)s, %(name)s”, user);&lt;/p&gt;
+
+&lt;p&gt;You can change the message string only by editing the xml file, no need to change code nor recompile. Better yet, if you need to support English, where it’s usual to have first and last names, but also Spanish, where the middle name is more important than the last name, on the Spanish xml file, you’d have:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+&amp;lt;string id=&amp;quot;greeting&amp;quot;&amp;gt;Hello %(firstName)s %(middleName)s&amp;lt;/string&amp;gt;
+...&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Same code, but different presentations format supported. You are effectively separating presentation (the string you need to produce/show) and logic. Internationalization will often require words in different orders from locale to locale.&lt;/p&gt;
+
+&lt;h3 id=&quot;warning_a_loose_interpretation_of_printf&quot;&gt;Warning: a loose interpretation of printf&lt;/h3&gt;
+
+&lt;p&gt;The as-printf implementation is loosely based on python’s print and strftime. I did implement most of it’s behaviour, but translated freely where it felt that actionscript should behave differently. For example, printf should never raise an error, and if a substitution fails it will be substituted by and empty string.&lt;/p&gt;
+
+&lt;h3 id=&quot;warning_performance&quot;&gt;Warning: performance&lt;/h3&gt;
+
+&lt;p&gt;While I did not make a consious effort to make as-printf slow, I didn’t do any optimizations at all. If you are producing a lot of strings in a place where performance is critical, you’d be better of doing the substitution by hand.&lt;/p&gt;
+
+&lt;h3 id=&quot;warning_regex_implementation&quot;&gt;Warning regex implementation&lt;/h3&gt;
+
+&lt;p&gt;Instead of a full blown parser, I it’s a quick hack: a regular expression. That means that making meaningless formats may produce in unexpected results. Mixing formatters that don’t go together is a bad idea, be warned.&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping_it_up&quot;&gt;Wrapping it up:&lt;/h3&gt;
+
+&lt;p&gt;printf-as is a small, very narrowed focused project. It’s a quick hack, but just like &lt;a href=&quot;http://github.com/arthur-debert/BulkLoader&quot;&gt;bulkloader&lt;/a&gt;, it removed a small nag that bothered me when developing in Actionscript.&lt;/p&gt;
+
+&lt;p&gt;Thanks to project member &lt;a href=&quot;http://www.gabriellaet.com&quot;&gt;Gabriel Laet&lt;/a&gt; who fixed bugs, improved the test coverage and convinced me that printf-as should never raise an error.&lt;/p&gt;
+
+&lt;p&gt;Happy stringing.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Flash on the Beach 2008</title>
+      <link>http://www.stimuli.com.br/trane/2008/sep/23/flash-on-the-beach-2008/</link>
+      <pubDate>Tue, 23 Sep 2008 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2008/sep/23/flash-on-the-beach-2008</guid>
+      <description>&lt;p&gt;After a while wanting to atend a flash conference, this year everything has worked out. FOTB 2008 has a fantastic line up of speakers, I am excited to hear quite a few talks.&lt;/p&gt;
+
+&lt;p&gt;I’ll be in FOTB in Brighton, so if anyone want to gather up and discuss development, BulkLoader, complain about AS3 in general, life, the universe and evertyhing over a beer, just drop me a line.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>BulkLoader :: Refactor me</title>
+      <link>http://www.stimuli.com.br/trane/2008/mar/01/bulkloader-refactor-me/</link>
+      <pubDate>Sat, 01 Mar 2008 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2008/mar/01/bulkloader-refactor-me</guid>
+      <description>&lt;p&gt;After BulkLoader was made public in November 2007, it really took of. From about 3 downloads a week, to around 30 daily, since November, totaling over 3 thousand downloads in about three months.&lt;/p&gt;
+
+&lt;p&gt;For me this came out as a big surprise. I’d expect coworkers at &lt;a href=&quot;http://www.gringo.nu/&quot;&gt;Gringo&lt;/a&gt; to use it, and maybe a few others, but I’ve never thought it would be that many.&lt;/p&gt;
+
+&lt;p&gt;Usage numbers are much harder to guess though, since most hackers would rather checkout from svn, and of course, the majority of people will download it, take a 20 seconds look and leave it at that.&lt;/p&gt;
+
+&lt;p&gt;Still, from the mailing list, email exchange and blog posts, I can see that there’s a few programmers using it. This is a great reward.&lt;/p&gt;
+
+&lt;p&gt;Turns out, releasing BulkLoader was much, much more work than I’d figure. Documenting, replying to comments, wiki and general maintenance are many times more time consuming than coding actually. It’s been a great exercise in learning how to communicate, write docs, and making sure that BulkLoader will help users getting work done.&lt;/p&gt;
+
+&lt;p&gt;When users started to write about it, I realized that there were far more use cases than I had planned for, and it showed. Many thoughtful feature requests came, bug reports. Also more than one person struggle with the same issue made it clear that the docs were either lacking, or that feature behave in a hard to grok manner.&lt;/p&gt;
+
+&lt;p&gt;As I started to push more and more updates, and many times, hacking features that were not in my regular usage pattern, sometimes I’d push broken updates, or sometimes break something that used to work.&lt;/p&gt;
+
+&lt;h2 id=&quot;the_types_mess&quot;&gt;The types mess&lt;/h2&gt;
+
+&lt;p&gt;Somewhere in January, I realized that there were problems with the way BulkLoader was programmed. One was that, for various reasons, it was necessary to specify the type of an item being added (images, videos, text files, etc), because that would map to internal details regarding how to load them (NetStreams, Sound objects, Loader object and so forth). But I made a deep mess, confusing file extension, mime types and the classes used in BulkLoader to load them. The end result was a big mess of the “types” system, where it was very complex to change, or and understand that part of the code. This also impacted users heavily since types were used from the outside as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;the_anti_oo_conditionals_spread_all_over_the_place&quot;&gt;The anti OO, conditionals spread all over the place&lt;/h2&gt;
+
+&lt;p&gt;The other issue, is that I always intend to not expose the LoadingItem instances, to keep them internal. It turns out, that it wasn’t possible to do that, not without restricting some very fair needs. So with time, people would use more and more of LoadingItem objects directly. But LoadingItem was crafted hack after hack, the antithesis of Object Orientation, full of conditionals for each loading type. &lt;a href=&quot;http://groups.google.com/group/bulkloader-users/browse_frm/thread/d9a5872c790b3ad3#&quot;&gt;This thread&lt;/a&gt; laid the plan.&lt;/p&gt;
+
+&lt;h2 id=&quot;change_but_dont_break&quot;&gt;Change but don’t break&lt;/h2&gt;
+
+&lt;p&gt;I wanted to get a major refactor done: properly create a class structure for LoadingItems and also clean up the whole types-are-extensions-and-classes mess. But there were so many people using it, and I didn’t want to break things too much. I needed to go into that large refactor, with some assurance that most stuff would simply work: a needed a test suite. I started a new svn branch, the li-refactor branch, and have been hacking on it when time allows for the last month.&lt;/p&gt;
+
+&lt;h2 id=&quot;testing_is_hard_lets_go_shopping&quot;&gt;Testing is hard: let’s go shopping!&lt;/h2&gt;
+
+&lt;p&gt;I’ve used some Unit Testing in the past, but very little. Either toy examples for studding, or reading it like documentation. BulkLoader is hard to test. Most features are asynchronous, and very little of the code is reentrant. Also, because it is a singleton of sorts (not really, but all instances are kept in memory) it made it testing hell.&lt;/p&gt;
+
+&lt;p&gt;I chose to go with &lt;a href=&quot;http://www.asunit.org/&quot;&gt;ASUnit&lt;/a&gt;, mostly because it looked less tied up to flex libraries and Flex Builder. BulkLoader is now proud to have over 170 test. I am pretty sure that there are more to come, but it is a great start. I’ve decided to keep test out of the main zip download, since most people will never need to touch those, but they are in the svn rep. I’ve kept a copy of ASUnit as well, since I had to patch it a bit to make testing for BulkLoader easier, mostly making sure that tests would run in a serial fashion, and not in parallel (because if it keeping all instances in memory, it made a mess).&lt;/p&gt;
+
+&lt;p&gt;Tests got many, many bugs that were lurking around. It’s really impressive how useful they are. There is so much to gain in understanding, how things work, and what in the design promotes bad coupling. This is first real test suite I wrote, and I am sure I’ve made a lot of mistakes in it. But never the less, it has taught me a lot, on testing, BulkLoader design in general, and more importantly, gave me the confidence for a large, much needed refactor.&lt;/p&gt;
+
+&lt;h2 id=&quot;breaking_backwards_compatibility&quot;&gt;Breaking backwards compatibility&lt;/h2&gt;
+
+&lt;p&gt;As much as I wished I didn’t have too, some backwards compatibility was broken. Fixing the issues above implied in changing a few details, and since BulkLoader is such a young project, I am glad I have done so.&lt;/p&gt;
+
+&lt;h2 id=&quot;avoiding_bloat&quot;&gt;Avoiding bloat&lt;/h2&gt;
+
+&lt;p&gt;One of the hardest issues with a public project is saying no to feature requests. Most are very sensible, and it is a natural impulse to just go ahead and implement them. But BulkLoader has become very large, borderline bloated for a project of it’s scope. So unless something incredibly useful comes out, I am freezing new features and calling this merge a release candidate. I’ll do a couple more of bug fixes releases and then called it a 1.0 day.&lt;/p&gt;
+
+&lt;h2 id=&quot;and_many_thanks&quot;&gt;And many thanks&lt;/h2&gt;
+
+&lt;p&gt;To all users who provided bug reports, feature requests and just general feedback. Those contributions are invaluable, and it is very rewarding seeing users begin more productive, doing less grunt work.&lt;/p&gt;
+
+&lt;p&gt;For a full list of changes: &lt;a href=&quot;http://groups.google.com/group/bulkloader-users/browse_frm/thread/9320421e58b7bd17&quot;&gt;mailing list thread&lt;/a&gt; for the whole shebang.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Why Hashes?</title>
+      <link>http://www.stimuli.com.br/trane/2008/feb/27/why-hashes/</link>
+      <pubDate>Wed, 27 Feb 2008 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2008/feb/27/why-hashes</guid>
+      <description>&lt;p&gt;Every now and then I have to defend the use of hashes in parameters. Usually it is a side issue to something else, and I try to explain my position in 6 words or less, and it ends up sounding like insult or non sense. So today I am writing this so I can provide a link between parenthesis and carry on with the subject in hand.&lt;/p&gt;
+
+&lt;p&gt;Using hashes to collect parameters to functions gives the impression that I think they are great, but in fact, I don’t: it’s a poor solution to a very specific problem. It’s a work around a language deficiency, mostly because Actionscript’s lack of a proper abstraction for this particular situation.&lt;/p&gt;
+
+&lt;h2 id=&quot;what_problem_does_it_solve&quot;&gt;What problem does it solve?&lt;/h2&gt;
+
+&lt;p&gt;Sometimes you have a method or a function that is very parametrized, you want to control it’s behavior with a many parameters, and many have a default, sensible value, your don’t need to specify them most of the time. Also, you might want to add features to your method in the near future, you want it to remain flexible.&lt;/p&gt;
+
+&lt;p&gt;The core issue here, is flexibility. Actionscript has a few features that take you 80% of the way, but sometimes it leaves you 20% off.&lt;/p&gt;
+
+&lt;h2 id=&quot;default_parameters&quot;&gt;Default parameters:&lt;/h2&gt;
+
+&lt;p&gt;Let’s say you have a method that plays sounds on the library, by some id which is string. Then, you always have to specify the id.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function playSound(soundID : String){
+ 	//...
+};&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;All is well, but you want to be able to control the volume each sound is playing. Maybe all sounds are not properly equalized, or the user has a volume knob he can set at run time. Most of the time, a volume of 1 is appropriate, but a few sounds are way to loud, and you need to tone it down a bit. But still, usually the volume of 1 will do it, and also you don’t want to break backwards compatibility with all the working code you’ve written. Default parameters solve both issues:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function playSound(soundID : String, volume : Number = 1){
+ 	//...
+};&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;All working code will keep working. Since you usually want the volume to be 1, this won’t make you type more on most calls, but for that few sounds that were recorded to loud, you can just say:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;playSound(&amp;quot;rollover&amp;quot;, 0,5);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the end you get flexibility, both in terms of code you’ve already written and code you will write. There is no overhead of breaking things, creating a new function or having to educate users. Flexibility is one of the touchstones of well written software.&lt;/p&gt;
+
+&lt;h2 id=&quot;variable_number_of_parameters&quot;&gt;Variable number of parameters:&lt;/h2&gt;
+
+&lt;p&gt;In AS3 you can signal that you are expecting an unknown number of parameters with a ”…”. Say you’ve got a function that adds to numbers:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function addNumbers(a : Number, b:Number) : Number{
+   return a + b
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you need a function that can add 3 numbers. What do you do, create another function that can add 3 numbers?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function addThreeNumbers(a : Number, b : Number, c: Number) : Number{
+	return a + b + c;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That’s ugly, and not very flexible, what if next week you run into the need of adding 5 numbers? Will you create a method call addFiveNumbers ? The solution for this, is to create a function that works with any amount of parameters:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function addNumbers(numbers...) : Void{
+	var result : Number = 0;
+	for(var i : int = 0; i &amp;lt; numbers.length; i++){
+		result += numbers[i]
+	}
+	return result;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you can deal with any number of parameters. Your function is very flexible. Old code will still work unmodified, new cases can be dealt with. Flexibility is good.&lt;/p&gt;
+
+&lt;p&gt;But having functions with an unknown number of parameters work well when all possible arguments are of the same type and will usually be processed in a loop, such as the example above.&lt;/p&gt;
+
+&lt;p&gt;But suppose you’d try that on the playSound above, but now defining if the sound will loop, something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function playSound(args...) : void{
+   var soundId : String = args[0];
+   var volume : Number = args[1] || 1;
+   var loops : Boolean = args[2] || false;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is still flexible, but it is not very maintainable. Lot’s of extra typing, and worse, now the arguments are tied to the order of the args parameter. Unless the order of items has any meaning, or doesn’t mean anything at all (such as when adding numbers), the functionality will depend on an opaque, hidden and unrelated information. So if you want a sound to loop with the default value, you have to say:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;playSound(&amp;quot;rollover&amp;quot;, null, true);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But if you then add other features (such as panning, or callbacks) you might simply end up with some case where you need to specify the 6th parameter but not the ones in the middle, now it is just horrible:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;playSound(&amp;quot;rollover&amp;quot;, null, false, null, null, onDone )&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It’s too easy to err and forget. Sometimes you would pass null, others false… it’s a lot of typing. All in one a very bad solution.&lt;/p&gt;
+
+&lt;p&gt;The core problem here, is that parameter passing, both with named parameters and also collapsing parameters into an args… array will make the logic depend on the order, and doesn’t let you mark things as optional. You only want to define the first and 7th option, not anything else. You shouldn’t have to remember long list of parameters and their correct order.&lt;/p&gt;
+
+&lt;h2 id=&quot;standard_java_solution_create_an_object_for_holding_an_specific_set_of_properties&quot;&gt;Standard Java solution: create an object for holding an specific set of properties.&lt;/h2&gt;
+
+&lt;p&gt;This is how you’d do it in Java, create a SoundPlayProperties object that does nothing. Then you can say:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var soundProperties : SoundPlayProperties = new SoundPlayProperties(&amp;quot;rollover&amp;quot;);
+soundProperties.loops = true;
+playSound(soundProperties);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I’ll get my self covered saying this is just a matter of taste. Some people like that better. But this is the standard excuse for not sticking to an opinion. I don’t like the above solution. It is not elegant, it is verbose, it imposes a higher learning curve. Main issues with it:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Complexity: the minimum number of tokens for this is 3, one for function call, another for the id, and other for the looping. The above code has 11 That’s way, way too many.&lt;/li&gt;
+
+&lt;li&gt;Overhead: now, you added another class, just to define options to a method. Users will no longer be able to find out how the method works by just reading the method signature, or the documentation to that method. Users will (I least I do) check out the modules for a library I am using. If a very simple library takes 30 classes, it really scares me.&lt;/li&gt;
+
+&lt;li&gt;Performance overhead: now, besides the method call you are creating an object.&lt;/li&gt;
+
+&lt;li&gt;Moral high ground: without trying to go overboard on over stretching the implications of a simple choice, or turning into a flamewar of Java doesn’t know what object orientation is. But an object is useful mostly for defining state and behavior, not just as a property list that doesn’t do anything.&lt;/li&gt;
+
+&lt;li&gt;Users expect to change the SoundPlayProperties objects later on, and have that change reflect on the playSound method.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Its a long rambling just to say it rubs me the wrong way, no I don’t like it.&lt;/p&gt;
+
+&lt;h2 id=&quot;hashes&quot;&gt;Hashes:&lt;/h2&gt;
+
+&lt;p&gt;Passing those options as hash keys, like this: playSound(“rollover”, {loops:true}); Provide a few advantages:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Order doesn’t matter any more&lt;/li&gt;
+
+&lt;li&gt;Very readable, you can see exactly what that call means, with very few superfluous tokens (just the “{}”).&lt;/li&gt;
+
+&lt;li&gt;You can choose to specify as many, or as few options as you like.&lt;/li&gt;
+
+&lt;li&gt;If in he future you decide to add another option, you are not breaking anyones code or habit.&lt;/li&gt;
+
+&lt;li&gt;Makes it very clear that those options will be used in the playSound method, and not later.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A few disadvantages remain though:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;An extra object creation ( performance overhead).&lt;/li&gt;
+
+&lt;li&gt;No static typing, if you make a type it won’t let you know, and while you can document the options on one place (the method doc).&lt;/li&gt;
+
+&lt;li&gt;Tt’s not very discoverable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the end, it’s just a hack, a work around, but right now, it feels to be the make fewer compromises. Most of the time, you either wish to create objects really, or have a small number of parameters, but sometimes you don’t.&lt;/p&gt;
+
+&lt;h2 id=&quot;the_ideal_solution&quot;&gt;The ideal solution&lt;/h2&gt;
+
+&lt;p&gt;Is to have a language with the right feature, like python has, which is to have optional named parameters, that won’t depend on evocation order, so in this case, you can say:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function playSound(soundID : String /* obligatory */, volume: Number=1, rightPanning: Number=1, leftPanning: Number=1, loops : Boolean=true, onCompleteCallBack : Function = null) : void{
+
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will give you a lot of flexibility, creates no overhead, is very readable, and doesn’t force the user to learn another class. You can specify as many options as you need, in any order you need, and keep it readable. You could say:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;playSound(&amp;quot;rollover&amp;quot;, loops=true);
+// or
+playSound(&amp;quot;rollover&amp;quot;, onCompleteCallBack=doSomething);
+// or many otions:
+playSound(&amp;quot;rollover&amp;quot;, loops=true, onCompleteCallBack=doSomething, volume=0.5);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This post was a bit longer than I expected, but I was tired of trying to squeeze all this info inside a one liner in a forum thread.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Loading Reloaded</title>
+      <link>http://www.stimuli.com.br/trane/2007/nov/25/loading-reloaded/</link>
+      <pubDate>Sun, 25 Nov 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2007/nov/25/loading-reloaded</guid>
+      <description>&lt;p&gt;Controlling loading is tedious, error prone, and each projects has such specific requirements that you end up rewriting loading code. A lot. In my last project I spent 4 hours debugging download code and promised my self I would solve this annoyance once and for all. So in the best &amp;quot;let me be lazy&amp;quot; fashion, I decided to write my final loading code.&lt;/p&gt;
+
+&lt;p&gt;Everybody has been there, and there are many classes around to manage loading, but I've never found one that was complete, flexible and easy enough to use. AS3 has created some kind of loading hell: so many classes to import and understand, a plethora of listeners, the need for error handling and the new API objects (Bitmap, DisplayObject) have added more corner cases to remember. Worse still, videos are still left in some twisted logic maze.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://github.com/arthur-debert/BulkLoader/&quot;&gt;BulkLoader&lt;/a&gt; is my shot at trying to unify the most common cases for loading management into a reusable library for AS3.&lt;/p&gt;
+
+&lt;p&gt;It is licensed under an open source MIT license. Features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Unified interface for different loading types.&lt;/li&gt;
+
+&lt;li&gt;Unified progress notification.&lt;/li&gt;
+
+&lt;li&gt;Events for individual items and as a group.&lt;/li&gt;
+
+&lt;li&gt;Priority.&lt;/li&gt;
+
+&lt;li&gt;Stop,resuming and removing individually as well as in bulk.&lt;/li&gt;
+
+&lt;li&gt;Configurable number of maximum connections.&lt;/li&gt;
+
+&lt;li&gt;Cache managing.&lt;/li&gt;
+
+&lt;li&gt;Statistics about loading (latency, speed, average speed).&lt;/li&gt;
+
+&lt;li&gt;Multiple kinds on progress indication: ratio (items loaded / items to load), bytes, and weighted percentage.&lt;/li&gt;
+
+&lt;li&gt;Multiple number of retries.&lt;/li&gt;
+
+&lt;li&gt;Configurable logging.&lt;/li&gt;
+
+&lt;li&gt;Video: meta data storage, streaming as soon as connection is open, sane progress handling.&lt;/li&gt;
+
+&lt;li&gt;Helpers for different kinds of contents&lt;/li&gt;
+
+&lt;li&gt;Easy memory management (releasing objects)&lt;/li&gt;
+
+&lt;li&gt;Connection pooling.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Design goals:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Minimal imports.&lt;/li&gt;
+
+&lt;li&gt;Few method to learn.&lt;/li&gt;
+
+&lt;li&gt;Dynamic nature: items can be added by specifying a url as a String or a URLRequest .&lt;/li&gt;
+
+&lt;li&gt;Items can be assigned an identifier key to be used on retrieval.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At a glance:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var loader : BulkLoader = new BulkLoader(&amp;quot;main&amp;quot;);
+loader.add(&amp;quot;bg.jpg&amp;quot;);
+loader.add(&amp;quot;config.xml&amp;quot;);
+loader.add(&amp;quot;soundtrack.mp3&amp;quot;);
+loader.add(&amp;quot;intro.flv&amp;quot;);
+loader.addEventListener(BulkLoader.PROGRESS, onProgress);
+loader.addEventListener(BulkLoader.COMPLETE, onComplete);
+loader.start();
+
+function onProgress(evt : BulkProgressEvent) : void{
+    trace(evt.percentLoaded);
+}
+
+function onComplete(evt : Event) : void{
+    var bgBitmap = loader.getBitmap(&amp;quot;bg.jpg&amp;quot;);
+    addChild(bgBitmap);
+    var video : Video = new Video();
+    video.attachNetStream(loader.getNetStream(&amp;quot;intro.flv&amp;quot;));
+    parseConfig(loader.getXML(&amp;quot;config.xml&amp;quot;));
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above code in 8 lines:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;adds 4 items with different typed to be loaded: xml, mp3, flv, jpg.&lt;/li&gt;
+
+&lt;li&gt;created listeners for progress notification and when all items are done.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I needed a class that:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Would wrap up errors elegantly: retries and no errors on browser tabs closed.&lt;/li&gt;
+
+&lt;li&gt;Progress that works with many simultaneous items and many simultaneous items of very different sizes&lt;/li&gt;
+
+&lt;li&gt;Would let me use (and let me know) as each item was ready, and would allow items that can be streamed (video, sound) to be consumed as soon as possible.&lt;/li&gt;
+
+&lt;li&gt;Would treat video as any kind of asset.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am pretty happy with the results. I feel BulkLoader strikes a good balance between ease of use, flexibility and power. At &lt;a href=&quot;http://www.gringo.nu/&quot;&gt;work&lt;/a&gt; we've used it in a few projects, and users like it.&lt;/p&gt;
+
+&lt;p&gt;The thought of managing multiple loadings by hand again makes me shiver. It's the same feeling I got when I started to use a tweening library.&lt;/p&gt;
+
+&lt;p&gt;The project is hosted at github. Right now, I believe it's very close the final API. Mostly bug fixes and other enhancements.&lt;/p&gt;
+
+&lt;h2 id=&quot;links&quot;&gt;Links:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;project home at &lt;a href=&quot;http://github.com/arthur-debert/BulkLoader/&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://github.com/arthur-debert/BulkLoader/issues&quot;&gt;the issue tracker&lt;/a&gt;: if you find a bug, please let me know and I'll get it fixed asap.&lt;/li&gt;
+
+&lt;li&gt;An &lt;a href=&quot;http://media.stimuli.com.br/projects/bulk-loader/docs/&quot;&gt;online doc&lt;/a&gt;.&lt;/li&gt;
+
+&lt;li&gt;The WIKI &lt;a href=&quot;http://github.com/arthur-debert/BulkLoader/wiki/&quot;&gt;developer guide&lt;/a&gt;.&lt;/li&gt;
+
+&lt;li&gt;The &lt;a href=&quot;http://groups.google.com/group/bulkloader-users&quot;&gt;discussion list&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;thanks_to&quot;&gt;Thanks to:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Igor Almeida: my coworker who has been a thorough beta tester. A couple of months ago he wrote a loading manager class that, while has little resemblance to BulkLoader, provided many insights and a good road map of what works (and what doesn't). Igor reported bugs and gave a lot of feedback on features and ideais.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://www.zeh.com.br/&quot;&gt;Zeh&lt;/a&gt;: in long emails Zeh has given valuable ideas and discussed a few key issues. Having Zeh give you design ideas is (to steal a phrase from &lt;a href=&quot;http://www.paulgraham.com/&quot;&gt;Paul Graham&lt;/a&gt;) like having Mick Jagger playing on your son's Bar Mitzvah.’&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>RSS Woes</title>
+      <link>http://www.stimuli.com.br/trane/2007/nov/17/rss-woes/</link>
+      <pubDate>Sat, 17 Nov 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2007/nov/17/rss-woes</guid>
+      <description>&lt;p&gt;A quick apology.&lt;/p&gt;
+
+&lt;p&gt;Earlier today, I’ve updated this site’s RSS feeds code. In some readers, this will result in a flood of “new” entries which are not new at all, they’ll look like duplicates. I am sorry about that (for all of you 3 feed subscribers), but I had to fix some RSS issues.&lt;/p&gt;
+
+&lt;p&gt;For the technically inclined this is what happened:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Some time ago, I updated the site’s code to deal with unicode, after the &lt;a href=&quot;http://code.djangoproject.com/changeset/5609&quot;&gt;unicode merge&lt;/a&gt;.&lt;/li&gt;
+
+&lt;li&gt;I did not update &lt;a href=&quot;http:/www.djangoproject.com/&quot;&gt;Django&lt;/a&gt; to post unicode merge, so all entries came out with generic titles such as “Entry object” instead of an entry’s actual title.&lt;/li&gt;
+
+&lt;li&gt;When I noticed this, I found out that I’d have to update to third party code as well, such as the excellent &lt;a href=&quot;http://code.google.com/p/django-tagging/&quot;&gt;django-taggging&lt;/a&gt;.&lt;/li&gt;
+
+&lt;li&gt;I’ve way busy doing &lt;a href=&quot;http://www.stimuli.com.br/works/maxhaus/&quot;&gt;this&lt;/a&gt;, until this week when we launched, and I finally had enough time to update Django + my own codebase.&lt;/li&gt;
+
+&lt;li&gt;Since nothing in life is always that simple, I also had to port for the &lt;a href=&quot;http://code.djangoproject.com/changeset/6671&quot;&gt;autoscaping&lt;/a&gt; changeset.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks for &lt;strong&gt;the&lt;/strong&gt; feed subscriber, &lt;a href=&quot;http://www.gabriellaet.com/&quot;&gt;Gabriel Late&lt;/a&gt; for noticing (and reporting) this.&lt;/p&gt;
+
+&lt;p&gt;Now back to some self punishment for reinventing the wheel and doing my own CMS software instead of reaching for a &lt;a href=&quot;http://wordpress.com/&quot;&gt;perfectly fine one&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Maxhaus</title>
+      <link>http://www.stimuli.com.br/works/maxhaus</link>
+      <pubDate>Sat, 17 Nov 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/maxhaus</guid>
+      <description>&lt;p&gt;Maxcasa, a Brazilian construction company is launching a new housing project: Maxhaus. A fresh, open approach: the apartment comes bare - no walls - with a beautiful concrete floors and ceiling. From there buyers can customize walls and many aspects of their apartment.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gringo.nu&quot;&gt;Gringo&lt;/a&gt; created a campaign that allows user to create their own “virtual apartment”. Users can add walls, furniture, paint, rotate and position them to their liking. The apartment can be viewed in 4 different angles, in a closer or further away look. Each user creates their own virtual floor on an imaginary building.&lt;/p&gt;
+
+&lt;p&gt;I was responsible for the virtual apartment section. Created from scratch it’s a fake 3d world. Technically, it’s all 2D, with a fake isometric projection. We toyed with the idea of having a real 3d scene, but the low poli constrains would not have worked. We wanted the furniture to look good, high poly renderings. This was a very challenging project for me. I’d never done any isometric world coding before, and there was a lot of learning to be done: projection, depth sorting, collision detection and so forth. All in a user friendly web interface. Depth sorting turned out to be much, much harder that anticipated. Since objects can occupy different number of tiles, the standard methods just don’t cut it. I am in great debt to &lt;a href=&quot;http:///www.zeh.com.br/&quot;&gt;Zeh&lt;/a&gt; who has helped me out, and implemented a great sorting algorithm. If I find the time, I’d love to write a detailed blog entry explaining his solution.&lt;/p&gt;
+
+&lt;p&gt;The site was built using AS3, and there are lots of performance tuning to it. A whole lot of computation has to happen real time: collision detection, depth sorting, masking, scaling and so forth. AS2 wouldn’t have cut it.&lt;/p&gt;
+
+&lt;p&gt;I was responsible for the back-end also. With quite a few features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;User management: login, registration, pass recovery, logout, authentication.&lt;/li&gt;
+
+&lt;li&gt;Social apps: comments, ratings&lt;/li&gt;
+
+&lt;li&gt;Search.&lt;/li&gt;
+
+&lt;li&gt;Saving and retrieving each apartment configuration: furniture, position, rotation, color and so forth.&lt;/li&gt;
+
+&lt;li&gt;A heavy weight admin interface that allowed us to add 3d objects from a user friendly web interface.&lt;/li&gt;
+
+&lt;li&gt;A &lt;a href=&quot;http://en.wikipedia.org/wiki/Representational_State_Transfer&quot;&gt;RESTful architecture&lt;/a&gt; that serializes data with &lt;a href=&quot;http://json.org/&quot;&gt;JSON&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This was a pretty large back-end, and I couldn’t have done it without &lt;a href=&quot;http://www.djangoproject.com/&quot;&gt;Django&lt;/a&gt;. Without Django, the back-end alone would take me longer than the front end.&lt;/p&gt;
+
+&lt;p&gt;The whole project was completed in about 2 months, and it was very intense. Given time constrains, some features didn’t make it to the first version, but all in all it’s a very exciting project.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, the website hasn’t been localized yet, and it’s Portuguese only. If you are interested in seeing it, just click on the larger button to the right of the navigation bar that reads “Usuário novo?” and from there you can take a shot of making your own apartment.&lt;/p&gt;
+
+&lt;p&gt;The website was awarded an &lt;a href=&quot;http://www.thefwa.com&quot;&gt;FWA&lt;/a&gt; site of the day for December the 03rd, 2008.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Tweener Tips</title>
+      <link>http://www.stimuli.com.br/trane/2007/nov/07/tweener-tips/</link>
+      <pubDate>Wed, 07 Nov 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2007/nov/07/tweener-tips</guid>
+      <description>&lt;p&gt;I’ve been using &lt;a href=&quot;http://code.google.com/p/tweener/&quot;&gt;Tweener&lt;/a&gt; for almost an year now, and I thought I’d share a few quick and useful tips.&lt;/p&gt;
+
+&lt;h2 id=&quot;delayed_function_call_or_a_poor_mans_timer&quot;&gt;Delayed Function call, or a Poor man’s timer&lt;/h2&gt;
+
+&lt;p&gt;AS3 has the Timer class which is handy, but sometimes you just need a quick “call this function in x seconds”. No need to instantiate an object, keep its reference, add event listeners, a function and clear up the timer. This is so simple (and great):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Tweener.addTween(this, {time:0.3, onComplete: myFunction});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or, using an anonymous function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Tweener.addTween(this, {time:0.3, onComplete: function():void{
+	// do something here!
+	trace(&amp;quot;hello&amp;quot;);
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that you don’t have to tween any property at all for this to work. Just specify any object as the target, the time in seconds you wish to wait until the function is called and which function to call.&lt;/p&gt;
+
+&lt;h2 id=&quot;using_base_as_a_template_for_tweens&quot;&gt;Using “base” as a template for Tweens&lt;/h2&gt;
+
+&lt;p&gt;Some animations / visual effects are used many times over in the same project. Using the base property you can create a “template” of a tween and specialize it later (like adding an onComplete callback for some runs of the effect). Suppose you have a recurring tween that scale items and does a fade. You can say:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// creates a &amp;quot;template&amp;quot; to be used more than once:
+var scaleFadeIn : Object = {
+	alpha:1,
+	_scale:1,
+	time:0.5,
+	transition: &amp;quot;linear&amp;quot;
+}
+// later in you code you can say:
+Tweener.addTween(myMovieClip, {base:scaleFadeIn});
+// or you can &amp;quot;enhance it&amp;quot;, for example with an onComplete callback:
+Tweener.addTween(myMovieClip, {base:scaleFadeIn, onComplete: callHome});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The great thing about this is easier maintenance. If you later on decide that you want to try another transition or time, you only change the template, the “base” for those Tweens.&lt;/p&gt;
+
+&lt;p&gt;Note that base is very flexible, as they can be nested:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var scaleAndColorFadeIn : Object = {
+	base: scaleFadeIn,
+	_color: 0xFF0000
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this case, you “add” all settings from the scaleFadeIn and the scaleAndColorFadeIn. More on the &lt;a href=&quot;http://hosted.zeh.com.br/tweener/docs/en-us/&quot;&gt;base property documentation page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;using_settimescale_to_speed_up_testing&quot;&gt;Using setTimeScale to speed up testing&lt;/h2&gt;
+
+&lt;p&gt;This is a real life saver. Tweener uses a sort of internal clock, a value by which all time operations are measured, called timeScale. Sometimes you are coding some section of the website, but to get there you have to see the loading animations, menu transitions and so on. Because you are seeing this over and over again, those precious seconds until you get to the part that really interests you is very boring, so you can “fast forward” them. At the beginning of your website you can just say:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// this will run everything 3 times as fast
+Tweener.timeScale(3);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once you’ve reached the section / part of the website that you are actually working on, you can just set the speed back to normal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// this will set the speed back to normal
+Tweener.setTimeScale( 1);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Another use for this is when you want to see your animations in “slow motion”. Setting time scale will allow the rhythm to be the same, you’re just slowing down the tempo, maybe you are interested in looking how a blur really looks or if some items are overlapping.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Gondry's Dream</title>
+      <link>http://www.stimuli.com.br/works/gondrys-dream</link>
+      <pubDate>Fri, 21 Sep 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/gondrys-dream</guid>
+      <description>&lt;p&gt;Dream On!&lt;/p&gt;
+
+&lt;p&gt;I am a big fan of director &lt;a href=&quot;http://en.wikipedia.org/wiki/Michel_Gondry&quot;&gt;Michael Gondry&lt;/a&gt;. Not only his tv spots, youtube kubrik_cube-videos and video clips are great, but he also directed a film I love: &lt;a href=&quot;http://www.imdb.com/title/tt0338013/&quot;&gt;Eternal Sunshine of the Spotless Mind&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So I was very excited when I found out that we were doing a “behind-the-scenes” for his latest Motorola Razr2 spot. The site is a collection of memorabilia related to the spot: the spot itself, a interview with Gondry, a behind the scenes video, still pictures, wallpapers and his sketches for the script.&lt;/p&gt;
+
+&lt;p&gt;The website presents a box of Gondry’s dream: once open bits and pieces orbit the screen from where they can be viewed. The briefing was a perfect fit for an adaptation of Papervision’s paper cloud. Coded in Actionscript 3, using &lt;a href=&quot;http://papervision3d.org/&quot;&gt;Papervision 3D&lt;/a&gt; and &lt;a href=&quot;http://code.google.com/p/tweener/&quot;&gt;Tweener&lt;/a&gt; made my life so much easier (and fun). I was responsible for the welcome box and the flying paper scene.&lt;/p&gt;
+
+&lt;p&gt;The final result is a dream-like experience that invites the user to navigate through Gondry’s vision.&lt;/p&gt;
+
+&lt;p&gt;The website packs quite a few goodies, including many download formats for the spot, interview and behind the scenes, as well as a blogger friendly embedable tag (below). Enjoy!&lt;/p&gt;
+&lt;p /&gt;&lt;p /&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Email validation in Actionscript 3</title>
+      <link>http://www.stimuli.com.br/trane/2007/sep/13/email-validation-actionscript-3/</link>
+      <pubDate>Thu, 13 Sep 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2007/sep/13/email-validation-actionscript-3</guid>
+      <description>&lt;p&gt;I’ve been playing with flex lately and I though the best way to get the hang of it was to use it in small pieces. One of the most obvious places for using the flex framework seemed form validation. Since it is &lt;strong&gt;enterprise&lt;/strong&gt; ready, validation must be top notch. And then I stumbled upon the monstrous 500+ lines of code mx.validators.EmailValidator class. Sure, it’s doing a lot more than checking if a String is a valid email address. It will tell you if there is too litle at signs, too many at signs, and many other possible combination of invalid email addresses.&lt;/p&gt;
+
+&lt;p&gt;Wow! This is such a case of over engineering! If someone is typing a email addresses on a form, they probably know what it looks like. I’ve never seen such detailed error messages, and honestly, that’s a good thing. Using the EmailValidator from flex will weight 6kb of sources. If it’s that complex it sure will do a great job at validating emails, you’d think. But shockingly, the email validation is a great hack: no regex just a bunch of string searches such as:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var ampPos:int = emailStr.indexOf(&amp;quot;@&amp;quot;);
+if (ampPos == -1)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And so forth. Ouch! Regexes can be daunting and intimidating, but sometimes avoiding a regex will cause a lot more trouble that it will save you. This is an invalid email address, according to the flex validator: “arthur+latenight@somedomain.com”. Not only plus signs are legal at the address part, but they’re very useful. If your mail server is configured correctly (and unfortunately many aren’t) and you have an email account such as “arthur@somedomain.com”, then you can use many variations of “arthur+a.web.store@somedomain.com” and still get those delivered to you. This is great for checking if a company has passed your personal information to others, or generating automated rules for filtering or forwarding. Gmail allows that, and I use it all the time.&lt;/p&gt;
+
+&lt;p&gt;Getting email validation right is tough. Zeh couldn’t get his email to be &lt;a href=&quot;http://labs.zeh.com.br/blog/?p=70&quot;&gt;accepted in so many places he had to change&lt;/a&gt; it. The &lt;a href=&quot;http://tools.ietf.org/html/rfc2822#section-3.4.1&quot;&gt;spec&lt;/a&gt; allows many variations such as: arthur’@’debert@somedomain.com and other bizarre cases. You don’t have to allow them all, but you should definitely allow for the most common ones. Flex, being a framework for client side programming, should really do a better job at validating emails.&lt;/p&gt;
+
+&lt;p&gt;In the end you have a heavy, tightly coupled framework that deals with really edge cases (such as warning a user that his email has too many at signs!) but not taking enough care to validate emails correctly.&lt;/p&gt;
+
+&lt;p&gt;I’ve hacked an EmailValidator class that is much more light weight and hopefully gets most emails right. You can &lt;a href=&quot;http://media.stimuli.com.br:8080/media/misc/downloads/email-validation.zip&quot;&gt;download it here&lt;/a&gt;. Sample usage below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/* http://www.stimuli.com.br/, Arthur Debert
+*/
+package br.com.stimuli.mona.validators{
+    /*// usage
+    * import br.com.stimuli.mona.validators.EmailValidator;
+    * 
+    * // will return a boolean
+    * EmailValidator.isValidEmail(&amp;quot;someone@someplace.com&amp;quot;);
+    * 
+    * // if you'd rather validate an catch an error you can use:
+    * EmailValidator.validate(&amp;quot;someone@someplace.com&amp;quot;);
+    * 
+    * // You can also specify which class you;d rather throw an error in case the email isn't valid:
+    * EmailValidator.validate(&amp;quot;bad@email@someplace.com&amp;quot;, MyErrorClass);
+    * 
+    * // You can also specify the message to be passed to the error class
+    * EmailValidator.validate(&amp;quot;bad@email@someplace.com&amp;quot;, Error, &amp;quot;Bad email!&amp;quot;);
+    * 
+    * // If you have an input where people can type a few email addresses you can validate a whole list
+    * // This will separate and trim each word of text:
+    * EmailValidator.isValidEmailList(&amp;quot;someone@someplace.com, afriend@otherplace.com&amp;quot;);
+    * 
+    * // If you specify an arbitrary separator to test. This will return true:
+    * EmailValidator.isValidEmailList(&amp;quot;someone@someplace.com; afriend@otherplace.com &amp;quot;, &amp;quot;;&amp;quot;);
+    * // But using the default (&amp;quot;,&amp;quot;) separator, this will return false:
+    * EmailValidator.isValidEmailList(&amp;quot;someone@someplace.com; afriend@otherplace.com &amp;quot;,);
+    */
+    public class EmailValidator{
+
+        public function EmailValidator() {
+            throw new Error(&amp;quot;The EmailValidator class is not intended to be instantiated.&amp;quot;);
+        }
+    
+        // permissive, will allow quite a few non matching email addresses
+        public static const EMAIL_REGEX : RegExp = /^[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+
+        /** Checks if the given string is a valid email address.
+        *  @param email The email address as a String
+        *  @return True if the given string is a valid email address, false otherwise.
+        */
+        public static function isValidEmail(email : String) : Boolean{
+            return Boolean(email.match(EMAIL_REGEX));
+        }
+    
+        /* Splits a string with the separator character, strips white characters and checks if all of them are valid
+        */
+        public static function isValidEmailList(emailList : String, separator : String = &amp;quot;,&amp;quot;) : Boolean{
+            var addresses : Array = emailList.split(separator);
+            for each (var email : String in addresses){
+                if (!isValidEmail(email.replace(/\s/, &amp;quot;&amp;quot;)))return false;
+            }
+            return true;
+        }
+    
+        public static function validate(email : String, errorClass : Class = null, errorMessage : String = &amp;quot;Invalid e-mail address.&amp;quot;) : void{
+            if (isValidEmail(email) )return;
+            errorClass = errorClass || Error;
+            throw new errorClass(errorMessage)
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you catch valid emails that this regex is complaining about, please let me know. you can also get the full scoop on the nitty gritty of email validation &lt;a href=&quot;http://www.regular-expressions.info/email.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Subclassing final native classes in the Flash Player</title>
+      <link>http://www.stimuli.com.br/trane/2007/aug/22/subclassing-final-native-classes-flash-player/</link>
+      <pubDate>Wed, 22 Aug 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2007/aug/22/subclassing-final-native-classes-flash-player</guid>
+      <description>&lt;p&gt;Reading Bruce &lt;a href=&quot;http://www.artima.com/weblogs/viewpost.jsp?thread=212818&quot;&gt;Eckel’s post about Flex Components&lt;/a&gt; I felt the ending suggestion was pretty interesting: porting python’s string library to AS3. Python’s string library is very useful: it is full of convenience methods such as &lt;strong&gt;startswith&lt;/strong&gt;, &lt;strong&gt;endswith&lt;/strong&gt; and so on. I can understand why Adobe feels like this doesn’t belong in the player: keeping the player footprint small is paramount, and adding a lot of convenience methods is arguable at best. So let’s code our own.&lt;/p&gt;
+
+&lt;p&gt;The first step it to create a new class, one that will inherit from String. Oops! The string class is marked &lt;strong&gt;final&lt;/strong&gt; which means that it can’t be extended. So now, you’d think, just trade inheritance for composition, creating a class that looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class SString{
+	private var _string : String;
+    private var _length : int;
+    public function SString(withString : *){
+        _string = withString.toString();
+        _length = _string.length;
+    }
+
+    public function get length() : int{
+        return _length;
+    }
+
+	public function toString() : String{
+        return _string;
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And then add the extra convenience methods. But there’s a problem with using composition in this scenario. If you do, every method that takes a vanilla String will not accept the SString class. This means every time you need a string such as in &lt;strong&gt; new URLRequest(myString);&lt;/strong&gt; you will need to convert back to a vanilla string. Now using our “enhanced” string class you must perform these extra steps:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Import the SSTring clas.&lt;/li&gt;
+
+&lt;li&gt;Use a formal constructor instead of quotes.&lt;/li&gt;
+
+&lt;li&gt;Convert back to a regular string for each use where a string is expected.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first two issues are understandable, it’s just harder to take those cases into account. But it starts to be too heavy weight, it feels clunky. This is just bad design. AS3 is a weakly typed language: types are converted behind the scenes in some cases. If you have something such as :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var s : * = 1 + &amp;quot; some text&amp;quot;;
+// s = &amp;quot;1 some text&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The interpreter will convert the Number 1 to a String automagically. So the type of variables depend on the context their being used. But on other cases the compiler will not allow type substitutions.&lt;/p&gt;
+
+&lt;p&gt;The other solution is to code a class that acts manly as a namespace for function. A class that is a collection of static methods such as:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; StringHelper.startsWith(myString, &amp;quot;static&amp;quot;);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is too verbose. Also, for note that a class such as this is mostly a workaround for the fact that no function do not exist by themselves, which is not very OOP at all. OOP is more than mimicking Java. OOP is about creating designs: hierarchy, collections, that are easy to use and make code more versatile. In this case, which is ironic, AS2 would offer us better alternatives. Prototype inheritance is not so bad after all.&lt;/p&gt;
+
+&lt;p&gt;For the life of me, I simply cannot understand why make the String class final. I can understand (but not agree to) not allowing to monkey patch the string class. But not allowing users to subclass string, imposes a lot of extra hoops to create an augmented string, which might not be worth the trouble in the end. Since polymorphism in AS3 is “subclassing polymorphism” it hinders any useful enhancements to the native string class of the Flash Player. The ruby community monkey patches with frequency. The python community has a few more hoops to go through for monkey patching but it can be (easily) done. Maybe, maybe, if your are building a nuclear power plant control code, or making the back end that Visa uses to process credit transactions, the extra safety is in place. But for what flash is used at, I simply can’t see the point.&lt;/p&gt;
+
+&lt;p&gt;The only reasonable explanation for this would be because of the internal implementation for the native string. The Array class in not final (I have subclassed it more that once, and it was very handy).At any rate, restricting user’s choices because of implementation details is bad design all together.&lt;/p&gt;
+
+&lt;p&gt;I am just venting my ever growing frustration with AS3. At the first, even though the bondage and discipline coefficient is pretty high, it looks like it will make things easier. Sure, the improved &lt;a href=&quot;http://www.stimuli.com.br/trane/2007/apr/03/as2-as3-growing-pains/&quot;&gt;run time&lt;/a&gt;, &lt;a href=&quot;http://www.stimuli.com.br/trane/2007/may/14/as3-happy-bits-2-displayobject-hierarchy/&quot;&gt;the better design&lt;/a&gt; for the display hierarchy is great too. But as I code more and more in AS3 I begin to miss AS2. If you know a better solution to this, I am all ears.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Nasty FLV preloading issue</title>
+      <link>http://www.stimuli.com.br/trane/2007/jun/17/nasty-flv-preloading-issue/</link>
+      <pubDate>Sun, 17 Jun 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2007/jun/17/nasty-flv-preloading-issue</guid>
+      <description>&lt;p&gt;Flash is, by far, the best way to deliver video on the web. The wide availability of the plugin makes it a no brainer.&lt;/p&gt;
+
+&lt;p&gt;I always used progressive download video, meaning video that’s read from a vanilla http connection, no special streaming server on the backend. I’d love to hear the stats, but my guess is that the majority of flash video is delivered this way. The huge video sites, &lt;a href=&quot;http://youtube.com&quot;&gt;youtube&lt;/a&gt;, &lt;a href=&quot;http://video.google.com/&quot;&gt;google video&lt;/a&gt; and &lt;a href=&quot;http://video.yahoo.com/&quot;&gt;yahoo videos&lt;/a&gt; all use flash with progressive download. But the API for showing video content is highly skewed towards using Flash Media Server. Sure Adobe(then macromedia) expects to make a buck on that, but still it’s pretty odd that the most common use case is so cumbersome to code.&lt;/p&gt;
+
+&lt;p&gt;With the great &lt;a href=&quot;http://www.stimuli.com.br/trane/2007/may/14/as3-happy-bits-2-displayobject-hierarchy/&quot;&gt;architectural changes&lt;/a&gt; I was really chocked to learn the the NetStream remained mostly unchanged. It’s awkward to use. It’s full of small confusing details and the documentation could be so much better. I sure am not the only one to feel this way. &lt;a href=&quot;http://blog.emmettshear.com/post/2007/03/06/Oh-the-things-that-youll-see&quot;&gt;Traces from the youtube player&lt;/a&gt;, from the &lt;a href=&quot;http://www.nytimes.com&quot;&gt;nytimes player&lt;/a&gt; make that clear.&lt;/p&gt;
+
+&lt;p&gt;So we hacked a sane VideoStream class for AS2 and I wanted to port it to AS3. The idea was to have a class that could do something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var vs : VideoStream = new VideoStream(url, buffertime);
+// video loops once the end of the stream is reached
+vs.loops = true ; 
+// listen to complete loading events
+vs.addEventListener(Event.COMPLETE, onVideoLoaded); 
+// listen to loading progres events
+vs.addEventListener(Event.PROGRESS, onLoadingProgress);
+vs.addEventListener(&amp;quot;playComplete&amp;quot;, onPlayFinished);
+
+// and then later:
+// the video duration:
+trace(vs.duration)
+// and so on
+&amp;lt;/code&amp;gt;
+In order to start a NetStream, you must instantiate it with a NetConnection object. it's ugly. You have to say:
+&amp;lt;code  class=&amp;quot;actionscript&amp;quot;&amp;gt;
+nc = new NetConnection();
+nc.connect(null);
+stream = new NetStream(nc);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Why on earth you can’t say simply stream = new NetStream(); and, with no parameters for the NetConnection, it would do it for you? Since the NetConnection object doesn’t do anything, I coded this class differently. Instead of keeping the NetConnection as a class property, I simply created a local variable and used that to instantiate the NetStream. But then something funny would happen. For a while the NetStream.bytesLoaded and NetStream.bytesTotal would behave as expected, at first it would be zero, until the the response would return the content length and then it would show the right bytes total and bytes loaded for a few executions, and THEN it would read 0 for both. That’s right, after a few milliseconds the bytesTotal would go from 28428 to 0. That combined with a miss configured apache omitting the content length, and it took us hours to chase this bug. Worse it wasn’t very predictable: sometimes loading information would read correctly all the way trough.&lt;/p&gt;
+
+&lt;p&gt;Googling around, I came across &lt;a href=&quot;http://www.actionscript.org/forums/showthread.php3?t=101635&quot;&gt;this thread&lt;/a&gt;. The post is 3 years old, for flash MX , but it’s the same issue. They found the workaround but didn’t understand why. Here’s what I think happens. When you create a new NetConnection and the NetStream object everything is fine. But if the NetConnection is a local variable inside a function it will be marked for garbage collection by the VM. At some point the gc kicks in and clears the NetConnection object, since it is a local variable. When that happens, the NetStream goes cuckoo and reads dummy values for bytesLoaded. Because you don’t know when the gc will do it’s thing, it is unpredictable, intermittent. If the gc is idle until you finished your preloading code, it works. The strangest part is that even if the gc clears the NetConnection object and the loading information goes berseck, you can still use the NetStream. It’s there. It’s readable and all, but the loading information becomes useless. The fix is easy. Just make sure you keep a reference to the NetConnection object, as a class property, anywhere the gc won’t clean it up.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>3,2,1 - Launch!</title>
+      <link>http://www.stimuli.com.br/trane/2007/jun/14/321-launch/</link>
+      <pubDate>Thu, 14 Jun 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2007/jun/14/321-launch</guid>
+      <description>&lt;p&gt;I’ve been holding back having a blog for a long time. I just felt that I didn’t have much to add. As time passed by, I felt it was very hard to find some information on the web, specially regarding flash development, which has been my bread and butter for a while. Informative Actionscript posts are few and far and between. Also after becoming a regular at other people’s blog for quite a while, I though it would be fun to be able to look back a few years and see what I was thinking , struggling or enjoying.&lt;/p&gt;
+
+&lt;p&gt;After deciding to start a blog, I did what any self respected hacker would do: create your own blogging engine (hint: irony). It was a chance to hack a little with &lt;a href=&quot;http://djangoproject.com&quot;&gt;django&lt;/a&gt;, which is always a pleasure. I’ve used some django apps, notably &lt;a href=&quot;http://code.google.com/p/coltrane-blog/&quot;&gt;James Bennet’s coltrane&lt;/a&gt; and &lt;a href=&quot;http://code.google.com/p/django-tagging/&quot;&gt;django-tagging&lt;/a&gt;. I kind of hated del.icio.us interface and wanted to have something simpler.&lt;/p&gt;
+
+&lt;p&gt;After hacking the backend and doing a half-assed job with the layout, it was time to find hosting. After a &lt;a href=&quot;http://futuro.stimuli.com.br/trane/2007/jun/13/hosting-life-good-again/&quot;&gt;long journey&lt;/a&gt; through various hosts, I landed at &lt;a href=&quot;http:www.slicehost.com&quot;&gt;SliceHost&lt;/a&gt; which has been a great learning experience. Having to run a server turned out to be less intimidating than it looked like and a lot more fun as well. Now not having root access to a server feels very restricting.&lt;/p&gt;
+
+&lt;p&gt;I grabbed some notes taken in the last few months and posted them as a morale-bosting push. I hope to write a few useful bits on actionscript, user interfaces, web-development and python.&lt;/p&gt;
+
+&lt;p&gt;3…2…1 ready, go!&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Hosting: Life is good again</title>
+      <link>http://www.stimuli.com.br/trane/2007/jun/13/hosting-life-good-again/</link>
+      <pubDate>Wed, 13 Jun 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2007/jun/13/hosting-life-good-again</guid>
+      <description>&lt;p&gt;We like to think our choices are unique, but honestly we go with the flow more than we’d like to acknowledge.&lt;/p&gt;
+
+&lt;p&gt;When I began doing websites, they we all statics. A bunch of jpegs, swfs and html files. Putting a site live was simple, the server requirements were minimal. My first hosting provider seemed like a real find: a US$7,95 / month plan that included a reasonable disk space, bandwidth and 20 domain names. At first I was a bit overwhelmed by the Control Panel. It was a &lt;a href=&quot;http://www.cpanel.net/index.html&quot;&gt;c-panel&lt;/a&gt; and after a couple of days I was getting around along with it fine. To me it seemed as straight forward as it should be: want an email address? Click on “new email”, fill in it’s name, a password and your done. I couldn’t imagine the maze of config files, program, dependencies and permissions that apparent simplicity hid so well. Life was good.&lt;/p&gt;
+
+&lt;p&gt;With time the limitations became apparent. The websites became more dynamic, I needed more flexibility: a database, php and maybe a few one click installs (blogs, wikis and so forth). I kept running into &lt;a href=&quot;http://www.dreamhost.com/&quot;&gt;DreamHost&lt;/a&gt;. The features were unbelievable and I signed up. I hosted quite a few clients with them, and I was pretty satisfied. In fact, if it’s features are enough for your, the bang for the buck DreamHost provides are incredible. All was good. Then I started to get into &lt;a href=&quot;http://djangoproject.com/&quot;&gt;django&lt;/a&gt;. Dreamhost could host django apps through fcgi. I was happy. But it’s performance was mediocre at best and every once in a while the app would hang. After sometime, it was clear it wasn’t good enough for django apps. Time to move along.&lt;/p&gt;
+
+&lt;p&gt;Then I came across &lt;a href=&quot;http://www.textdrive.com&quot;&gt;TextDrive&lt;/a&gt;. It looked perfect: afordable and built for developers. The user base was knowledgeable and extensive. Ssh to get anything done. It was scary at first. Great. But it’s shortcomings became apparent pretty soon. The lighttp setup wasn’t stable enough and no root access became a bummer. Besides, since a lot of their costumers were developers, every now and then someone would make the server crash. Combined with long fchecks and the uptime wasn’t too good. Looking back, it wasn’t an especific TextDrive issue. As other alternatives to php and perl became more main stream (python, ruby), the deployment solutions weren’t very established. It was easy to code apps that leaked memory. It was too restricting not having much control over servers and installed software. For the developers a bit more to the edge of web dev, a vanilla shared server wasn’t enough. At any rate it was time to move along once again.&lt;/p&gt;
+
+&lt;p&gt;That’s when I got a &lt;a href=&quot;http://www.slicehost.com&quot;&gt;Slicehost&lt;/a&gt; account. I was quite a leap to have to administer fully a webserver: with great power comes great responsibility indeed. I am enjoying my slice a lot. While very affordable the performance is great. Also some powerful capabilities are a real boon to the newbie: javascript console, being able to rebuild a slice through the control panel. The freedom to try different deployment strategies and software stacks is wonderful (and fun). Getting used to install and manage everything is easier that I though (except for postfix: could it be any more complex than that?). I feel more at ease running a virtual host: if I screw up with some code, I am confident I won’t be a bad neighbor. Life is good again.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>AS3 Happy bits #2: The DisplayObject Hierarchy </title>
+      <link>http://www.stimuli.com.br/trane/2007/may/14/as3-happy-bits-2-displayobject-hierarchy/</link>
+      <pubDate>Mon, 14 May 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2007/may/14/as3-happy-bits-2-displayobject-hierarchy</guid>
+      <description>&lt;p&gt;Flash, like most interesting programs has developed organically, out living by far the sort of “low file size gif replacement” it began it’s life as. Also, like many successful platforms (windows more than anything else) it takes backwards compatibility very seriously. I find it really incredible that to this day I can use flash 9 to export Flash 1 version swfs. More incredible still, the flash 9 plugin can read those files flawlessly. This means that content produced in 1996 is still readable as is.&lt;/p&gt;
+
+&lt;p&gt;The downside to it, is that in the struggle to make backwards compatibility feasible, many short sighted decisions have lingered on, from version to the next. The flash API, up to flash 8 is some sort of fransktein. We use to joke at work that some core members of the API have been implemented by trainees, without any access to the current API. It’s just awful. At the heart of the API is the &lt;strong&gt;MovieClip&lt;/strong&gt; class. Since flash is a visual and interactive platform the &lt;strong&gt;MovieClip&lt;/strong&gt;, complex objects that can hold graphics, sounds and code the class flash developers work the most with. Yet, it’s interface makes no sense:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// creating a movie clip:
+var mc : MovieClip = createEmptyMovieClip(&amp;quot;ball&amp;quot;, 1);
+// do we really need &amp;quot;create&amp;quot; here, do we say things such as
+var obj = createEmptyObject();
+// ?
+// we are just creating it, it should be empty!
+
+// now attaching from the library
+var mc2 : MovieClip = attachMovie(&amp;quot;id&amp;quot;, name, depth);
+// why do we sometimes have to say MovieClip and sometimes just Movie will do?
+
+// removing a movie clip:
+mc2.removeMovieClip();
+// wouldn't just 'remove' suffice?&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Besides the inconsistency with method names, how about not making use of a powerful AS feature: variable length of parameters? Why not having the createEmpty&lt;strong&gt;MovieClip&lt;/strong&gt;() accept only a name, and in that case using the next highest depth available. How about assigning some place holder name in case the first parameter is null? This seems a bit wacky, but that’s exactly what the IDE does with clips on the timeline.&lt;/p&gt;
+
+&lt;p&gt;There are lots of nonsense points to the API, no point in beating a dead horse. So when flash 9 (flex actually) announced a new version of AS, with a completely new virtual machine and API, it gave macromedia team the chance to drop the historical artifacts of the API and begin a fresh one.&lt;/p&gt;
+
+&lt;p&gt;So AS3 finally gave us a sane display list. The class hierarchy makes sense, with each subclass extending the one above it, with a clear use case and extra features. The display list can be manipulated consistently with the node related methods such as addChild, addChildAt and so forth. Value ranges have been changed to be one based (1-&amp;gt; 100% scale, alpha), making it more intuitive to apply ratios and general calculations. The underscore prefixed to items’ properties has been removed (why were they made to “look” like private: &lt;em&gt;alpha,&lt;/em&gt;xscale, etc). Long standing issues such as getting the list of available frame labels on a &lt;strong&gt;MovieClip&lt;/strong&gt; are now possible (I have no idea why this one wasn’t implemented before: the runtime had to know the labels available).&lt;/p&gt;
+
+&lt;p&gt;My favorite feature though, is that the display list is a real node tree, and now you can move objects between nodes. This used be a big headache in earlier versions. You had to be very careful with the way you build the &lt;strong&gt;MovieClip&lt;/strong&gt; hierarchy, because once it was setup you couldn’t move things around. Preloading images and swfs had be done with the hierarchy in place, and that also made up a lot of grunt work.&lt;/p&gt;
+
+&lt;p&gt;Not being able to remove a &lt;strong&gt;MovieClip&lt;/strong&gt; off the stage without “killing” the &lt;strong&gt;MovieClip&lt;/strong&gt; included a few hacks as well: setting things off stage, alpha set to 0 and &lt;code&gt;_visible&lt;/code&gt; to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now not only you can set masks, but you can also check if a clip is masked, and by whom (what could be the reason behind having a write only property?). Better yet, mask don’t have to share the same parents, a “feature” that made a masking a lot more complicated: when “cleaning up” some clips you’d have to remove &lt;strong&gt;MovieClip&lt;/strong&gt; higher on the tree and keep track of that yourself, since it was a write-only property.&lt;/p&gt;
+
+&lt;p&gt;The stage is finally well represented by a singleton class, instead of a holder of static properties.&lt;/p&gt;
+
+&lt;p&gt;Drawing on &lt;strong&gt;MovieClip&lt;/strong&gt;s is decuppled from the DisplayObject itself, into a Graphics object, and has a reasonable API. Most notably the convinience methods of drawRect and friends.&lt;/p&gt;
+
+&lt;p&gt;Loading information has been moved to an aproppriate object, the LoaderInfo, so now the place to check urls, bytes size and so forth are in a different place than drawing code, for example.&lt;/p&gt;
+
+&lt;p&gt;When one looks at the new the DisplayObejct hiererchy, it becomes clear how much the old API sucked. There were no separation of responsibilities, at a quick glance, what was the &lt;strong&gt;MovieClip&lt;/strong&gt; class now is spread out through at least 6 other classes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;LoaderInfo&lt;/em&gt;: information regarding loading , urls, events and so forth,&lt;/li&gt;
+
+&lt;li&gt;&lt;em&gt;Loader&lt;/em&gt;: used to load new DisplayObjects&lt;/li&gt;
+
+&lt;li&gt;&lt;em&gt;FrameLabel&lt;/em&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;em&gt;InteractiveObject&lt;/em&gt;: holding events and properties such as contextMenu, tabIndex.&lt;/li&gt;
+
+&lt;li&gt;&lt;em&gt;Graphics&lt;/em&gt;: used for drawing.&lt;/li&gt;
+
+&lt;li&gt;&lt;em&gt;Stage&lt;/em&gt;: a singleton that holds “global” properties for the display list.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The display package is a very welcome change. It fixed a lot of bad design decisions that flash took over those 10 years and created a logical and powerful way to manipulate visual objects which is, afterall, the whole point in using flash. I for one won’t be looking back.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>AS3 Sad bits #1: Deep copying or cloning</title>
+      <link>http://www.stimuli.com.br/trane/2007/may/09/as3-sad-bits-1-deep-copying-or-cloning/</link>
+      <pubDate>Wed, 09 May 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2007/may/09/as3-sad-bits-1-deep-copying-or-cloning</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.kirupa.com/forum/showpost.php?p=1897368&amp;postcount=77&quot;&gt;original idea to use a ByteArray&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://niko.informatif.org/blog/2007_07_20_clone_an_object_in_as3&quot;&gt;how to not loose type information&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;http://www.darronschall.com/weblog/archives/000271.cfm#more&quot;&gt;Darron Schall explains throughly how the [TRANSIENT] directive works and it’s effects on cloning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Along with many great improvements in AS3 there are a few things that are frustrating.&lt;/p&gt;
+
+&lt;p&gt;While for some, a great programming language is on that has a very concise, elegant core and for others a more capable standard, some facilities really should be included in the language itself. Complex objects in AS3 are passed by reference, and it works almost all the time. At another times though, you must make a fresh new, deep copy of an object. An object where all of it’s properties are unique new objects, recursively. That’s why it makes sense to give developers a way to make deep copies. That’s why python has the &lt;a href=&quot;http://docs.python.org/lib/module-copy.html&quot;&gt;copy module&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;AS3 can make copies of objects with the ObjectUtil module. But as it’s documentation says, it will work for some objects, but not for others. The documentation doesn’t go into much detail of what constitutes a good clonable object. It tells us that it won’t work for UIComponent objects. Why not? it will later go on and recommend the “clone” method on these objects. But the clone method is a mystery in itself: it’s not defined in a root object in the display list. Some objects implement it , some don’t.&lt;/p&gt;
+
+&lt;p&gt;In a current project I stumbled upon the need to clone NetStream instances. No dice. No clone method. Ok, so I will implement it my self. Following &lt;a href=&quot;http://www.richapps.de/?p=34&quot;&gt;this thread&lt;/a&gt;, it seems more people have ran into this issue. The work around is to copy ByteArray.writeObject. Great! Except that you’ll loose typing information, making it somewhat useless. Now you must traverse the prototype hierarchy and copy that as well.&lt;/p&gt;
+
+&lt;p&gt;Sure, deep copying poses some questions: circular references and large data structures, but the first one can be resolved pretty easily and the second one, just let developers decide what’s too large to copy.&lt;/p&gt;
+
+&lt;p&gt;This came as a shock because the new display list, with it’s real node tree, where you can move objects freely along the tree would benefit a lot from a powerful clone method. It’s useful to really duplicate a MovieClip (with all state preserved): current frame, transforms, filters, callbacks and all.&lt;/p&gt;
+
+&lt;p&gt;I’ll just have to stop whining and code a well rounded class. Any finished implementations on this?&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Aktuell PSVA</title>
+      <link>http://www.stimuli.com.br/works/aktuell-psva</link>
+      <pubDate>Tue, 08 May 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/aktuell-psva</guid>
+      <description>&lt;p&gt;Aktuell is a marketing company focused on events and unconventional campaigns.&lt;/p&gt;
+
+&lt;p&gt;For their website, &lt;a href=&quot;http://wwww.gringo.nu/&quot;&gt;Gringo&lt;/a&gt; created a blog of sorts, an immersive environment where users could find out what Aktuell is thinking.&lt;/p&gt;
+
+&lt;p&gt;Following the brain metaphor, Aktuell’s blog presents us with a flow of high voltage neurons. I was responsible for the blog: the neurons floating in space, archive, post details and comments view.&lt;/p&gt;
+
+&lt;p&gt;This was my first AS3 project. The gap between AS2 and AS3 is pretty big, it’s almost learning a new platform. Speed bumps aside, AS3 opens up a whole new set of possibilities, and I hope AS2 projects will be rare from now on.&lt;/p&gt;
+
+&lt;p&gt;The blog allows them to publish a few content types: regular posts, podcasts and videos. To reduce the impact of using flash, i developed a permalink system, so users are able to do deep linking directly to posts. I’m pretty fond of the Archive view. A well though of interface provides a dynamic, quick look into the entries in time. Time navigation interfaces are usually very much alike, it’s hard to come across a fresh idea.&lt;/p&gt;
+
+&lt;p&gt;Soon I’ll write more throughly about my pains (and pleasures) with the AS2 -&amp;gt; AS3 transition.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>AS3 Happy bits #1: Runtime errors</title>
+      <link>http://www.stimuli.com.br/trane/2007/apr/03/as2-as3-growing-pains/</link>
+      <pubDate>Tue, 03 Apr 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2007/apr/03/as2-as3-growing-pains</guid>
+      <description>&lt;p&gt;Sure, the much improved performance AVM is great. A sane display hierarchy helps (or rather doesn’t get a lot in the way) too, but my favorite AS3 feature is runtime errors.&lt;/p&gt;
+
+&lt;p&gt;Actionscript was my first programming language. After doing it for a while I decided I need to lear a &lt;em&gt;real&lt;/em&gt; language and decided to learn Java (it was 2001 after all…). After wrestling with the compiler for a while I remember being shock running into my first &lt;a href=&quot;http://java.sun.com/j2se/1.4.2/docs/api/java/lang/NullPointerException.html&quot;&gt;NullPointerException&lt;/a&gt;. What do you mean my program just “quits”? After getting used it to it became clear: actionscript was a freak language: no matter what happens (or should but doesn’t), your program will keep on running. No warnings, no traces, it will keeping haply humming along. Even worse, being a dynamic loosely typed language there was very little error checking at all in AS2. Even if you did use “static” typing it was mostly useless: the bread an butter of the API, the MovieClip object was dynamic: mistyped properties on it wouldn’t be caught by the compiler: no dice.&lt;/p&gt;
+
+&lt;p&gt;What looks at first as a nice way to make beginning programmers less intimidated with programming soon enough becomes debugging hell. Anything. Reading from an existing location (local files or http streaming) will not throw any errors. Telling a MovieClip that doesn’t exist to do something. Linking from a library asset that isn’t loaded yet. Nothing. Whatever goes wrong, you must find out on your own. It’s kind of ironic, since you - the programmer - are asked to do something that the computer has already done (it has hidden it from you).&lt;/p&gt;
+
+&lt;p&gt;An ugly side effect of this is that because code can fail anywhere and you must find about it on your own, to produce solid code, you end up putting error checking all over the place. Great. Now your code looks like C.&lt;/p&gt;
+
+&lt;p&gt;In flash 8, Macromedia introduced Error. But like a lot of flash things (in the old days, I hope) it was a half-baked solution: almost nothing would throw an error (only NetStream.close() as far as I can remember). The feature was there but wasn’t of any use throughout the API. You could however, create and throw your own errors, but most developers didn’t do it, it wasn’t a common idiom in the AS world. If it is useful, how come the API doesn’t use it?&lt;/p&gt;
+
+&lt;p&gt;So I was happy to learn that AS3 and the new AVM make a better use of errors and better still, that the runtime will let you know (even the player, as a plugin or stand alone), on the spot that some assumption isn’t holding. They implemented it in a nice, unobtrusive way: normal users wouldn’t see anythings (the stack will stop execution though) but developers (a reasonable assumption for people with the debug player installed) will see the error.&lt;/p&gt;
+
+&lt;p&gt;As an added bonus: Error.getStackTrace() so you can print and check code execution path.&lt;/p&gt;
+
+&lt;p&gt;Dealing effectively with errors takes sometime to get used to. Even though they’re very useful I certainly don’t want to go down the checked exceptions with empty nested try-catch blocks all over the place. That’s why I am glad AS didn’t go the Java route, making code that may throw exception required to say so in advanced, and client code to deal with it. In theory it looks like you’re making code more solid, but it &lt;a href=&quot;http://www.mindview.net/Etc/Discussions/CheckedExceptions&quot;&gt;doesn’t work in practice&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Gatorade Inside Sidney</title>
+      <link>http://www.stimuli.com.br/works/gatorade-inside-sidney</link>
+      <pubDate>Wed, 14 Mar 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/gatorade-inside-sidney</guid>
+      <description>&lt;p&gt;Made for Tribal DDb Canada, this is the front piece for Gatorade’s Canadian website. Gathering elements from the tv spot, the website is divided into 6 rooms: six small games that guide us through hockey virtuoso Sidney’s life.&lt;/p&gt;
+
+&lt;p&gt;The site has an incredible production: stunning 3D elements, great soundtrack and art direction.&lt;/p&gt;
+
+&lt;p&gt;I was responsible for the general structure: main loading, section transitions, and one of the rooms. Working closely with the 3 other flash developers. it was my second stab at implementing a mini api to integrate other developer’s modules into a website. Much trickier than it seems, specially if you’re keeping a high level of finish, it was a great learning experience.&lt;/p&gt;
+
+&lt;p&gt;Featured at the &lt;a href=&quot;http://www.thefwa.com/&quot;&gt;the FWA&lt;/a&gt; on April 18th, 2007.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>As2 Class Paths are global variables</title>
+      <link>http://www.stimuli.com.br/trane/2007/feb/04/as2-class-paths-are-global-variables/</link>
+      <pubDate>Sun, 04 Feb 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2007/feb/04/as2-class-paths-are-global-variables</guid>
+      <description>&lt;p&gt;Globals are evil, anyone will tell you that.&lt;/p&gt;
+
+&lt;p&gt;In AS2 there are no real classpaths, but a chain of objects bound to the &lt;code&gt;_global&lt;/code&gt; space. In fact, before Flash MX came out this was the canonical way to make sure your “semi-global” objects were safe kept: creating nested objects that would look like a class path, and put your data there. For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// checks to make sure we don't overwrite anybody else's objects
+if (!_global.com) _global.com = {};
+if(!_global.com.stimuli)_global.com.stimuli = {};
+_global.com.stimuli.myFavoriteColor = 0xFF0000;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This code hides a variable “myFavoriteColor” inside a global object com.stimuli, that looks like a classpath. This works well. So well that, in fact, it’s how classpaths are usually created in Javascript. If you are careful to make sure you don’t delete anybody else’s “com” or “org” objects you should be fine. Since in AS2 and Javascript there are no real private variables(except for values hidden inside closures) that’s pretty much how far classpaths go.&lt;/p&gt;
+
+&lt;p&gt;But recently, I’ve been bitten by a nasty side effect of this: a global object is no substitute for a real class loader. In &lt;a href=&quot;http://www.gringo.nu/&quot;&gt;Gringo’s website&lt;/a&gt; the shell swf loads each job in our portfolio as an external swf. The website has been online for almost six months, and must load swf made with very different needs. The trouble is: sometimes, the same libraries are used in different swfs. And worse, each one is a different version. For example, we use &lt;a href=&quot;http://www.zeh.com.br/&quot;&gt;Zeh’s&lt;/a&gt; excellent &lt;a href=&quot;http://code.google.com/p/tweener/&quot;&gt;Tweener&lt;/a&gt; for scripted animations, and have been doing so for sometime. What if a new swf must use a newer version of Tweener, than the one the ‘shell’ was compiled with. The flash player will keep the class definition compiled at the first swf that it runs into. So if the “main.swf” has revision 38 compiled and the player runs that first, a second swf, that was compiled later, with revision 173 will end up using the first class definition: revision 38. Now you are hosed.&lt;/p&gt;
+
+&lt;p&gt;Even worse, if demo “A” uses revision 56 and demo “B” uses revision 98, the cached version will depend on which version the player runs into first. That means that how the class will behave depends on runtime execution order, if demo “A” is viewed first, then when demo “B” is loaded it will work differently then if their viewing order was reversed. This make bug tracking extremely hard. Testing quickly becomes unmanageable: with 20 demos there will be millions permutations.&lt;/p&gt;
+
+&lt;p&gt;While in most use cases the fact that classpaths are just global object is pretty harmless, in situations where many different swfs may refer to the same class names (but different versions) shatters the illusion that both should be treated the same way. The flash player(the old AVM) is at least predictable on how it behaves, but that can still harvest some pretty nasty bugs.&lt;/p&gt;
+
+&lt;p&gt;There are a few partials solutions to this, but all a bit hackish. One obvious choice is to instruct programmers to put all of their classes into dedicated classpaths, so they’re run as separate classes. Besides being a lot of work to move classpaths around like that it quite error prone. Another hack is to keep track of all classes (looping recursively though the global object and looking for variables that are of type Functions). Then, every time you load a new swf, you diff that class map, and check if all new classes are inside an expected class path, tracing a warning message if they’re not. As the number of classes increase this can affect performance. Not good.&lt;/p&gt;
+
+&lt;p&gt;I understand that’s this is an edge case, and should be pretty rare if you consider the scope of most actionscript projects. Still, it’ worth noting that abstractions are only good until they break.&lt;/p&gt;
+
+&lt;p&gt;p.s.: AS3 acknowledges this problem and has a well defined (if a source of confusion) to deal with it: the ApplicationDomain. When loading external swfs, you can choose to “separate” it’s code, it will run as if in a new classpath, avoiding all this mess.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Eon - Shoot the O</title>
+      <link>http://www.stimuli.com.br/works/eon-shoot-o</link>
+      <pubDate>Tue, 23 Jan 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/eon-shoot-o</guid>
+      <description>&lt;p&gt;German energy supplier Free-On is the official sponsor of the FWA Cup (UK’s soccer league ). Gringo created an online game that mimics their tv campaign: people have to shoot inside the “o” of eon’s logo. I was resposnible for the site, but for the game itself.&lt;/p&gt;
+
+&lt;p&gt;The website is also to the front end to the game user management application. Users can register, login, play and view their rankings. The website was a hit, having almost 1000 registered players in only one week after going live.&lt;/p&gt;
+
+&lt;p&gt;Created for &lt;a href=&quot;http://unit9.co.uk/&quot;&gt;Unit9&lt;/a&gt; the website makes good use of live action composed into the interface with alpha channel videos.&lt;/p&gt;
+
+&lt;p&gt;Go ahead, shoot the o and play to win FA Cup tickets!&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Gringo V2</title>
+      <link>http://www.stimuli.com.br/works/gringo-v2</link>
+      <pubDate>Mon, 08 Jan 2007 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/gringo-v2</guid>
+      <description>&lt;p&gt;This is v2 of the Gringo website. After the successful &lt;a href=&quot;http://www.gringo.nu/mfp/&quot;&gt;Middle Finger Pub&lt;/a&gt; , it was time for Gringo to showcase it’s portfolio. We’ve decided on a simple interface, a basic timeline of projects. Each project’s detail page features a small demo of the project, mostly a condensed look and feel for each site. I was responsible for the main timeline view and the mini-api to load and communicate with all the internal demos.&lt;/p&gt;
+
+&lt;p&gt;A few people saw this as a rip off of Apple’s signature animation. The truth is that at gringo we are all happy mac users, and it’s becoming a tradition for each one of our websites to pay a tribute to a OSX visual feature. The first version of Gringo’s website, the Middle Finger Pub mimics the genie effect. This one had the challenge to recreate Apple’s cube within the flash player.&lt;/p&gt;
+
+&lt;p&gt;Technically it was quite challenging as the website allows for a resizable stage and the cube takes the entire stage area. Making the flash player 8 render a full screen real time distortion of those images wasn’t easy.&lt;/p&gt;
+
+&lt;p&gt;While a demo loads, other demos are marked as unfocused by a subtle but powerful effect: de-saturation. Thanks to flash 8’s ColorMatrix, and &lt;a href=&quot;http://code.google.com/p/tweener/&quot;&gt;Tweener&lt;/a&gt; it was a breeze to implement.&lt;/p&gt;
+
+&lt;p&gt;This was my first commercial project using &lt;a href=&quot;http://www.zeh.com.br/&quot;&gt;Zeh&lt;/a&gt;’s excellent &lt;a href=&quot;http://code.google.com/p/tweener/&quot;&gt;Tweener&lt;/a&gt; library. A set of classes for doing animation, Tweener is incredibly powerful and versatile, with great api by Zeh. I could ramble on Tweener’s merit for hours but that deserves an entire post to itself. Look for Tweener making a big splash in the near future.&lt;/p&gt;
+
+&lt;p&gt;Almost at launch, we hit a bug on the flash player that would make the browser crash on Internet Explorer. It was a very specific bug, affecting only the ie active-x control and revisions 8.33 and earlier. It took us some time to track it down, and it’s pretty uncommon for flash development to check carefully for different player versions on a specific platform. In the end we decided on simple requiring the flash player 9, since that version was not susceptible to this crash, but the whole site was coded for flash 8.&lt;/p&gt;
+
+&lt;p&gt;Since most of our work is flash centric, we had to figure out a way to keep an up to date HTML version of the website that would simple follow along the flash version. I hacked a python script that transforms the website’s xml data and outputs a HTML version for search engines and those rare visitors with no flash player. The &lt;a href=&quot;http://www.gringo.nu/html/index_en.html&quot;&gt;HTML versions&lt;/a&gt;, while very simple, respect the general look of the website . Python is such a beautiful language and with so many powerful libraries that reading the xml, parsing, copying all needed images and writing for two different languages was achieved in less than 50 lines of code.&lt;/p&gt;
+
+&lt;p&gt;The website was featured on the &lt;a href=&quot;http://www.thefwa.com/&quot;&gt;FWA&lt;/a&gt; on January the 17th.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Preloading Video in AS2</title>
+      <link>http://www.stimuli.com.br/trane/2006/dec/10/preloading-video-as2/</link>
+      <pubDate>Sun, 10 Dec 2006 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2006/dec/10/preloading-video-as2</guid>
+      <description>&lt;p&gt;Sometimes you need to preload a whole video before displaying it. Maybe you will use it as a transition, maybe it’s integrated into the user interface(it’s part of a menu, for example). Because videos must be attached to Video instances, you need to have you movie clip hierarchy in place so you can attach the NetStream and load it. This imposes too many restraints on how you must have your clips setup (and instantiated) before loading.&lt;/p&gt;
+
+&lt;p&gt;It’s pretty obvious, but it took me a while to figure this one out: you don’t need a Video instance to preload videos. For example, suppose you have a menu with three items and a video to play for each. No need to keep different videos on stage. You can preload the stream directly. It’s so simple in fact that there’s barely code to show.&lt;/p&gt;
+
+&lt;p&gt;main_conn = new NetConnection(); main_conn.connect(null);&lt;/p&gt;
+
+&lt;p&gt;main_stream = new NetStream(main_conn); main_stream.play(url);&lt;/p&gt;
+
+&lt;p&gt;From there you can control loading easely through main_stream.bytesTotal and main_stream.bytesLoaded. When you need to play that video, just attch the NetStream to it:&lt;code&gt;video.attachVideo(main_stream);&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;As an added bonus, after playing your video, you can get rid of your Video instance (remove from the stage) and change the movie clip hierarchy as you see fit. Later on, just attach another Video instance and call &lt;code&gt;video.attachVideo(main_stream);&lt;/code&gt; on it, and voilá, you can safely keep you preloaded stream, with two caveats:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You’ll be keeping the whole stream in memory, so this will work better for smaller videos (You don’t want to waste your user’s memory preloading large videos)&lt;/li&gt;
+
+&lt;li&gt;You don’t call &lt;span class='code'&gt;close()&lt;/span&gt; on the NeStream, if you do, it will be gone from memory.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The same trick works for AS3 too. Even though with the &lt;code&gt;URLLoader&lt;/code&gt; you could always use the raw data as cast it to a NetStream, it’s pretty handy.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>We don't need no stinky web oS</title>
+      <link>http://www.stimuli.com.br/trane/2006/dec/08/we-dont-need-no-stinky-web-os/</link>
+      <pubDate>Fri, 08 Dec 2006 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/trane/2006/dec/08/we-dont-need-no-stinky-web-os</guid>
+      <description>&lt;p&gt;So I’ve tried youos and wasn’t impressed. I played with it a little and lost interest. I figured I just didn’t spend enough time on it, maybe another time I’ll come back to it and “get it”.&lt;/p&gt;
+
+&lt;p&gt;Fast forward a couple of months and I was involved in a project that had a small team, 5 or 6 people, that had to exchange (and share) quite a few documents: email, calendars, spreadsheets, textfiles - the usual stuff for non techies. We shared everything with google’s apps to manage our workflow. Then it hit me: we don’t need a web os.&lt;/p&gt;
+
+&lt;h2 id=&quot;what_good_is_an_operating_system_for&quot;&gt;What good is an operating system for?&lt;/h2&gt;
+
+&lt;p&gt;I am going to use a lax definition of an operation system: kernel + drivers + user land general utilities. In a general way what would be called a stripped down Linux distro or a Microsoft Windows install. A X window system and a window manager would be included inside this definition.&lt;/p&gt;
+
+&lt;p&gt;Generally speaking an os is useful for:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Interfacing with hardware: IO operations: This means that every developer doesn’t have to worry how track move positions for every mouse maker model, or keys pressed on a keyboards, or how to display graphics for each kind of video card.&lt;/li&gt;
+
+&lt;li&gt;Storing data: though the file system, an os allows user to store , manage and retrieve their data (and launch applications too)&lt;/li&gt;
+
+&lt;li&gt;Providing facilities for applications developers to build upon, like Cocoa on OSX.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;But the more you look carefully to the way web applications work, to how users use them (and will use them), the less an idea of a web os makes sense. Point 1 is the easier to dismiss: if you can log into an web os on a browser, all that stuff is already taken care of for you (reading from the keyboard, mouse, showing graphics on screen, and so forth). There are quite a few ways to dismiss point 2 such as WEBDAV. But actually the focus on file storage is probably mostly an artifact of not having a good server / client architecture. Your documents, your data only make sense if you use it with an application (or a few of them), so let each application take care of keeping it’s data for you. This is how many applications work: let iTunes organize you music files, let Thunderbird keep track of your emails without you even knowing where / how they are stored, let the browser keep track of cookies or browsing history. It doesn’t (and shouldn’t) matter if the browser stores cookies on files or in a database, if they are in plain text or binary. As long as it works it’s not the user’s problem. Users shouldn’t have to think about files, it’s a convenient abstraction for system developer’s but it’s lame for users, users need data, not files. How and where those are stored are irrelevant as long as applications provide practical ways to process and exchange information.&lt;/p&gt;
+
+&lt;p&gt;Point 3 will be solved by the combination of two things: frameworks and webservices. Frameworks can be linked to server and client code. You might provide RSS feeds by using a common library for parsing and generating rss, such as the excellent feedparser. You may also use framework for common gui widgets such as calendars and checkboxes, like &lt;a href=&quot;http://developer.yahoo.com/yui/&quot;&gt;yui&lt;/a&gt;. Through webservices apis you can exchange, import and consume data coming from different places. I keep bookmarks on my del.icio.us account, but consume them from the provided api to replicate them on this website. I also use my &lt;a href=&quot;http://www.flickr.com/photos/bananal/&quot;&gt;flicker account&lt;/a&gt; to store all my relevant photos, and send the to &lt;a href=&quot;http://www.tabblo.com/studio&quot;&gt;tabloo&lt;/a&gt; to make posters.&lt;/p&gt;
+
+&lt;h2 id=&quot;are_we_arguing_about_names&quot;&gt;Are we arguing about names?&lt;/h2&gt;
+
+&lt;p&gt;I am not sure about this one. Each year more and more applications become web based. And each year it becomes easier to make our data go from one place to the other and back, it’s not about the applications, it’s about the data. When Sun says “the network is the computer” (and it has been saying that for over 20 years now) it is referring exactly to this. Maybe we can call the whole ecosystem of web applications as the web-os, but that would be just for the sake of using a familiar term, the convergence and communication of apps through the web is very different from a desktop OS both from the user perspective and from the developer, we could use a new name just as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;this_sounds_good_in_theory_but_in_practice&quot;&gt;This sounds good in theory but in practice&lt;/h2&gt;
+
+&lt;p&gt;We are pretty much in a transitory stage right now. The transition from the desktop world to the web world has begun only a few years ago and it will take some time until we have a more established way of doing things. It’s still early and there are many questions unanswered: we’ll we use REST, atom, SOAP or some combination of these ? How do all these apps exchange data? What about user’s privacy and security? We’ll we be just replacing vendors lock-in: from Microsoft to Google? There are many open questions, but little by little we are drawing the landscape that will make possible for people to forget (mostly) about local applications, platforms and files , soon enough all you’ll see is your data.&lt;/p&gt;
+
+&lt;p&gt;I might be wrong, maybe youos and other web based operating systems will prosper and I will have to eat my words. But from all I can tell, we are moving towards a much less decentralized, much more distributed scenery: many applications running on many different places and all you care about is that is keeps your data safe and accessible.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Ipiranga</title>
+      <link>http://www.stimuli.com.br/works/ipiranga</link>
+      <pubDate>Mon, 13 Nov 2006 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/ipiranga</guid>
+      <description>&lt;p&gt;My first project working full time for &lt;a href=&quot;http://www.gringo.nu&quot;&gt;Gringo&lt;/a&gt;, it was a big change of direction for me. After years making sites with a lots of minimalist, vector contents, I was presented with a rich, baroque bitmap layout and site navigation. Full of many details and an interesting proposition, it was very challenging to bring this vision into life.&lt;/p&gt;
+
+&lt;p&gt;The motion graphics had to embody the funny look (and concept) of the idea: 11 crazy brazilians in aspen. It was a challenge to make the site performing: huge amount of bitmaps and a very large scenery (5000px by 4800px). The animations were cartoonish and the sketches quite monty-pythonesque.&lt;/p&gt;
+
+&lt;p&gt;This was the first website with meaningful window resizing. Resizable stages present a few interesting programming problems. Besides dealing with positioning of irregular animating elements, all sliding have to be reconsidered. Animation speed have to take into account for varying distances and transitions equations.&lt;/p&gt;
+
+&lt;p&gt;I did the main site, and my co-worker, &lt;a href=&quot;http://gabriellaet.com&quot;&gt;Gabriel Laet&lt;/a&gt; hacked the game. Your goal: to hit with a soccer ball the snowboarders gliding through the half-pipe, a very Brazilian way to see snowboarding in general.&lt;/p&gt;
+
+&lt;p&gt;All in all it was a great project, completed in about two weeks. Working with Gabriel was fun, specially finding localToGlobal bugs on resizable stage the night before launch.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Miração Filmes</title>
+      <link>http://www.stimuli.com.br/works/miracao-filmes</link>
+      <pubDate>Mon, 06 Nov 2006 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/miracao-filmes</guid>
+      <description>&lt;p&gt;With a distinctively playful and smart style, Miração Filmes is a brazilian film production company that specializes in documentary films. The art direction created by &lt;a href=&quot;http://www.fiveblackcats.com&quot;&gt;Lucia Dossin&lt;/a&gt; was able to create the visual language that is a trademark of their work. Colorful and simple, the website presents their portfolio with multiple view modes. A fun “who we are” section introduces the usual suspects in a very light-hearted tone.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Acura MDX</title>
+      <link>http://www.stimuli.com.br/works/acura-mdx</link>
+      <pubDate>Tue, 24 Oct 2006 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/acura-mdx</guid>
+      <description>&lt;p&gt;The Accura MDX website is a hotsite to promote Honda’s new high end car. I coded the internal pages, each one having an specific look (more than 30 of them). A few of them have playful interaction to show off the car’s extensive feature set.&lt;/p&gt;
+
+&lt;p&gt;The website was awarded an FWA site of the day for November the 19th.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Toyota Corolla S</title>
+      <link>http://www.stimuli.com.br/works/toyota-corolla-s</link>
+      <pubDate>Tue, 12 Sep 2006 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/toyota-corolla-s</guid>
+      <description>&lt;p&gt;My first project as a freelancer for &lt;a href=&quot;http://www.gringo.nu&quot;&gt;gringo&lt;/a&gt;, this hot site showcases the new features of the Toyota Corolla special series.&lt;/p&gt;
+
+&lt;p&gt;A simple but intriguing site, it invites the user to roll over the hot spots and get a glimpse of them. The user can also see details in a larger view. If you are to curious just hit the space bar and turn on the lights!&lt;/p&gt;
+
+&lt;p&gt;This hot site was done in about a week. With small sections for tech specs and a viewer to the tv spot, the hot site is a good tour of the new features for the new Toyota Corolla S Series.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Mox Produções</title>
+      <link>http://www.stimuli.com.br/works/mox-producoes</link>
+      <pubDate>Wed, 05 Jul 2006 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/mox-producoes</guid>
+      <description>&lt;p&gt;Portfolio website for video production company, Mox Produções.&lt;/p&gt;
+
+&lt;p&gt;The idea was to present a really simple navigation showcasing the company’s main areas like stripes that will open up to reveal themselves. With a blocky, staccato look and feel design by &lt;a href=&quot;http://www.fiveblackcats.com&quot;&gt;Lucia Dossin&lt;/a&gt; the website achieves an almost retro look.&lt;/p&gt;
+
+&lt;p&gt;The navigation between jobs is thoughtful and fun. Extensive use of masking and an infinite scroll suggest a long line of films passing by the viewer. Some tricks had to be applied in order to allow for the same image to be visible in more that one frame as if they were stitched together while they aren’t. While it looks like you’re seeing the same film strip simply sliding, each frame contains a full strip, and they are carefully animated so the look as one.This piece taught me a few rough corners with BitmapData’s in actionscript. As the number of pieces grow, the filmstrips have to be broken upon a few movie clips, since flash can’t handle Bitmaps larger than 2880 pixels in any dimension.&lt;/p&gt;
+
+&lt;p&gt;The site is fully editable by the administration application, built with django. Since reads are way more common that writes, the back-end outputs xml files that feed the front end, therfore avoiding many unnecessary db queries.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Duplex Bistrot</title>
+      <link>http://www.stimuli.com.br/works/duplex-bistrot</link>
+      <pubDate>Sun, 02 Jul 2006 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/duplex-bistrot</guid>
+      <description>&lt;p&gt;Duplex Bistrot is a charming restaurant in Mello Alves, in my home town,: big bad São Paulo. The idea was to create a simple but useful website for a restaurant: a menu that could be neatly displayed and updated, a photo gallery and simple contact information.&lt;/p&gt;
+
+&lt;p&gt;The whole site is done with &lt;a href=&quot;http://www.djangoproject,.com/&quot;&gt;django&lt;/a&gt;, and at it’s heart is a “menu” application that allows restaurant owners to build an online menu very quickly.&lt;/p&gt;
+
+&lt;p&gt;We chose to go with a classic but slightly cocky look, almost all black and white. With litlle text to read it was a good opportunity to use white text on a black background. A simple but effective ajax on the photo gallery gives a bit of eye candy and more stream-lined navigation.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Marcelo Krasilcic</title>
+      <link>http://www.stimuli.com.br/works/marcelo-krasilcic</link>
+      <pubDate>Tue, 02 May 2006 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/marcelo-krasilcic</guid>
+      <description>&lt;p&gt;Another &lt;a href=&quot;http://www.fiveblackcats.com/&quot;&gt;five black cats&lt;/a&gt; project, this was a complete new web site for fashion photographer Marcelo Krasilsic. Lucia reached a great creative solution to image viewer problem in interfaces. With large bold thumbs and a sideways scrolling timeline, each photo collection carries a distinctive flavour, inviting the user to view more. A very minimalist look, the site almost disappears, all you see are the photos themselves.&lt;/p&gt;
+
+&lt;p&gt;Another interesting feature was the personal favorites. Each user can select his favorites pictures and send them to friends. This was my first flash 8 project, and being able to use BitmapDatas helped a lot to implement this feature. This was also the first time I implemented a full fledge drag and drop interface, complete with reordering, removal and so forth. The end result is very usable and delightfully simple.&lt;/p&gt;
+
+&lt;p&gt;The back-end for the favorites was hacked in python.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Andrade Morettin</title>
+      <link>http://www.stimuli.com.br/works/andrade-morettin</link>
+      <pubDate>Fri, 10 Mar 2006 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/andrade-morettin</guid>
+      <description>&lt;p&gt;Actionscript for Brazilian architect office Andrade Morettin. With a bold and clean modernist look, AM has an extensive project catalog. From residential house to large public buildings their portfolio is interesting and versatile, the website had to match.&lt;/p&gt;
+
+&lt;p&gt;A &lt;a href=&quot;http://www.fiveblackcats.com/&quot;&gt;five black cats&lt;/a&gt; project, with design and concept by Lucia Dossin, this was the second of our collaboration work. Lucia’s solution included an elegant still creative visual grid and a surprising interface, where a plain list view morphs into a full blown detailed view very smoothly. I’ve always enjoyed this kind of subtly: making things transform into others, without taking something off view and putting a new view in it’s place. This is one of the areas where flash interfaces shine. Technically, because of the odd ways as2 handled objects on the stage, it’s much harder than it seems. Clip structure and design have to balance in a very symbiotic manner. The navigation between each project and the next one is simple and elegant.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Liveimages</title>
+      <link>http://www.stimuli.com.br/works/liveimages</link>
+      <pubDate>Wed, 19 May 2004 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/liveimages</guid>
+      <description>&lt;p&gt;This is a portfolio site for video artist Luiz Duva. Duva has quite a few works, about 25 of so. He wanted his portfolio to show a complete set of information for each piece: videos, photos and general info.&lt;/p&gt;
+
+&lt;p&gt;The challenge for this piece was to communicate Duva’s personal, from-the-gut style, while still presenting an organized window into his work. The final solution was to have him sketch words and symbols into a piece of paper, scan them and adapt them to the website. The final result is pleasing: a strong, and personal language.&lt;/p&gt;
+
+&lt;p&gt;The site is mostly a series of timelines with his work, divided by categories (vjing, fiction and so on). This is the first piece I did that included videos embedded into flash. How hard can that be? Pretty hard.&lt;/p&gt;
+
+&lt;p&gt;Turns out that streaming video from an http server in actionscript is a complete mess. The api is crazy, inconsistent, just plain ugly. It took me a while to get the hang of it. To my total surprise, four years later, a complete new VM and streaming http video in flash is still horrible.&lt;/p&gt;
+
+&lt;p&gt;Some time later, after watching a normal human being struggle to hand edit huge xml files, I coded a backend for him to update his own site with no intervention. The back-end was coded with django, which was, as usual a real pleasure.&lt;/p&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Stimuli Studio</title>
+      <link>http://www.stimuli.com.br/works/stimuli-studio</link>
+      <pubDate>Sat, 03 Apr 2004 00:00:00 +0000</pubDate>
+      <author></author>
+      <guid>http://www.stimuli.com.br/works/stimuli-studio</guid>
+      <description>&lt;p&gt;After years of developing websites for others, it was finally time to do one for my self. Oh boy, having yourself as a customer is hard. After three or four aborted attempts, I had an idea for a very simple website, blocks of color and some typographic teases. A few words about guiding principles for my work, portfolios pieces and a contact form.&lt;/p&gt;
+
+&lt;p&gt;The site was done in a little under three weeks. Today many ideas in it look very dated (oh, the soundtrack…) but I still like it’s tone and simplicity.&lt;/p&gt;
+
+&lt;p&gt;Portfolio pieces include works from 2001 to 2004. After that I got too busy (and maybe too lazy) to update it, so most of the pieces there are pretty old.&lt;/p&gt;
+
+&lt;p&gt;It was the first time I implemented hot swapping for i18n, meaning that you could change idioms at any time and voliá, with animation too. This was a bit tricy since the type effect was a bit intensive, processing wise. Some careful timing and algorithm to sequence all texts that needed to change in an orderly fashion.&lt;/p&gt;
+
+&lt;p&gt;It was also an a-ha moment for not reinventing the wheel. A few days after launching I discovered ASBroadcaster, a simple but functional event broadcaster that did exactely what my own broadcaster did, except it was already done and tested and wouldn’t take me two or three hours to get it right.&lt;/p&gt;</description>
+    </item>
+    
+    
+
+  </channel> 
+</rss>

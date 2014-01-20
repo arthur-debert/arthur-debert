@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Visual Inspector for BulkLoader &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="A Visual Inspector for BulkLoader ">
+    <link rel="canonical" href="http://www.stimuli.com.br/trane/2009/aug/09/bulkloader-inspector/">
+     
+           
+    <meta property="og:title" content="A Visual Inspector for BulkLoader "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/trane/2009/aug/09/bulkloader-inspector/"/>
+    
+
+    
+    <meta property="og:description" content="A Visual Inspector for BulkLoader"/>
+    <meta name="description" content="A couple of weeks ago I exchanged a few emails with [Chris O'Byrne](http://www.acleveraddress.com..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2009-09-August" title="August 09, 2009">August 09, 2009</time>
+            </div>
+            <h1 class="title">A Visual Inspector for BulkLoader</h1>
+            
+        </header>
+
+        <section>
+            <p>A couple of weeks ago I exchanged a few emails with <a href="http://www.acleveraddress.com/">Chris O’Byrne</a>. He was writing a loading lib for actionscritp and was taking some ideas and code from BulkLoader. The result is <a href="http://code.google.com/p/as3-multiloader/">MultiLoader</a>. I haven’t look much into it, but one thing struck me. He created a visual inspector, a GUI that let’s helps to understand what is being loaded. I thought this would be a nice addition to BulkLoader, mainly to help others debug and understand what BulkLoader is doing. As they say, good artists copy, great artists steal ;).</p>
+
+<p>It ocurred to me that anything but the simplest interface would require a GUI toolkit. It made sense to do it in Flex.</p>
+
+<p>It turns out that the inspector is very useful, and helped to visualize a few issues with BulkLoader my self. Here is what it looks like:</p>
+
+<p><img src="/assets/images/blog-posts/bulkloader-inspector-01.jpg" alt="The inspector running" /></p>
+
+<p>Since it uses Flex, you need to use it differently, depending on what your project is. If you are coding a Flex application, then just instanciate the BulkLoaderInspectorPanel, and you should be all set. If you are working on a regular (non-flex) project, you should load a compiled swf. But since flex apps have a very specific lifecycle, there are some steps you need to take. The easiest path is to just create a Bootstrapper (trunk/inspector/Bootstrapper.as). Just setup the path to the swf, and it should just work.</p>
+
+<p>There a few visual adjustments to be made, but it’s <strong>very</strong> useful as is. If you’re into flex and would like to improve on it, patches are very welcome.</p>
+
+<p>Note however, that since it compiles the entire flex framework, hence it has a big file size, it should only be used while debugging.</p>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="A Visual Inspector for BulkLoader" data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

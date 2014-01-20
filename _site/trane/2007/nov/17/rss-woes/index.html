@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS Woes &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="RSS Woes ">
+    <link rel="canonical" href="http://www.stimuli.com.br/trane/2007/nov/17/rss-woes/">
+     
+           
+    <meta property="og:title" content="RSS Woes "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/trane/2007/nov/17/rss-woes/"/>
+    
+
+    
+    <meta property="og:description" content="RSS Woes"/>
+    <meta name="description" content="A quick apology.
+
+Earlier today, I've updated this site's RSS feeds code. In some readers, this..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2007-17-November" title="November 17, 2007">November 17, 2007</time>
+            </div>
+            <h1 class="title">RSS Woes</h1>
+            
+        </header>
+
+        <section>
+            <p>A quick apology.</p>
+
+<p>Earlier today, I’ve updated this site’s RSS feeds code. In some readers, this will result in a flood of “new” entries which are not new at all, they’ll look like duplicates. I am sorry about that (for all of you 3 feed subscribers), but I had to fix some RSS issues.</p>
+
+<p>For the technically inclined this is what happened:</p>
+
+<ul>
+<li>Some time ago, I updated the site’s code to deal with unicode, after the <a href="http://code.djangoproject.com/changeset/5609">unicode merge</a>.</li>
+
+<li>I did not update <a href="http:/www.djangoproject.com/">Django</a> to post unicode merge, so all entries came out with generic titles such as “Entry object” instead of an entry’s actual title.</li>
+
+<li>When I noticed this, I found out that I’d have to update to third party code as well, such as the excellent <a href="http://code.google.com/p/django-tagging/">django-taggging</a>.</li>
+
+<li>I’ve way busy doing <a href="http://www.stimuli.com.br/works/maxhaus/">this</a>, until this week when we launched, and I finally had enough time to update Django + my own codebase.</li>
+
+<li>Since nothing in life is always that simple, I also had to port for the <a href="http://code.djangoproject.com/changeset/6671">autoscaping</a> changeset.</li>
+</ul>
+
+<p>Thanks for <strong>the</strong> feed subscriber, <a href="http://www.gabriellaet.com/">Gabriel Late</a> for noticing (and reporting) this.</p>
+
+<p>Now back to some self punishment for reinventing the wheel and doing my own CMS software instead of reaching for a <a href="http://wordpress.com/">perfectly fine one</a>.</p>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="RSS Woes" data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

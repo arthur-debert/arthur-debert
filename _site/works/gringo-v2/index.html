@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gringo V2 &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="Gringo V2 ">
+    <link rel="canonical" href="http://www.stimuli.com.br/works/gringo-v2">
+     
+           
+    <meta property="og:title" content="Gringo V2 "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/works/gringo-v2"/>
+    
+
+    
+    <meta property="og:description" content="Gringo V2"/>
+    <meta name="description" content="This is v2 of the Gringo website. After the successful [Middle Finger Pub](http://www.gringo.nu/m..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2007-08-January" title="January 08, 2007">January 08, 2007</time>
+            </div>
+            <h1 class="title">Gringo V2</h1>
+            
+        </header>
+
+        <section>
+            <p>This is v2 of the Gringo website. After the successful <a href="http://www.gringo.nu/mfp/">Middle Finger Pub</a> , it was time for Gringo to showcase it’s portfolio. We’ve decided on a simple interface, a basic timeline of projects. Each project’s detail page features a small demo of the project, mostly a condensed look and feel for each site. I was responsible for the main timeline view and the mini-api to load and communicate with all the internal demos.</p>
+
+<p>A few people saw this as a rip off of Apple’s signature animation. The truth is that at gringo we are all happy mac users, and it’s becoming a tradition for each one of our websites to pay a tribute to a OSX visual feature. The first version of Gringo’s website, the Middle Finger Pub mimics the genie effect. This one had the challenge to recreate Apple’s cube within the flash player.</p>
+
+<p>Technically it was quite challenging as the website allows for a resizable stage and the cube takes the entire stage area. Making the flash player 8 render a full screen real time distortion of those images wasn’t easy.</p>
+
+<p>While a demo loads, other demos are marked as unfocused by a subtle but powerful effect: de-saturation. Thanks to flash 8’s ColorMatrix, and <a href="http://code.google.com/p/tweener/">Tweener</a> it was a breeze to implement.</p>
+
+<p>This was my first commercial project using <a href="http://www.zeh.com.br/">Zeh</a>’s excellent <a href="http://code.google.com/p/tweener/">Tweener</a> library. A set of classes for doing animation, Tweener is incredibly powerful and versatile, with great api by Zeh. I could ramble on Tweener’s merit for hours but that deserves an entire post to itself. Look for Tweener making a big splash in the near future.</p>
+
+<p>Almost at launch, we hit a bug on the flash player that would make the browser crash on Internet Explorer. It was a very specific bug, affecting only the ie active-x control and revisions 8.33 and earlier. It took us some time to track it down, and it’s pretty uncommon for flash development to check carefully for different player versions on a specific platform. In the end we decided on simple requiring the flash player 9, since that version was not susceptible to this crash, but the whole site was coded for flash 8.</p>
+
+<p>Since most of our work is flash centric, we had to figure out a way to keep an up to date HTML version of the website that would simple follow along the flash version. I hacked a python script that transforms the website’s xml data and outputs a HTML version for search engines and those rare visitors with no flash player. The <a href="http://www.gringo.nu/html/index_en.html">HTML versions</a>, while very simple, respect the general look of the website . Python is such a beautiful language and with so many powerful libraries that reading the xml, parsing, copying all needed images and writing for two different languages was achieved in less than 50 lines of code.</p>
+
+<p>The website was featured on the <a href="http://www.thefwa.com/">FWA</a> on January the 17th.</p>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Gringo V2" data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

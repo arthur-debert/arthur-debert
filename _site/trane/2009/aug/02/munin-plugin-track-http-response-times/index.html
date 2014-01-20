@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Munin plugin to track http response times. &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="A Munin plugin to track http response times. ">
+    <link rel="canonical" href="http://www.stimuli.com.br/trane/2009/aug/02/munin-plugin-track-http-response-times/">
+     
+           
+    <meta property="og:title" content="A Munin plugin to track http response times. "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/trane/2009/aug/02/munin-plugin-track-http-response-times/"/>
+    
+
+    
+    <meta property="og:description" content="A Munin plugin to track http response times."/>
+    <meta name="description" content="After two years of abandonment, I've finally managed to give some love to the server running this..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2009-02-August" title="August 02, 2009">August 02, 2009</time>
+            </div>
+            <h1 class="title">A Munin plugin to track http response times.</h1>
+            
+        </header>
+
+        <section>
+            <p>After two years of abandonment, I’ve finally managed to give some love to the server running this site. After all the trouble, I wanted to have a good monitoring setup, so I can evaluate the changes and how they’re performing.</p>
+
+<p><a href="http://munin.projects.linpro.no/">Munin</a> has been running for while, but I had never tweaked it. Now, after running nginx and memcahed, I wanted to monitor those as well.</p>
+
+<p>Turns out that Munin’s plugin system is easy to extend. But it takes a while to understand how it all comes together: the various jobs, rdd integration, updates, permissions. Specially the autocongif and wildcards plugins, while a neat idea do make things more magical and harder to track.</p>
+
+<p>I wanted to monitor is the total performance of the application. Not how apache, nginx or mysql are doing. Nor only disk or the bandwidth but the final response times, to measure how the entire stack is doing.</p>
+
+<p>External tools, such as <a href="http://pingdom.com/">Pingdom</a> and <a href="http://mon.itor.us/">Monitor.us</a> can handle it, but then you’re also dealing with the internet connection, network conditions interfere with the measurements.</p>
+
+<p>So I’ve hacked a quick plugin for Munin, that will measure response times for the urls you wish to monitor. This is a how it looks: <img src="http://media.stimuli.com.br/blog-posts/http-response.png" alt="The Http Response munin plugin graph" />.</p>
+
+<p>In this particular case, I am monitoring the home url and the same one with a query string. That way, I can keep tabs on how the site is performing with memcached on and off.</p>
+
+<p>Munin plugins are ran through the shell: they can be anything a perl script, c, python, anything else really. This plugin is written in python. It does require <a href="http://code.oogle.com/p/httplib2/">httplib2</a> though. I’ve tested this in python 2.5 and 2.4 (thanks for the patch <a href="http://github.com/hermzz">Hermann Kase</a> ) on linux, but it should really run on other setups without issues.</p>
+
+<p>I am putting this up on <a href="http://github.com/arthur-debert/munin-httpresponse-plugin/tree/master">github</a>, as future updates will be easier to track. Installing is pretty easy, just copy the httpresonsetime file to where plugins are located (/etc/munin/plugins on ubuntu), chmod it appropriately and add the urls you need to monitor on the config file:</p>
+
+<pre><code>[httpresponsetime]
+    env.urls http://www.example.com,http://www.othersite.com/somewhere</code></pre>
+
+<p>Restart the munin-node daemon, and you’re all set.</p>
+
+<p>Of course, just as I finished writing this, I found a similar plugin at the <a href="http://muninexchange.projects.linpro.no/?search=&cid=10&os%5B4%5D=on&os%5B7%5D=on&os%5B3%5D=on&os%5B2%5D=on&os%5B5%5D=on&os%5B8%5D=on&os%5B1%5D=on&os%5B6%5D=on&pid=158">munin exchange</a>.It takes a different approach though, as it allows for one url only to be monitored, and that url is set on the plugin file itself. The solution above seems cleaner.</p>
+
+<p>If anyone else finds this useful, I’ll put it up on munin exchange.</p>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="A Munin plugin to track http response times." data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

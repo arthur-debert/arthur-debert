@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS3 Happy bits #1: Runtime errors &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="AS3 Happy bits #1: Runtime errors ">
+    <link rel="canonical" href="http://www.stimuli.com.br/trane/2007/apr/03/as2-as3-growing-pains/">
+     
+           
+    <meta property="og:title" content="AS3 Happy bits #1: Runtime errors "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/trane/2007/apr/03/as2-as3-growing-pains/"/>
+    
+
+    
+    <meta property="og:description" content="AS3 Happy bits #1: Runtime errors"/>
+    <meta name="description" content="Sure, the much improved performance AVM is great. A sane display hierarchy helps (or rather doesn..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2007-03-April" title="April 03, 2007">April 03, 2007</time>
+            </div>
+            <h1 class="title">AS3 Happy bits #1: Runtime errors</h1>
+            
+        </header>
+
+        <section>
+            <p>Sure, the much improved performance AVM is great. A sane display hierarchy helps (or rather doesn’t get a lot in the way) too, but my favorite AS3 feature is runtime errors.</p>
+
+<p>Actionscript was my first programming language. After doing it for a while I decided I need to lear a <em>real</em> language and decided to learn Java (it was 2001 after all…). After wrestling with the compiler for a while I remember being shock running into my first <a href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/NullPointerException.html">NullPointerException</a>. What do you mean my program just “quits”? After getting used it to it became clear: actionscript was a freak language: no matter what happens (or should but doesn’t), your program will keep on running. No warnings, no traces, it will keeping haply humming along. Even worse, being a dynamic loosely typed language there was very little error checking at all in AS2. Even if you did use “static” typing it was mostly useless: the bread an butter of the API, the MovieClip object was dynamic: mistyped properties on it wouldn’t be caught by the compiler: no dice.</p>
+
+<p>What looks at first as a nice way to make beginning programmers less intimidated with programming soon enough becomes debugging hell. Anything. Reading from an existing location (local files or http streaming) will not throw any errors. Telling a MovieClip that doesn’t exist to do something. Linking from a library asset that isn’t loaded yet. Nothing. Whatever goes wrong, you must find out on your own. It’s kind of ironic, since you - the programmer - are asked to do something that the computer has already done (it has hidden it from you).</p>
+
+<p>An ugly side effect of this is that because code can fail anywhere and you must find about it on your own, to produce solid code, you end up putting error checking all over the place. Great. Now your code looks like C.</p>
+
+<p>In flash 8, Macromedia introduced Error. But like a lot of flash things (in the old days, I hope) it was a half-baked solution: almost nothing would throw an error (only NetStream.close() as far as I can remember). The feature was there but wasn’t of any use throughout the API. You could however, create and throw your own errors, but most developers didn’t do it, it wasn’t a common idiom in the AS world. If it is useful, how come the API doesn’t use it?</p>
+
+<p>So I was happy to learn that AS3 and the new AVM make a better use of errors and better still, that the runtime will let you know (even the player, as a plugin or stand alone), on the spot that some assumption isn’t holding. They implemented it in a nice, unobtrusive way: normal users wouldn’t see anythings (the stack will stop execution though) but developers (a reasonable assumption for people with the debug player installed) will see the error.</p>
+
+<p>As an added bonus: Error.getStackTrace() so you can print and check code execution path.</p>
+
+<p>Dealing effectively with errors takes sometime to get used to. Even though they’re very useful I certainly don’t want to go down the checked exceptions with empty nested try-catch blocks all over the place. That’s why I am glad AS didn’t go the Java route, making code that may throw exception required to say so in advanced, and client code to deal with it. In theory it looks like you’re making code more solid, but it <a href="http://www.mindview.net/Etc/Discussions/CheckedExceptions">doesn’t work in practice</a>.</p>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="AS3 Happy bits #1: Runtime errors" data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I learn to stop worrying and love VIM &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="How I learn to stop worrying and love VIM ">
+    <link rel="canonical" href="http://www.stimuli.com.br/trane/2009/sep/19/how-i-learn-stop-worrying-and-love-vim/">
+     
+           
+    <meta property="og:title" content="How I learn to stop worrying and love VIM "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/trane/2009/sep/19/how-i-learn-stop-worrying-and-love-vim/"/>
+    
+
+    
+    <meta property="og:description" content="How I learn to stop worrying and love VIM"/>
+    <meta name="description" content="In the beginning there was Eclipse, and all was good. It was feature packed and free. It was slow..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2009-19-September" title="September 19, 2009">September 19, 2009</time>
+            </div>
+            <h1 class="title">How I learn to stop worrying and love VIM</h1>
+            
+        </header>
+
+        <section>
+            <p>In the beginning there was Eclipse, and all was good. It was feature packed and free. It was slow, but that seemed inevitable: so many features should cost something. Then I found out TextMate, and I was immediately hooked. It was fast, responsive and powerful. It could edit just any file type with great syntax highlighting and useful commands. Until one day I had a hacking session with a <a href="http://b1n.org/">friend</a>. He fired up VIM and boy, it seemed like magic. I was intrigued, but saw no reason to change editors, since TextMate was incredibly smooth. But then I started to edit more and more files on different boxes, mostly unixes through ssh. Since TextMate wasn’t available on other systems I had to learn enough vim to get by (basically getting into insert mode, then saving and quiting), which is pretty dumb: using VIM as it was pico. The clumsiness with VIM started to bother me more and more, those edits were slow and painful. I needed to learn VIM so I could edit in any box with ease.</p>
+
+<p>So my VIM journey begins. Now, after using strictly VIM for over a month, I can’t picture my self using another editor. I still have much to learn, since VIM is very customizable, but I am very used to it.</p>
+
+<p>The thing is, it does have a learning curve, and that’s stems from:</p>
+
+<ul>
+<li>VIM is unlike other editors. Being a modal editor, VIM is a different beast. You can’t just type. You need to understand visual, command and insert mode. More than understand it, you must embrace it. VIM makes no sense if you use it in insert mode all the time. Used in such manner, you might as well use nano or notepad. This means that very little of what you’ve previously learned will be of any use. Most editors behave pretty much the same: you type text and you run commands with keyboard shortcuts. Changing editor is merely a question of learning new commands / shortcuts. With VIM you’ll need to learn an entire new model. It takes time until you muscle memory stops getting lost.</li>
+
+<li>VIM is too powerful, too configurable. This is both a technical reason and a cultural one. VIM is very customizable and has a long legacy. VIM is geared to power users, hard core users. Its features aren’t easily discovered. Worse, the terminology, the help system is pretty intimidating for newbies. The long legacy implies that VIM will be installed pretty naked on your machine. VIM expects you to customize it heavily. If you edit on someone else’s TextMate, chances are it will be almost identical to yours. Maybe they’ve added a couple of bundles, maybe they’ve changed some shortcut, but you’d be at home. Not with VIM. VIM users customize their settings so heavily, that it can be disorienting. So learning vim means also learning to customize it entirely. VIM is not a turnkey system, you have to spend some time with it making it behave as you desire.</li>
+</ul>
+
+<p>Roughly speaking, the learning process I’ve followed was:</p>
+
+<ul>
+<li>The I-just-want-an-editor-stage. Learn to get out of it, save file, enter insert mode and edit it. This is the dumb nano stage. VIM sucks like this.</li>
+
+<li>The well-this-is-actually-nifty-stage. Go through the tutorial. <a href="http://jmcpherson.org/editing.html">Jonathan McPherson’s tips</a> is a great quick starter as well. At this point you can move efficiently. This is the first steep step to mastery. This is where your muscle memory starts to abandon the modeless paradigm. When this is mastered, you find that you can edit files very quickly. Now you are hooked to VIM, and its design starts to make sense. Except now, you start to miss IDE like features. Maybe the color scheme isn’t right for you. Maybe you need a syntax highlighting that is not readily available. Some shortcuts seem inefficient and hard to remember. You’re ready for customization hell.</li>
+
+<li>The customization-hell-stage. You start trying to bend VIM to your will. You understand how the customization works (vimrc, plugins, ftplugins, syntax). You start browsing <a href="http://www.vim.org">vim’s official website</a> and fiddle with plugins. You will scavenge vimrc files, trying to find neat customizations by chance. You want to make vim what you think it should be.</li>
+
+<li>The I-better-learn-how-this-thing-works stage. After some trial and error, you’ll find out that it won’t work. Since the combinations of settings and plugins is enormous you are bound to have conflicting mappings, settings and so on. Also, since the community is geared towards heavy users, you’ll have difficulty understanding the documentation. You need to dive in, understand how the help works, the jargon, the logic things (tend) to follow. After groking the basics it gets so much easier. Now you can generate help, navigate it and best of all, make sense of it. Comfortable enough with the help system you’ll find out that VIM has excellent documentation. Not only the core software, but also plugins. It’s just that it takes a while to wrap your head around it. Things to understand: guimode, term mode, auto load, filetypes and the help system.</li>
+
+<li>The evangelizing stage. Now, after much messing with plugins, vimrcs and other goodies you understand that VIM is very flexible. Most things that annoyed you are easy to change. You’ll have the most important IDE features you miss. You can navigate and edit many files at once easily. You want to let others now about it. It feels that after a long detour you’ve reached a summit, and it’s beautiful from the top. Then you’ll start to blog about it, let your coworkers know what’s so cool about VIM. Some people under this spell will go on useless rampages against Emacs.</li>
+</ul>
+
+<p>Since VIM is so powerful and you can script it, there is always a lot to learn. I still feel like a newbie, but I can find my way through things, and fix most issues. VIML is not a very nice language to script in, but you can script it with Python, Perl or Ruby (as long as you compile it with such capabilities).</p>
+
+<p>While I was happy with TextMate, I’ll be sticking to VIM now mainly because it’s:</p>
+
+<ul>
+<li>Available in many platforms</li>
+
+<li>Ease to customize heavily</li>
+
+<li>Much better editing. Command mode rules.</li>
+
+<li>Faster and leaner.</li>
+</ul>
+
+<p>I’ve <a href="http://www.stimuli.com.br/trane/2009/sep/21/hello-vim-or-quitting-textmate-cold-turkey/">written</a> about the plugins that made the transition from TextMate possible.</p>
+
+<p>And now the obligatory vimrc file. Enjoy:</p>
+
+<pre><code>&quot; Arthur Debert
+&quot; http://www.stimuli.com.br
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;            Appearance              &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+colorscheme ir_black        &quot; color scheme
+set ruler                   &quot; line numbers, rulers, and everything else
+set number
+set cursorline
+set vb                      &quot; Visual bell
+set lazyredraw              &quot; Don't update while in macro
+set ttyfast                 &quot; Improves redrawing
+set titlestring=%f title    &quot; Display filename in terminal window
+set rulerformat=%l:%c ruler &quot; Display current column/line
+set showcmd                 &quot; Show commands at bottom right
+set splitbelow              &quot; Split windows BELOW current window!
+set winminheight=0          &quot; Window minimum height
+set scrolloff=8             &quot; always have at least 8 lines before the window's bottom
+&quot;match ErrorMsg /\%&gt;80v.\+/  &quot; formats text longer than 80 columns
+set foldcolumn=3              &quot; 2 lines of column for fold showing, always
+set foldmethod=syntax
+set foldlevelstart=99
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;  Search &amp; Replace
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+set hlsearch   &quot; highlight searches
+set ignorecase &quot; make searches case-insensitive, unless they contain upper-case letters:
+set smartcase
+set incsearch  &quot; show the `best match so far' as search strings are typed:
+set gdefault   &quot; assume the /g flag on :s substitutions to replace all matches in a line:
+set enc=utf-8  &quot; UTF-8 Default encoding
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;           General Settings         &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+syntax on                                                            &quot; syntax highlighting
+filetype plugin on                                                   &quot; enables filetype
+set listchars=nbsp:¬¨¬®,eol:¬¨‚àÇ,tab:&gt;-,extends:¬¨¬™,precedes:¬¨¬¥,trail:‚Äö√Ñ¬¢ &quot; whitespace chars
+set autoindent smartindent                                           &quot; auto/smart indent
+set expandtab                                                        &quot; expand tabs to spaces
+set smarttab                                                         &quot; tab and backspace are smart &quot; 
+set ttyfast
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;           Menu completions          &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+set wildmode=full wildmenu                            &quot; Command-line tab completion
+set infercase                                         &quot; AutoComplete in Vim
+set completeopt=longest,menu,menuone
+set wildignore+=*.o,*.obj,*.pyc,*.DS_STORE,*.db,*.swc
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;           GUI Stuff                 &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+set mousemodel=extend &quot; Enable mouse support
+set selectmode=mouse
+set mousefocus
+set mouse=a
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;    Keystrokes -- Moving Around      &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;Space is so much easier than :
+noremap &lt;space&gt; :
+&quot; have the h and l cursor keys wrap between lines (like &lt;Space&gt; and &lt;BkSpc&gt; do
+&quot; by default), and ~ covert case over line breaks; also have the cursor keys
+&quot; wrap in insert mode:
+set whichwrap=h,l,~,[,]
+&quot; backspace over anything
+set backspace=indent,eol,start
+&quot; Use smarte paste for preserving identation when copying and pasting
+nmap &lt;silent&gt; ,p :SmartPaste&lt;cr&gt;
+&quot; Show a list of recently opend files:
+nmap ,r :FuzzyFinderMruFile&lt;cr&gt;
+&quot; Show a list of files to be regex matched, under the current dir (a la textmate)
+nmap ,f :FuzzyFinderTextMate&lt;cr&gt;
+let Tlist_WinWidth = 50
+&quot; Task list bindings:
+map &lt;silent&gt; ,T :TaskList&lt;CR&gt;
+&quot;Tag list
+map &lt;silent&gt; ,t :Tlist&lt;CR&gt;
+&quot; joining lines
+noremap ,j :join&lt;cr&gt;
+&quot; Bindings for tab switching:
+&quot; change tabs with shift tab
+nnoremap &lt;S-Tab&gt; &lt;C-W&gt;w;
+&quot;&quot; Scrolling
+no J 20j
+no K 20k
+&quot; List whitespace
+nn &lt;silent&gt; ,&lt;space&gt; :se nolist!&lt;cr&gt;
+&quot; Buffer Window Focus
+nn ,k       &lt;C-W&gt;k&lt;C-W&gt;_
+nn ,=       &lt;C-W&gt;=
+&quot; Yank to all app's
+no ,y !pbcopy&lt;cr&gt;&lt;esc&gt;u 
+&quot; use smart paste &quot;
+nmap &lt;silent&gt; ,p :SmartPaste&lt;cr&gt;
+&quot; ,nn will toggle NERDTree on and off
+nmap ,nn :NERDTreeToggle&lt;cr&gt;
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;           Plugins                   &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; MiniBuffer support:
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+&quot; tag list :
+let Tlist_Sort_Type = &quot;name&quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;           Spelling                  &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+if v:version &gt;= 700
+  setlocal spell spelllang=en
+  nmap ,ll :set spell!&lt;CR&gt;
+  nmap ,le :set spelllang=en&lt;CR&gt;
+  nmap ,lp :set spelllang=pt&lt;CR&gt;
+endif
+&quot;   Correct some spelling mistakes    &quot;
+ia teh      the
+ia htis     this
+ia tihs     this
+ia funciton function
+ia fucntion function
+ia funtion  function
+ia retunr   return
+ia reutrn   return
+ia sefl     self
+ia eslf     self
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;           GUI Stuff                 &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+autocmd BufRead *.json set filetype=javascript &quot; clojure filetype:
+autocmd BufRead *.as set filetype=actionscript &quot; actionscript syntax:
+autocmd BufRead *.clj set filetype=clojure     &quot; clojure filetype:
+autocmd BufRead *.mxml set filetype=mxml       &quot; mxml files:
+let mapleader=&quot;,&quot;
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;           backup options            &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+set backupdir=~/tmp,/tmp &quot; backups (~)
+set directory=~/tmp,/tmp &quot; swap files
+set backup               &quot; enable backups
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;           Clipboard Management      &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot;&quot; Improve Vim copy for OSX terminal
+if has('gui_running')
+    set mousefocus          &quot; Mouse can control splits
+endif
+&quot;Make sure paste mode is on before pasting
+function! SmartPaste()
+    set paste
+    normal! p`[=`]
+    set nopaste
+endfunction
+command! -bar            SmartPaste   :call SmartPaste()</code></pre>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="How I learn to stop worrying and love VIM" data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

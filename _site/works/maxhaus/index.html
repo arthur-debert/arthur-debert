@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxhaus &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="Maxhaus ">
+    <link rel="canonical" href="http://www.stimuli.com.br/works/maxhaus">
+     
+           
+    <meta property="og:title" content="Maxhaus "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/works/maxhaus"/>
+    
+
+    
+    <meta property="og:description" content="Maxhaus"/>
+    <meta name="description" content="Maxcasa, a Brazilian construction company is launching a new housing project: Maxhaus. A fresh, o..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2007-17-November" title="November 17, 2007">November 17, 2007</time>
+            </div>
+            <h1 class="title">Maxhaus</h1>
+            
+        </header>
+
+        <section>
+            <p>Maxcasa, a Brazilian construction company is launching a new housing project: Maxhaus. A fresh, open approach: the apartment comes bare - no walls - with a beautiful concrete floors and ceiling. From there buyers can customize walls and many aspects of their apartment.</p>
+
+<p><a href="http://www.gringo.nu">Gringo</a> created a campaign that allows user to create their own “virtual apartment”. Users can add walls, furniture, paint, rotate and position them to their liking. The apartment can be viewed in 4 different angles, in a closer or further away look. Each user creates their own virtual floor on an imaginary building.</p>
+
+<p>I was responsible for the virtual apartment section. Created from scratch it’s a fake 3d world. Technically, it’s all 2D, with a fake isometric projection. We toyed with the idea of having a real 3d scene, but the low poli constrains would not have worked. We wanted the furniture to look good, high poly renderings. This was a very challenging project for me. I’d never done any isometric world coding before, and there was a lot of learning to be done: projection, depth sorting, collision detection and so forth. All in a user friendly web interface. Depth sorting turned out to be much, much harder that anticipated. Since objects can occupy different number of tiles, the standard methods just don’t cut it. I am in great debt to <a href="http:///www.zeh.com.br/">Zeh</a> who has helped me out, and implemented a great sorting algorithm. If I find the time, I’d love to write a detailed blog entry explaining his solution.</p>
+
+<p>The site was built using AS3, and there are lots of performance tuning to it. A whole lot of computation has to happen real time: collision detection, depth sorting, masking, scaling and so forth. AS2 wouldn’t have cut it.</p>
+
+<p>I was responsible for the back-end also. With quite a few features:</p>
+
+<ul>
+<li>User management: login, registration, pass recovery, logout, authentication.</li>
+
+<li>Social apps: comments, ratings</li>
+
+<li>Search.</li>
+
+<li>Saving and retrieving each apartment configuration: furniture, position, rotation, color and so forth.</li>
+
+<li>A heavy weight admin interface that allowed us to add 3d objects from a user friendly web interface.</li>
+
+<li>A <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">RESTful architecture</a> that serializes data with <a href="http://json.org/">JSON</a>.</li>
+</ul>
+
+<p>This was a pretty large back-end, and I couldn’t have done it without <a href="http://www.djangoproject.com/">Django</a>. Without Django, the back-end alone would take me longer than the front end.</p>
+
+<p>The whole project was completed in about 2 months, and it was very intense. Given time constrains, some features didn’t make it to the first version, but all in all it’s a very exciting project.</p>
+
+<p>Unfortunately, the website hasn’t been localized yet, and it’s Portuguese only. If you are interested in seeing it, just click on the larger button to the right of the navigation bar that reads “Usuário novo?” and from there you can take a shot of making your own apartment.</p>
+
+<p>The website was awarded an <a href="http://www.thefwa.com">FWA</a> site of the day for December the 03rd, 2008.</p>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Maxhaus" data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

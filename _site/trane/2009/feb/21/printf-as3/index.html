@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcing as-printf. &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="Announcing as-printf. ">
+    <link rel="canonical" href="http://www.stimuli.com.br/trane/2009/feb/21/printf-as3/">
+     
+           
+    <meta property="og:title" content="Announcing as-printf. "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/trane/2009/feb/21/printf-as3/"/>
+    
+
+    
+    <meta property="og:description" content="Announcing as-printf."/>
+    <meta name="description" content="Actionscript, as it's name implies, is a high level scripting language. Regardless of what script..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2009-21-February" title="February 21, 2009">February 21, 2009</time>
+            </div>
+            <h1 class="title">Announcing as-printf.</h1>
+            
+        </header>
+
+        <section>
+            <p>Actionscript, as it’s name implies, is a high level scripting language. Regardless of what scripting means, it’s definitely high level. It has a large core api that shields most programmers from low level manipulation. It’s is actually a pretty powerful language, with optional static typing, closures, functions as first class objects and other facilities.</p>
+
+<p>It does, however, has a few key missing features. One of it’s noteworthy absences is the low level interface for string manipulation, specially a lack of a printf like facility. <a href="http://en.wikipedia.org/wiki/Printf">printf</a> stands for print format, a function that makes mixing strings and variables more convenient. It’s surprising really, that actionscript does not have a printf function in it’s core library. Even C, which is seen as a low level, unproductive language has it. printf has been around for a long time, and has been known by printf for over 30 years. As far as I can remember, Actionscript and Javascript are the only modern , high level, programming languages that lack such facility.</p>
+
+<p><a href="http://github.com/arthur-debert/printf-as3/">Printf-as</a> tries to bridge this gap. If you are familiar with printf, the rest of this post will simply bore you. You might just head to the <a href="http://http://github.com/arthur-debert/printf-as3/">project’s github homepage</a>, check out the <a href="http://stimuli.com.br:8080/media/projects/printf-as3/docs/printf/as/package-detail.html">list of supported formatters</a> or make a fresh <a href="http://github.com/arthur-debert/printf-as3/">svn checkout</a>. The project has a working test suite (I love synchronous re-entrant code) that servers as a good documentation of what to expect. The code license is a <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>.</p>
+
+<p>Just import br.com.stimuli.string.printf and you are all set.</p>
+
+<p>If you are not sold on what the point is, I’ll try to illustrate bellow how it makes things easier.</p>
+
+<h3 id="advantages_conciseness_readability">Advantages: conciseness, readability</h3>
+
+<p>At first, it seems the primary advantage is that it’s terse and readable. All those quotes and addition signs really get in the way. Suppose you have a class called User, that has a friendly toString output, such as:</p>
+
+<pre><code>public function toString() : String{
+    return &quot;[Class User] name: &quot; + name + &quot;, age:&quot; + age ;
+}</code></pre>
+
+<p>Printf makes it more readable:</p>
+
+<pre><code>public function toString() : String{
+    return printf(&quot;[Class User] name:%s  age: %s&quot;,  name, age );
+}</code></pre>
+
+<p>You simply mark “wholes” on the string, places where it should be substituted by a variable. That way, the string itself is not interrupted by extraneous quotes and plus signs. Less typing, more readability. The percent sign marks a whole on the string, where a substitution will occur. Following the percent sign, you specify how to substitute the string. The universal case is to mark it as a string, with an “s” (%s), but other formatters are helpful as we’ll see bellow. The template string is the followed by the variables to be used in the substitution.</p>
+
+<h3 id="advantages_helpers_precision_padding">Advantages: helpers, precision, padding</h3>
+
+<p>Besides direct substitution, printf can help you format those strings with little fuss. One such helper is the precision formatter. Let’s say you have a frame rate counter, that can hold decimal values such as 23.652636. Maybe you wish to truncate the number to a certain digits, for a more friendly output. Just use the dot (“.”) precision formatter:</p>
+
+<pre><code>frate.txt = printf(&quot;%.1f fps&quot;, frameRate); 
+// sets the textfield's value to &quot;23.6 fps&quot;. The digit 1 after the dot means to 
+// truncate to 1 decimal place, and the f tells printf to threat it like a float.</code></pre>
+
+<p>Or you want to display number in hexadecimal, for example:</p>
+
+<pre><code>msg = printf(&quot;The box color is %h&quot;, boxColor); // outputs: The box color is #FF0066</code></pre>
+
+<h3 id="advantages_logic_outside_of_the_string">Advantages: Logic outside of the string.</h3>
+
+<p>Printf can use named variables. Let’s say there’s an User object, with “name”, “middleName” and “lastName” properties.</p>
+
+<pre><code>msg = &quot;Posted by &quot; + user.name + &quot; &quot; + user.lastName + &quot;.&quot;;</code></pre>
+
+<p>But then if later on you decide to show the last name first, you need to rewrite this code:</p>
+
+<pre><code>msg = &quot;Posted by &quot; + user.lastName + &quot;, &quot; + user.name + &quot;.&quot;;</code></pre>
+
+<p>If you are using printf, you could say:</p>
+
+<pre><code>msg = printf( &quot;Posted by  %(name)s %(lastName)s&quot;,  user);</code></pre>
+
+<p>And printf will match those names between parenthesis with properties on the variable “user”. Then a change to the string is easier to visualize:</p>
+
+<pre><code>msg = printf( &quot;Posted by  %(lastName)s, %(name)s&quot;,  user);</code></pre>
+
+<p>That’s handy, but printf really shines when you realize that having format strings allow you to have let code alone on presentational changes. Let’s say that you have a website with different languages, and of all of it’s strings are defined an external xml file . An excerpt of that xml:</p>
+
+<pre><code>...
+&lt;string id=&quot;greeting&quot;&gt;Hello %(firstName)s %(lastName)s&lt;/string&gt;
+...</code></pre>
+
+<p>And the code is: msg = printf( “Posted by %(lastName)s, %(name)s”, user);</p>
+
+<p>You can change the message string only by editing the xml file, no need to change code nor recompile. Better yet, if you need to support English, where it’s usual to have first and last names, but also Spanish, where the middle name is more important than the last name, on the Spanish xml file, you’d have:</p>
+
+<pre><code>...
+&lt;string id=&quot;greeting&quot;&gt;Hello %(firstName)s %(middleName)s&lt;/string&gt;
+...</code></pre>
+
+<p>Same code, but different presentations format supported. You are effectively separating presentation (the string you need to produce/show) and logic. Internationalization will often require words in different orders from locale to locale.</p>
+
+<h3 id="warning_a_loose_interpretation_of_printf">Warning: a loose interpretation of printf</h3>
+
+<p>The as-printf implementation is loosely based on python’s print and strftime. I did implement most of it’s behaviour, but translated freely where it felt that actionscript should behave differently. For example, printf should never raise an error, and if a substitution fails it will be substituted by and empty string.</p>
+
+<h3 id="warning_performance">Warning: performance</h3>
+
+<p>While I did not make a consious effort to make as-printf slow, I didn’t do any optimizations at all. If you are producing a lot of strings in a place where performance is critical, you’d be better of doing the substitution by hand.</p>
+
+<h3 id="warning_regex_implementation">Warning regex implementation</h3>
+
+<p>Instead of a full blown parser, I it’s a quick hack: a regular expression. That means that making meaningless formats may produce in unexpected results. Mixing formatters that don’t go together is a bad idea, be warned.</p>
+
+<h3 id="wrapping_it_up">Wrapping it up:</h3>
+
+<p>printf-as is a small, very narrowed focused project. It’s a quick hack, but just like <a href="http://github.com/arthur-debert/BulkLoader">bulkloader</a>, it removed a small nag that bothered me when developing in Actionscript.</p>
+
+<p>Thanks to project member <a href="http://www.gabriellaet.com">Gabriel Laet</a> who fixed bugs, improved the test coverage and convinced me that printf-as should never raise an error.</p>
+
+<p>Happy stringing.</p>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Announcing as-printf." data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>

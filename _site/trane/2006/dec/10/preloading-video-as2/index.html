@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloading Video in AS2 &mdash; Arthur Debert</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.jpg"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Arthur Debert" />
+    <meta name="title" content="Preloading Video in AS2 ">
+    <link rel="canonical" href="http://www.stimuli.com.br/trane/2006/dec/10/preloading-video-as2/">
+     
+           
+    <meta property="og:title" content="Preloading Video in AS2 "/>
+    <meta property="og:url" content="http://www.stimuli.com.br/trane/2006/dec/10/preloading-video-as2/"/>
+    
+
+    
+    <meta property="og:description" content="Preloading Video in AS2"/>
+    <meta name="description" content="Sometimes you need to preload a whole video before displaying it. Maybe you will use it as a tran..."/>
+    
+    <meta property="og:site_name" content="Arthur Debert">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.jpg" alt="Inc">
+            </a>
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/talks/">Talks</a>
+            <a href="/about/">About</a>
+
+        </nav>
+<nav class="tagline">
+            <span>Yak shave me a river</span>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="" target="_blank">Arthur</a> &mdash;
+                <time pubdate datetime="2006-10-December" title="December 10, 2006">December 10, 2006</time>
+            </div>
+            <h1 class="title">Preloading Video in AS2</h1>
+            
+        </header>
+
+        <section>
+            <p>Sometimes you need to preload a whole video before displaying it. Maybe you will use it as a transition, maybe it’s integrated into the user interface(it’s part of a menu, for example). Because videos must be attached to Video instances, you need to have you movie clip hierarchy in place so you can attach the NetStream and load it. This imposes too many restraints on how you must have your clips setup (and instantiated) before loading.</p>
+
+<p>It’s pretty obvious, but it took me a while to figure this one out: you don’t need a Video instance to preload videos. For example, suppose you have a menu with three items and a video to play for each. No need to keep different videos on stage. You can preload the stream directly. It’s so simple in fact that there’s barely code to show.</p>
+
+<p>main_conn = new NetConnection(); main_conn.connect(null);</p>
+
+<p>main_stream = new NetStream(main_conn); main_stream.play(url);</p>
+
+<p>From there you can control loading easely through main_stream.bytesTotal and main_stream.bytesLoaded. When you need to play that video, just attch the NetStream to it:<code>video.attachVideo(main_stream);</code></p>
+
+<p>As an added bonus, after playing your video, you can get rid of your Video instance (remove from the stage) and change the movie clip hierarchy as you see fit. Later on, just attach another Video instance and call <code>video.attachVideo(main_stream);</code> on it, and voilá, you can safely keep you preloaded stream, with two caveats:</p>
+
+<ul>
+<li>You’ll be keeping the whole stream in memory, so this will work better for smaller videos (You don’t want to waste your user’s memory preloading large videos)</li>
+
+<li>You don’t call <span class='code'>close()</span> on the NeStream, if you do, it will be gone from memory.</li>
+</ul>
+
+<p>The same trick works for AS3 too. Even though with the <code>URLLoader</code> you could always use the raw data as cast it to a NetStream, it’s pretty handy.</p>
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Preloading Video in AS2" data-related="arthur_debert">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="" target="_blank">Arthur Debert</a></strong><br>
+                </p>
+            </address>
+
+        </footer>
+
+        
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014 
+        
+        <nav>
+            <a href="https://www.loggi.com/">Loggi</a> &middot;
+            <a href="/trane/" class="home">Blog</a>
+            <a href="/work/">Work</a>
+            <a href="/about/">About</a>
+            
+            
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/arthur_debert" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/arthurdebert" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+
+</body>
+</html>
