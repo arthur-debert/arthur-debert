@@ -3,8 +3,8 @@ layout: post
 title: "As2 Class Paths are global variables"
 permalink: "/trane/2007/feb/04/as2-class-paths-are-global-variables/"
 tags: [as2 actionscript]
-categories: [posts]
-id: 7
+categories: [trane]
+legacy_id: 7
 date: "2007-02-04 -0300"
 ---
 Globals are evil, anyone will tell you that.

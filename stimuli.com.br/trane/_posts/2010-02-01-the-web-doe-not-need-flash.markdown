@@ -3,8 +3,8 @@ layout: post
 title: "The Web does not need flash."
 permalink: "/trane/2010/feb/01/the-web-doe-not-need-flash/"
 tags: [flash ipad html5 future web ]
-categories: [posts]
-id: 32
+categories: [trane]
+legacy_id: 32
 date: "2010-02-01 -0300"
 ---
 With the iPad launch, the lack of the Flash runtime has received a lot of slashback. This gave me the opportunity to gather a few thoughts on Flash, and where it is going. I've seen a lot of hate from people who don't know much about Flash, and also a very defensive and blind reaction from inside the Flash world. I wanted to give a different perspective.

@@ -1,6 +1,7 @@
 ---
 layout: base
 ---
+==========
 {% if page.cover_image %}
 <div class="article-cover">
     <div>
@@ -13,7 +14,7 @@ layout: base
     <div class="container">
         <header>
             <div class="meta">
-                By <address><a rel="author" href="{{ page.author.link }}" title="{{ page.author.name }}" target="_blank">{{ page.author.name }}</a> &mdash;
+                By <address><a rel="author" href="{{ page.author.link }}" title="{{ page.author.name }}" target="_blank">Arthur</a> &mdash;
                 <time pubdate datetime="{{ page.date | date: "%Y-%d-%B" }}" title="{{ page.date | date: "%B %d, %Y" }}">{{ page.date | date: "%B %d, %Y" }}</time>
             </div>
             <h1 class="title">{{ page.title }}</h1>
@@ -27,9 +28,8 @@ layout: base
 
         <footer>
             <address>
-               {% if page.author.image %}<img src="/images/arthur.jpeg">{% endif %}
-                <p>Written by <strong><a rel="author" href="https://twitter.com/{{ page.author.twitter }}" title="{{ page.author_name }}" target="_blank">Arthur Debert</a></strong><br>
-                <span class="muted">{{ page.author.bio }}</span>
+               <img src="/images/arthur.jpeg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/arthur_debert" title="{{ page.author_name }}" target="_blank">Arthur Debert</a></strong><br>
                 </p>
             </address>
 

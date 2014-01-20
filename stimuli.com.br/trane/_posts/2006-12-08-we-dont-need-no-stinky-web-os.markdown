@@ -3,8 +3,8 @@ layout: post
 title: "We don't need no stinky web oS"
 permalink: "/trane/2006/dec/08/we-dont-need-no-stinky-web-os/"
 tags: [webdev python]
-categories: [posts]
-id: 1
+categories: [trane]
+legacy_id: 1
 date: "2006-12-08 -0300"
 ---
 An operating system that you can run from your browser: launch applications and work on your files. The idea seemed straight forward.

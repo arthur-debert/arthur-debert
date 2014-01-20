@@ -3,8 +3,8 @@ layout: post
 title: "Nasty FLV preloading issue"
 permalink: "/trane/2007/jun/17/nasty-flv-preloading-issue/"
 tags: [actionscript flv annoyances]
-categories: [posts]
-id: 14
+categories: [trane]
+legacy_id: 14
 date: "2007-06-17 -0300"
 ---
 Flash is, by far, the best way to deliver video on the web. The wide availability of the plugin makes it a no brainer.

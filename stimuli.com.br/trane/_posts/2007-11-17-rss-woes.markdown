@@ -3,8 +3,8 @@ layout: post
 title: "RSS Woes"
 permalink: "/trane/2007/nov/17/rss-woes/"
 tags: [django meta feeds unicode]
-categories: [posts]
-id: 21
+categories: [trane]
+legacy_id: 21
 date: "2007-11-17 -0300"
 ---
 A quick apology.

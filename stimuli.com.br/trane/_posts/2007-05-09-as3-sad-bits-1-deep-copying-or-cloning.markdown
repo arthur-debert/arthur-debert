@@ -3,8 +3,8 @@ layout: post
 title: "AS3 Sad bits #1: Deep copying or cloning"
 permalink: "/trane/2007/may/09/as3-sad-bits-1-deep-copying-or-cloning/"
 tags: [as2 actionscript flash-annoyances]
-categories: [posts]
-id: 10
+categories: [trane]
+legacy_id: 10
 date: "2007-05-09 -0300"
 ---
 UPDATE: This post is outdated, see:

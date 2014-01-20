@@ -3,8 +3,8 @@ layout: post
 title: "Hello VIM, or quitting TextMate cold turkey"
 permalink: "/trane/2009/sep/21/hello-vim-or-quitting-textmate-cold-turkey/"
 tags: [vim textmate editors]
-categories: [posts]
-id: 30
+categories: [trane]
+legacy_id: 30
 date: "2009-09-21 -0300"
 ---
 In my [last post](http://www.stimuli.com.br/trane/2009/sep/19/how-i-learn-stop-worrying-and-love-vim/) I've mentioned my way through VIM. Quiting TextMate cold turkey wasn't easy. But fear not: there are a bunch of plugins that will make it a breeze. Bellow a list of the best ones to fill the gap:

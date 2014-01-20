@@ -3,8 +3,8 @@ layout: post
 title: "Why Hashes?"
 permalink: "/trane/2008/feb/27/why-hashes/"
 tags: [actionscript design]
-categories: [posts]
-id: 23
+categories: [trane]
+legacy_id: 23
 date: "2008-02-27 -0300"
 ---
 Every now and then I have to defend the use of hashes in parameters. Usually it is a side issue to something else, and I try to explain my position in 6 words or less, and it ends up sounding like insult or non sense. So today I am writing this so I can provide a link between parenthesis and carry on with the subject in hand. 

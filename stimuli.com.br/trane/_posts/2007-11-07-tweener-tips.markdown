@@ -3,8 +3,8 @@ layout: post
 title: "Tweener Tips"
 permalink: "/trane/2007/nov/07/tweener-tips/"
 tags: [tweener actionscript]
-categories: [posts]
-id: 20
+categories: [trane]
+legacy_id: 20
 date: "2007-11-07 -0300"
 ---
 I've been using [Tweener](http://code.google.com/p/tweener/) for almost an year now, and I thought I'd share a few quick and useful tips.

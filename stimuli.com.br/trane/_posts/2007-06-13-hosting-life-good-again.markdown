@@ -3,8 +3,8 @@ layout: post
 title: "Hosting: Life is good again"
 permalink: "/trane/2007/jun/13/hosting-life-good-again/"
 tags: []
-categories: [posts]
-id: 11
+categories: [trane]
+legacy_id: 11
 date: "2007-06-13 -0300"
 ---
 We like to think our choices are unique, but honestly we go with the flow more than we'd like to acknowledge. 

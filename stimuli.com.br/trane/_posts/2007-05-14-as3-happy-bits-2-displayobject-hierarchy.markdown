@@ -3,8 +3,8 @@ layout: post
 title: "AS3 Happy bits #2: The DisplayObject Hierarchy "
 permalink: "/trane/2007/may/14/as3-happy-bits-2-displayobject-hierarchy/"
 tags: [as2 actionscript as3]
-categories: [posts]
-id: 12
+categories: [trane]
+legacy_id: 12
 date: "2007-05-14 -0300"
 ---
 Flash, like most interesting programs has developed organically, out living by far the sort of "low file size gif replacement" it began it's life as. Also, like many successful platforms (windows more than anything else) it takes backwards compatibility very seriously. I find it really incredible that to this day I can use flash 9 to export Flash 1 version swfs. More incredible still, the flash 9 plugin can read those files flawlessly. This means that content produced in 1996 is still readable as is. 

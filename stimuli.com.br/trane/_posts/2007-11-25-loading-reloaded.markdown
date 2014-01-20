@@ -3,8 +3,8 @@ layout: post
 title: "Loading Reloaded"
 permalink: "/trane/2007/nov/25/loading-reloaded/"
 tags: [actionscript bulk-loader opensource]
-categories: [posts]
-id: 19
+categories: [trane]
+legacy_id: 19
 date: "2007-11-25 -0300"
 ---
 Controlling loading is tedious, error prone, and each projects has such specific requirements that you end up rewriting loading code. A lot. In my last project I spent 4 hours debugging download code and promised my self I would solve this annoyance once and for all. So in the best \"let me be lazy\" fashion, I decided to write my final loading code.

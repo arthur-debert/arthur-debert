@@ -20,38 +20,20 @@ layout: base
         </div>
     </section>
 </div>
-
-
-<article class="container">
-{% for post in paginator.posts %}
-  {% unless post.draft %}
-    <section class="index">
-        {% if post.author.image %}<img src="/images/arthur.jpeg" class="avatar">{% endif %}
-        <div>
-            <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
-            {{ post.content | strip_html | truncate:140 }}
-            {% if post.content | size > 140 %}
-                 <a href="{{ post.url }}" rel="prefetch"><strong>Read more</strong></a>
-            {% endif %}
-            <div class="meta">
-                Written By <address>{{ post.author.name }}</address> &mdash;
-                <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%B %d, %Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
-            </div>
-        </div>
-        <hr>
-    </section>
-    {% endunless %}
-    {% endfor %}
-    <section class="pagination" style="text-align:center">
-      {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-        <a href="/" class="btn btn-outline">‹ Newer</a>
-        {% else %}
-        <a href="/page{{ paginator.previous_page }}" class="btn btn-outline">‹ Newer</a>
-        {% endif %}
-      {% endif %}
-      {% if paginator.next_page %}
-        <a href="/page{{ paginator.next_page }}" class="btn btn-outline">Older ›</a>
-      {% endif %}
-    </section>
+<article class='container'>
+<section class="index">
+    <img src="/images/arthur.jpeg" class="avatar">
+    <div>
+       
+        <p>Hey there, welcome to my internets.</p>
+        <p>
+        This the personal website of Arthur Debert.<br>
+        I seldom, but occasionally do <a href='/trane/'>blog</a>.<br>
+        My (terribly) old <a href="/work/"> work list</a>.<br>
+        More <a href="/about/">about</a> me.<br>
+       
+       
+    </div>
+    <hr>
+</section>
 </article>

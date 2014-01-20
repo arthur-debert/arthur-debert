@@ -3,8 +3,8 @@ layout: post
 title: "AS3 Happy bits #1: Runtime errors"
 permalink: "/trane/2007/apr/03/as2-as3-growing-pains/"
 tags: []
-categories: [posts]
-id: 8
+categories: [trane]
+legacy_id: 8
 date: "2007-04-03 -0300"
 ---
 Sure, the much improved performance AVM is great. A sane display hierarchy helps (or rather doesn't get a lot in the way) too, but my favorite AS3 feature is runtime errors.

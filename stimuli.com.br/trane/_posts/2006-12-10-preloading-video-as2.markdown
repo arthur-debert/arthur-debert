@@ -3,8 +3,8 @@ layout: post
 title: "Preloading Video in AS2"
 permalink: "/trane/2006/dec/10/preloading-video-as2/"
 tags: [actionscript as2 video flv]
-categories: [posts]
-id: 9
+categories: [trane]
+legacy_id: 9
 date: "2006-12-10 -0300"
 ---
 Sometimes you need to preload a whole video before displaying it. Maybe you will use it as a transition, maybe it's integrated into the user interface(it's part of a menu, for example). Because videos must be attached to Video instances, you need to have you movie clip hierarchy in place so you can attach the NetStream and load it. This imposes too many restraints on how you must have your clips setup (and instantiated) before loading.

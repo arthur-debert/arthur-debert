@@ -3,8 +3,8 @@ layout: post
 title: "How I learn to stop worrying and love VIM"
 permalink: "/trane/2009/sep/19/how-i-learn-stop-worrying-and-love-vim/"
 tags: [vim textmate editors]
-categories: [posts]
-id: 29
+categories: [trane]
+legacy_id: 29
 date: "2009-09-19 -0300"
 ---
 In the beginning there was Eclipse, and all was good. It was feature packed and free. It was slow, but that seemed inevitable: so many features should cost something. Then I found out TextMate, and I was immediately hooked. It was fast, responsive and powerful. It could edit just any file type with great syntax highlighting and useful commands. Until one day I had a hacking session with a [friend](http://b1n.org/). He fired up VIM and boy, it seemed like magic. I was intrigued, but saw no reason to change editors, since TextMate was incredibly smooth. But then I started to edit more and more files on different boxes, mostly unixes through ssh. Since TextMate wasn't available on other systems I had to learn enough vim to get by (basically getting into insert mode, then saving and quiting), which is pretty dumb: using VIM as it was pico. The clumsiness with VIM started to bother me more and more, those edits were slow and painful. I needed to learn VIM so I could edit in any box with ease.

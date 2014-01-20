@@ -3,8 +3,8 @@ layout: post
 title: "Announcing as-printf."
 permalink: "/trane/2009/feb/21/printf-as3/"
 tags: [actionscript as3 opensource]
-categories: [posts]
-id: 26
+categories: [trane]
+legacy_id: 26
 date: "2009-02-21 -0300"
 ---
 Actionscript, as it's name implies, is a high level scripting language. Regardless of what scripting means, it's definitely high level. It has a large core api that shields most programmers from low level manipulation. It's is actually a pretty powerful language, with optional static typing, closures, functions as first class objects and other facilities.

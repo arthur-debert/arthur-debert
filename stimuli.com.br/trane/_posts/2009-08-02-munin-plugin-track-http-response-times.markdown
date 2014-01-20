@@ -3,8 +3,8 @@ layout: post
 title: "A Munin plugin to track http response times."
 permalink: "/trane/2009/aug/02/munin-plugin-track-http-response-times/"
 tags: [munin linux http monitoring slicehost]
-categories: [posts]
-id: 27
+categories: [trane]
+legacy_id: 27
 date: "2009-08-02 -0300"
 ---
 After two years of abandonment, I've finally managed to give some love to the server running this site.

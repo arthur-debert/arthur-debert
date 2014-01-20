@@ -3,8 +3,8 @@ layout: post
 title: "3,2,1 - Launch!"
 permalink: "/trane/2007/jun/14/321-launch/"
 tags: [personal]
-categories: [posts]
-id: 13
+categories: [trane]
+legacy_id: 13
 date: "2007-06-14 -0300"
 ---
 I've been holding back having a blog for a long time. I just felt that  I didn't have much to add. As time passed by, I felt it was very hard to find some information on the web, specially regarding flash development, which has been my bread and butter for a while. Informative Actionscript posts are few and far and between. Also after becoming a regular at other people's blog for quite a while, I though it would be fun to be able to look back a few years and see what I was thinking , struggling or enjoying. 

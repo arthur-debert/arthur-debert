@@ -1,7 +1,7 @@
 inc:
   # Blog Information
   title:        "Arthur Debert"
-  subtitle:     "Welcome to my internets"
+  subtitle:     "Yack shave me a river"
   cover_image:  blog-cover.jpg
   logo:         logo.jpg
   
@@ -59,6 +59,9 @@ relative_permalinks: true
 permalink:     pretty
 paginate_path: 'page:num'
 paginate: 10
+#paginate_files:
+# - trane/index.html
+# - works/index.html
 
 #markdown:      maruku
 markdown_ext:  markdown,mkd,mkdn,md

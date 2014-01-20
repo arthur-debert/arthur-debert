@@ -3,8 +3,8 @@ layout: post
 title: "Email validation in Actionscript 3"
 permalink: "/trane/2007/sep/13/email-validation-actionscript-3/"
 tags: [actionscript as3 email flex]
-categories: [posts]
-id: 18
+categories: [trane]
+legacy_id: 18
 date: "2007-09-13 -0300"
 ---
 I've been playing with flex lately and I though the best way to get the hang of it was to use it in small pieces. One of the most obvious places for using the flex framework seemed form validation. Since it is **enterprise** ready, validation must be top notch. And then I stumbled upon the monstrous 500+ lines of code mx.validators.EmailValidator class. Sure, it's doing a lot more than checking if a String is a valid email address. It will tell you if there is too litle at signs, too many at signs, and many other possible combination of invalid email addresses. 

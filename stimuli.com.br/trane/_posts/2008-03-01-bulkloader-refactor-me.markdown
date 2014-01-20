@@ -3,8 +3,8 @@ layout: post
 title: "BulkLoader :: Refactor me"
 permalink: "/trane/2008/mar/01/bulkloader-refactor-me/"
 tags: [actionscript design bulk-loader]
-categories: [posts]
-id: 24
+categories: [trane]
+legacy_id: 24
 date: "2008-03-01 -0300"
 ---
 After BulkLoader was made public in November 2007, it really took of. From about 3 downloads a week, to around 30 daily, since November, totaling over 3 thousand downloads in about three months.

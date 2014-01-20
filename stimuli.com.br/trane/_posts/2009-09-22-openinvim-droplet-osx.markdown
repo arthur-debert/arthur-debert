@@ -3,8 +3,8 @@ layout: post
 title: "OpenInVim droplet for osx"
 permalink: "/trane/2009/sep/22/openinvim-droplet-osx/"
 tags: [vim osx scripts]
-categories: [posts]
-id: 31
+categories: [trane]
+legacy_id: 31
 date: "2009-09-22 -0300"
 ---
 A quick osx droplet: Open In Vim.

@@ -23,13 +23,16 @@ layout: base
 
 
 <article class="container">
-{% for post in paginator.posts %}
+{% for post in site.posts %}
   {% unless post.draft %}
     <section class="index">
-        <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %}-->
+        <img src="/images/arthur.jpeg" class="avatar">
         <div>
             <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
-            <p>{{ post.excerpt }}</p>
+            {{ post.content | strip_html | truncate:140 }}
+            {% if post.content | size > 140 %}
+                 <a href="{{ post.url }}" rel="prefetch"><strong>Read more</strong></a>
+            {% endif %}
             <div class="meta">
                 Written By <address>{{ post.author.name }}</address> &mdash;
                 <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%B %d, %Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>

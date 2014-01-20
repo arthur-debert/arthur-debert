@@ -3,8 +3,8 @@ layout: post
 title: "Subclassing final native classes in the Flash Player"
 permalink: "/trane/2007/aug/22/subclassing-final-native-classes-flash-player/"
 tags: [as3 actionscript design]
-categories: [posts]
-id: 16
+categories: [trane]
+legacy_id: 16
 date: "2007-08-22 -0300"
 ---
 Reading Bruce [Eckel's post about Flex Components](http://www.artima.com/weblogs/viewpost.jsp?thread=212818) I felt the ending suggestion was pretty interesting: porting python's string library to AS3. Python's string library is very useful: it is full of convenience methods such as <strong>startswith</strong>, <strong>endswith</strong> and so on. I can understand why Adobe feels like this doesn't belong in the player: keeping the player footprint small is paramount, and adding a lot of convenience methods is arguable at best. So let's code our own.

@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Ipiranga"
+permalink: "/works/ipiranga"
+tags: []
+categories: [works]
+legacy_id: 1
+date: "2006-11-13 -0300"
+---
+My first project working full time for [Gringo](http://www.gringo.nu), it was a big change of direction for me. After years making sites with a lots of minimalist, vector contents, I was presented with a rich, baroque bitmap layout and site navigation. Full of many details and an interesting proposition, it was very challenging to bring this vision into life.
+
+The motion graphics had to embody the funny look (and concept) of the idea: 11 crazy brazilians in aspen. It was a challenge to make the site performing: huge amount of bitmaps and a very large scenery (5000px by 4800px). The animations were cartoonish and the sketches quite monty-pythonesque.
+
+This was the first website with meaningful window resizing. Resizable stages present a few interesting programming problems. Besides dealing with positioning of irregular animating elements, all sliding have to be reconsidered. Animation speed have to take into account for varying distances and transitions equations.
+
+I did the main site, and my co-worker, [Gabriel Laet](http://gabriellaet.com) hacked the game. Your goal: to hit with a soccer ball the snowboarders gliding through the half-pipe, a very Brazilian way to see snowboarding in general.
+
+All in all it was a great project, completed in about two weeks. Working with Gabriel was fun, specially finding localToGlobal bugs on resizable stage the night before launch.
