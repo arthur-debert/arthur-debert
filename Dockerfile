@@ -4,7 +4,6 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 RUN apt-add-repository ppa:brightbox/ruby-ng &&  apt-get -y -qq update
 RUN apt-get remove rubygems
 RUN apt-get install --force-yes -qq ruby1.9.3 
-RUN echo `which ruby` && echo `ruby --version` && echo `gem --version`
 #RUN apt-get install -y -qq rubygems
 RUN gem update 
 RUN echo "root:root" | chpasswd
@@ -14,6 +13,7 @@ ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
 RUN gem install --no-rdoc --no-ri json  jekyll jekyll-assets maruku rake sass uglifier github-pages therubyracer execjs
 
-VOLUME ["/var/www/site"]
+VOLUME ["/var/www/source", "/var/www/build/"]
 CMD "/usr/sbin/sshd" -D
 EXPOSE 4000
+EXPOSE 3001

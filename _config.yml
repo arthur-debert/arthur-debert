@@ -41,7 +41,7 @@ inc:
 
 url:         http://www.stimuli.com.br
 source:      .
-destination: ./_site
+destination: /var/www/build/
 plugins:     ./_plugins
 layouts:     ./_layouts
 include:     ['.htaccess']
