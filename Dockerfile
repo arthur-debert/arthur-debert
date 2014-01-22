@@ -11,7 +11,7 @@ RUN mkdir /var/run/sshd && chmod 0755 /var/run/sshd
 RUN locale-gen en_US.UTF-8
 ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
-RUN gem install --no-rdoc --no-ri json  jekyll jekyll-assets maruku rake sass uglifier github-pages therubyracer execjs
+RUN gem install --no-rdoc --no-ri json  jekyll jekyll-assets maruku rake sass uglifier github-pages therubyracer execjs bundler
 
 VOLUME ["/var/www/source", "/var/www/build/"]
 CMD "/usr/sbin/sshd" -D
